@@ -38,7 +38,7 @@ namespace QuirkyScraper
             var productSheet = book.Worksheets.Add("Product Network");
             var contributorSheet = book.Worksheets.Add("Contributor Network");
 
-            //GenerateProductNetwork(ref productSheet);
+            GenerateProductNetwork(ref productSheet);
             GenerateContributionNetwork(ref contributorSheet);
 
             book.Save(Savepath);
