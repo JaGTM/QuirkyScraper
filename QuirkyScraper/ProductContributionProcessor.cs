@@ -11,6 +11,7 @@ namespace QuirkyScraper
     public class ProductContributionProcessor : IProcessor
     {
         public const string DEFAULT_SAVE_PATH = @"D:\Users\JaG\Desktop\productcontributor.xls";
+        public const string BASE_FOLDER = @"D:\Users\JaG\Desktop\processedResults\";
 
         private IEnumerable<ICategory> categories;
         private string mSavePath;
@@ -22,11 +23,12 @@ namespace QuirkyScraper
 
         public string Savepath
         {
-            get {
+            get
+            {
                 if (string.IsNullOrEmpty(mSavePath))
                     mSavePath = DEFAULT_SAVE_PATH;
 
-                return mSavePath;            
+                return mSavePath;
             }
 
             set { mSavePath = value; }
@@ -34,80 +36,21 @@ namespace QuirkyScraper
 
         public void Process()
         {
-            XmlWriterSettings settings = new XmlWriterSettings
+            using (XmlWriter writer = Helper.GenerateXmlWriter(Savepath))
             {
-                CheckCharacters = false
-            };
-            using (XmlWriter writer = XmlWriter.Create(Savepath, settings))
-            {
-                writer.WriteStartDocument();
-                writer.WriteProcessingInstruction("mso-application", "progid='Excel.Sheet'");
+                writer.StartCreateXls()
 
-                writer.WriteStartElement("Workbook", "urn:schemas-microsoft-com:office:spreadsheet");
-                writer.WriteAttributeString("xmlns", "o", null, "urn:schemas-microsoft-com:office:office");
-                writer.WriteAttributeString("xmlns", "x", null, "urn:schemas-microsoft-com:office:excel");
-                writer.WriteAttributeString("xmlns", "ss", null, "urn:schemas-microsoft-com:office:spreadsheet");
-                writer.WriteAttributeString("xmlns", "html", null, "http://www.w3.org/TR/REC-html40");
-
-                writer.WriteStartElement("DocumentProperties", "urn:schemas-microsoft-com:office:office");
-                writer.WriteEndElement();
-
-                // Creates the workbook
-                writer.WriteStartElement("ExcelWorkbook", "urn:schemas-microsoft-com:office:excel");
-                writer.WriteEndElement();
-
-                // Create header style
-                writer.WriteStartElement("Styles");
-                writer.WriteStartElement("Style");
-                writer.WriteAttributeString("ss", "ID", null, "s21");
-                writer.WriteStartElement("Font");
-                writer.WriteAttributeString("ss", "Bold", null, "1");
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-
-                // Creates the worksheet
-                writer.WriteStartElement("Worksheet");
-                writer.WriteAttributeString("ss", "Name", null, "Product Network");
-
-                // Creates the table
-                writer.WriteStartElement("Table");
-
-                GenerateProductNetwork(writer);
-
-                writer.WriteEndElement();   // Closes table
-                writer.WriteEndElement();   // closes worksheet
-                
-                // Creates the worksheet
-                writer.WriteStartElement("Worksheet");
-                writer.WriteAttributeString("ss", "Name", null, "Contributor Network");
-
-                // Creates the table
-                writer.WriteStartElement("Table");
-
-                GenerateContributionNetwork(writer);
-
-                writer.WriteEndElement();   // Closes table
-                writer.WriteEndElement();   // closes worksheet
-
-                writer.WriteEndElement();
-                writer.WriteEndDocument();
-
-                writer.Flush();
+                .CreateWorksheet("Product Network")
+                .CustomNodes(GenerateProductNetwork)
+                .CloseWorksheet()
+                .CloseXls();
             }
-            //var book = new Workbook();
-            //book.ExcelWorkbook.ActiveSheetIndex = 1;
-            //var productSheet = book.Worksheets.Add("Product Network");
-            //var contributorSheet = book.Worksheets.Add("Contributor Network");
 
-            //GenerateProductNetwork(ref productSheet);
-            //GenerateContributionNetwork(ref contributorSheet);
-
-            //book.Save(Savepath);
+            GenerateContributionNetwork();
             MessageBox.Show("Excel sheet has been created at " + Savepath + "!");
         }
 
-        private void GenerateContributionNetwork(XmlWriter writer)
+        private void GenerateContributionNetwork()
         {
             var items = categories.SelectMany(x =>
                 x.Contributions.Select(y => new
@@ -116,11 +59,11 @@ namespace QuirkyScraper
                     Project = x.Project
                 })
             ).GroupBy(x => x.Name)
-            .Select(x => new
-            {
-                Name = x.Key,
-                Projects = x.Select(y => y.Project).Distinct().ToList()
-            }).ToList();
+            .Select(x => new Tuple<string, List<string>>
+            (
+                x.Key,
+                x.Select(y => y.Project).Distinct().ToList()
+            )).ToList();
 
             // Build grid
             var grid = new int[items.Count, items.Count];
@@ -128,36 +71,73 @@ namespace QuirkyScraper
             {
                 for (var col = row + 1; col < items.Count; col++)
                 {
-                    var intersectCount = items[row].Projects.Intersect(items[col].Projects).Count();
+                    var intersectCount = items[row].Item2.Intersect(items[col].Item2).Count();
                     grid[row, col] = intersectCount;
                 }
             }
 
-            // Setup header
-            // Creates a row.
-            writer.WriteStartElement("Row");
-            writer.WriteStartElement("Cell");
-            writer.WriteEndElement();
-            foreach(var people in items)
-                WriteCell(writer, people.Name, true);
-            writer.WriteEndElement();
+            SaveContributionNetwork(grid, items);
+        }
 
-            // Populate data
-            for (var row = 0; row < items.Count; row++)
+        private void SaveContributionNetwork(int[,] grid, List<Tuple<string, List<string>>> items)
+        {
+            var sizeX = 1000;
+            var sizeY = 1000;
+
+            var rowBlocks = (grid.GetLength(0) / sizeY) + 1;
+            var colBlocks = (grid.GetLength(1) / sizeX) + 1;
+            for(int i = 0; i < rowBlocks; i++)
             {
-                writer.WriteStartElement("Row");
-                WriteCell(writer, items[row].Name, true);
-
-                for (var col = 0; col < items.Count; col++ )
+                for(int j = 0; j < colBlocks; j++)
                 {
-                    if (col == row)
-                        WriteCell(writer, "");
-                    else if (col < row)
-                        WriteCell(writer, grid[col, row].ToString());
-                    else
-                        WriteCell(writer, grid[row, col].ToString());
+                    var dimName = i + "_" + j;
+                    XmlWriter writer = Helper.GenerateXmlWriter(BASE_FOLDER + "ContributorNetwork_" + dimName + ".xls");
+                    writer.StartCreateXls()
+                        .CreateWorksheet("Contributor Network " + dimName);
+
+                    var startRowIndex = i * sizeY;
+                    var startColIndex = j * sizeX;
+                    
+                    // Setup header
+                    // Creates a row.
+                    writer.CreateRow()
+                        .WriteCell(string.Empty);
+                    for (var peopleIndex = startColIndex; peopleIndex < startColIndex + sizeX; peopleIndex++)
+                    {
+                        if (peopleIndex >= items.Count)
+                            break;
+                        else
+                            writer.WriteCell(items[peopleIndex].Item1, true);
+                    }
+                    writer.CloseRow();
+
+                    // Populate data
+                    for(var row = 0; row < sizeY; row++){
+                        var rowIndex = row + startRowIndex;
+                        if (rowIndex >= grid.GetLength(0)) break;
+
+                        writer.CreateRow()
+                            .WriteCell(items[rowIndex].Item1, true);
+
+                        for(var col = 0; col < sizeX; col++)
+                        {
+                            var colIndex = col + startColIndex;
+                            if (colIndex >= grid.GetLength(1)) break;
+                            
+                            if (colIndex == rowIndex)
+                                writer.WriteCell("");
+                            else if (colIndex < rowIndex)
+                                writer.WriteCell(grid[colIndex, rowIndex].ToString());
+                            else
+                                writer.WriteCell(grid[rowIndex, colIndex].ToString());
+                        }
+                        writer.CloseRow();
+                    }
+                                        
+                    writer.CloseWorksheet()
+                        .CloseXls()
+                        .Close();
                 }
-                writer.WriteEndElement();
             }
         }
 
@@ -182,57 +162,42 @@ namespace QuirkyScraper
             }
 
             // Setup header
-            writer.WriteStartElement("Row");
-            writer.WriteStartElement("Cell");
-            writer.WriteEndElement();
+            writer.CreateRow()
+                .WriteCell(string.Empty);
             foreach (var item in items)
-                WriteCell(writer, item.Project, true);
-            writer.WriteEndElement();
+                writer.WriteCell(item.Project, true);
+            writer.CloseRow();
 
             // populate data
             for (var row = 0; row < items.Count; row++)
             {
-                writer.WriteStartElement("Row");
-                WriteCell(writer, items[row].Project, true);
+                writer.CreateRow()
+                    .WriteCell(items[row].Project, true);
 
                 for (var col = 0; col < items.Count; col++)
                 {
                     if (col == row)
-                        WriteCell(writer, "");
+                        writer.WriteCell(string.Empty);
                     else if (col < row)
-                        WriteCell(writer, grid[col, row].ToString());
+                        writer.WriteCell(grid[col, row].ToString());
                     else
-                        WriteCell(writer, grid[row, col].ToString());
+                        writer.WriteCell(grid[row, col].ToString());
                 }
-                writer.WriteEndElement();
+                writer.CloseRow();
             }
-        }
-
-        private void WriteCell(XmlWriter writer, string value, bool bold = false)
-        {
-            writer.WriteStartElement("Cell");
-            if(bold)
-                writer.WriteAttributeString("ss", "StyleID", null, "s21");
-
-            writer.WriteStartElement("Data");
-
-            writer.WriteAttributeString("ss", "Type", null, "String");
-            writer.WriteString(value);
-
-            writer.WriteEndElement();
-
-            writer.WriteEndElement();
         }
 
         private void GenerateContributionNetwork(ref Worksheet sheet)
         {
             var items = categories.SelectMany(x =>
-                x.Contributions.Select(y => new {
+                x.Contributions.Select(y => new
+                {
                     Name = y.Contributor,
                     Project = x.Project
                 })
             ).GroupBy(x => x.Name)
-            .Select(x => new{
+            .Select(x => new
+            {
                 Name = x.Key,
                 Projects = x.Select(y => y.Project).Distinct().ToList()
             }).ToList();
@@ -312,7 +277,7 @@ namespace QuirkyScraper
                 {
                     if (col == row)
                         wsRow.Cells.Add();  // No value to be shown for this group
-                    else if(col < row)
+                    else if (col < row)
                     {   // In the bottom triangle. Take from the symetric top
                         wsRow.Cells.Add(grid[col, row].ToString());
                     }

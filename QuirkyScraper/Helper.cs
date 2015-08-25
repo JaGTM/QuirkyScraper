@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace QuirkyScraper
 {
@@ -23,7 +24,7 @@ namespace QuirkyScraper
 
         public static IWebDriver GetWebdriver()
         {
-            var driver = new PhantomJSDriver(@"C:\phantomjs\bin", new PhantomJSOptions() , new TimeSpan(0,2,0));
+            var driver = new PhantomJSDriver(@"C:\phantomjs\bin", new PhantomJSOptions(), new TimeSpan(0, 2, 0));
             return driver;
         }
 
@@ -43,6 +44,15 @@ namespace QuirkyScraper
             {
                 semaphore.Release();
             }
+        }
+
+        public static XmlWriter GenerateXmlWriter(string path)
+        {
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                CheckCharacters = false
+            };
+            return XmlWriter.Create(path, settings);
         }
     }
 }

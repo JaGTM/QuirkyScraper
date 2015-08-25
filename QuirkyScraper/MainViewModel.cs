@@ -78,6 +78,19 @@ namespace QuirkyScraper
 
             if (categories == null) return;
 
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+            }
+
             IProcessor processor = new ProductContributionProcessor(categories);
             processor.Process();
         }
