@@ -17,6 +17,7 @@ namespace QuirkyScraper
         private ICommand mScrapeParticipants;
         private bool mBusy;
         private ICommand mGenerateProductContribution;
+        private ICommand mGeneratePhaseContribution;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -36,9 +37,20 @@ namespace QuirkyScraper
             get { return mGenerateProductContribution; }
             set { mGenerateProductContribution = value; Notify(); }
         }
+
+        public ICommand GeneratePhaseContribution
+        {
+            get { return mGeneratePhaseContribution; }
+            set { mGeneratePhaseContribution = value; Notify(); }
+        }
         #endregion
 
         public MainViewModel()
+        {
+            BindCommands();
+        }
+
+        private void BindCommands()
         {
             ScrapeParticipants = new CustomCommand
             {
@@ -50,9 +62,54 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoGenerateProductContribution)
             };
+            GeneratePhaseContribution = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGeneratePhaseContribution)
+            };
         }
-
         #region Actions
+
+        private void DoGeneratePhaseContribution()
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select processed category json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<ICategory> categories = null;
+            try
+            {
+                categories = ParticipantScraper.GetExistingProcessCategories(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to generate production contribution graph. Exception: {0}", e);
+                return;
+            }
+
+            if (categories == null) return;
+
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+            }
+
+            IProcessor processor = new PhaseContributionProcessor(categories);
+            processor.Process();
+        }
 
         private void DoGenerateProductContribution()
         {

@@ -3,8 +3,10 @@ using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -124,6 +126,21 @@ namespace QuirkyScraper
             writer.WriteEndElement();
 
             return writer;
+        }
+
+        /// <summary>
+        /// Credits to Gary Kindel
+        /// http://stackoverflow.com/a/8626562
+        /// </summary>
+        /// <param name="filename"></param>
+        /// <param name="replaceChar"></param>
+        /// <returns></returns>
+        public static string RemoveInvalidFilePathCharacters(this string filename)
+        {
+            string replaceChar = "_";
+            string regexSearch = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
+            Regex r = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
+            return r.Replace(filename, replaceChar);
         }
     }
 }

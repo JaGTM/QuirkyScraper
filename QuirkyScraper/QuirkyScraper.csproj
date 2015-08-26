@@ -103,6 +103,7 @@
   <ItemGroup>
     <Compile Include="ParticipantScraper.cs" />
     <Compile Include="People.cs" />
+    <Compile Include="PhaseContributionProcessor.cs" />
     <Compile Include="ProductContributionProcessor.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
