@@ -11,6 +11,7 @@ namespace QuirkyScraper
     {
         private const string FILE_PATH = @"C:\Users\JaG\Desktop\pcats.txt";
         private IEnumerable<string> projectUrls;
+        public event Action<int> ProgressChanged;
 
         public ParticipantScraper(IEnumerable<string> projectUrls)
         {

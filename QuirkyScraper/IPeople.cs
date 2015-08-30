@@ -11,9 +11,9 @@ namespace QuirkyScraper
         string URL { get; set; }
         string Location { get; set; }
         IEnumerable<string> Projects { get; }
-        IEnumerable<string> Contributions { get; }
+        IEnumerable<ICategory> Contributions { get; }
         void AddProject(string projectName);
-        void AddContribution(string contributionProjectName);
+        void AddContribution(ICategory contributionProjectName);
         IEnumerable<IPeople> Followers { get; }
         IEnumerable<IPeople> Followees { get; }
     }

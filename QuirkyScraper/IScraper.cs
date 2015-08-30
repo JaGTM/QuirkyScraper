@@ -8,5 +8,6 @@ namespace QuirkyScraper
     public interface IScraper
     {
         IEnumerable<object> Scrape();
+        event Action<int> ProgressChanged;
     }
 }

@@ -12,7 +12,7 @@ namespace QuirkyScraper
         public string URL { get; set; }
         public string Location { get; set; }
         public IEnumerable<string> Projects { get; private set; }
-        public IEnumerable<string> Contributions { get; private set; }
+        public IEnumerable<ICategory> Contributions { get; private set; }
         public IEnumerable<IPeople> Followers { get; private set; }
         public IEnumerable<IPeople> Followees { get; private set; }
 
@@ -21,7 +21,7 @@ namespace QuirkyScraper
             Followers = new List<IPeople>();
             Followees = new List<IPeople>();
             Projects = new List<string>();
-            Contributions = new List<string>();
+            Contributions = new List<ICategory>();
         }
 
         [JsonConstructor]
@@ -35,7 +35,7 @@ namespace QuirkyScraper
             Followers = followers;
             Followees = followees;
             Projects = new List<string>();
-            Contributions = new List<string>();
+            Contributions = new List<ICategory>();
         }
 
         public void AddProject(string projectName)
@@ -43,9 +43,13 @@ namespace QuirkyScraper
             (Projects as List<string>).Add(projectName);
         }
 
-        public void AddContribution(string contributionProjectName)
+        public void AddContribution(ICategory contributionProject)
         {
-            (Contributions as List<string>).Add(contributionProjectName);
+            var list = (Contributions as List<ICategory>);
+
+            // Don't add duplicates
+            if (list.Any(x => x.Name == contributionProject.Name && x.URL == contributionProject.URL)) return;
+            list.Add(contributionProject);
         }
     }
 }

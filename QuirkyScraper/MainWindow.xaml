@@ -2,27 +2,39 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:qs="clr-namespace:QuirkyScraper"
+        xmlns:c="clr-namespace:QuirkyScraper.UI.Converters"
         Title="MainWindow" Height="350" Width="525">
     <Window.DataContext>
         <qs:MainViewModel/>
     </Window.DataContext>
     <Window.Resources>
+        <c:IntMoreThanZeroConverter x:Key="VMTZ"/>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="6"/>
         </Style>
     </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button Content="Scrape participants" Command="{Binding ScrapeParticipants}"/>
+            <Button Content="Scrape people" Command="{Binding ScrapePeople}" Grid.Column="1"/>
+            <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Row="1" Grid.Column="1"/>
+            <Button Content="Generate product phase contribution graph" Command="{Binding GeneratePhaseContribution}" Grid.Row="1"/>
+        </Grid>
         
-        <Button Content="Scrape participants" Command="{Binding ScrapeParticipants}"/>
-        <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Column="1"/>
-        <Button Content="Generate product phase contribution graph" Command="{Binding GeneratePhaseContribution}" Grid.Row="1"/>
+        <ProgressBar Maximum="100" Minimum="0" Value="{Binding Progress}" Visibility="{Binding Progress, Converter={StaticResource VMTZ}}" Grid.Row="1"/>
     </Grid>
 </Window>
