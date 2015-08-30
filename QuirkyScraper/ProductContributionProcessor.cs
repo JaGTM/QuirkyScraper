@@ -15,6 +15,7 @@ namespace QuirkyScraper
 
         private IEnumerable<ICategory> categories;
         private string mSavePath;
+        public event Action<int> ProgressChanged;
 
         public ProductContributionProcessor(IEnumerable<ICategory> categories)
         {
@@ -36,16 +37,6 @@ namespace QuirkyScraper
 
         public void Process()
         {
-            using (XmlWriter writer = Helper.GenerateXmlWriter(Savepath))
-            {
-                writer.StartCreateXls()
-
-                .CreateWorksheet("Product Network")
-                .CustomNodes(GenerateProductNetwork)
-                .CloseWorksheet()
-                .CloseXls();
-            }
-
             GenerateContributionNetwork();
             MessageBox.Show("Excel sheet has been created at " + Savepath + "!");
         }
@@ -138,52 +129,6 @@ namespace QuirkyScraper
                         .CloseXls()
                         .Close();
                 }
-            }
-        }
-
-        private void GenerateProductNetwork(XmlWriter writer)
-        {
-            var items = categories.GroupBy(x => x.Project)
-            .Select(x => new
-            {
-                Project = x.Key,
-                Contributors = x.SelectMany(y => y.Contributions.Select(z => z.Contributor).Distinct()).ToList()
-            }).ToList();
-
-            // Build grid
-            var grid = new int[items.Count, items.Count];
-            for (var row = 0; row < items.Count; row++)
-            {
-                for (var col = row + 1; col < items.Count; col++)
-                {
-                    var intersectCount = items[row].Contributors.Intersect(items[col].Contributors).Count();
-                    grid[row, col] = intersectCount;
-                }
-            }
-
-            // Setup header
-            writer.CreateRow()
-                .WriteCell(string.Empty);
-            foreach (var item in items)
-                writer.WriteCell(item.Project, true);
-            writer.CloseRow();
-
-            // populate data
-            for (var row = 0; row < items.Count; row++)
-            {
-                writer.CreateRow()
-                    .WriteCell(items[row].Project, true);
-
-                for (var col = 0; col < items.Count; col++)
-                {
-                    if (col == row)
-                        writer.WriteCell(string.Empty);
-                    else if (col < row)
-                        writer.WriteCell(grid[col, row].ToString());
-                    else
-                        writer.WriteCell(grid[row, col].ToString());
-                }
-                writer.CloseRow();
             }
         }
 

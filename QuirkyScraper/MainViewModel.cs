@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using Microsoft.WindowsAPICodePack.Dialogs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace QuirkyScraper
@@ -20,6 +22,9 @@ namespace QuirkyScraper
         private ICommand mGeneratePhaseContribution;
         private ICommand mScrapePeople;
         private int mProgress;
+        private ICommand mGenerateProductXContributors;
+        private ICommand mGenerateProductInfluencers;
+        private ICommand mGenerateContributorsxProducts;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -50,6 +55,24 @@ namespace QuirkyScraper
         {
             get { return mScrapePeople; }
             set { mScrapePeople = value; Notify(); }
+        }
+
+        public ICommand GenerateProductXContributors
+        {
+            get { return mGenerateProductXContributors; }
+            set { mGenerateProductXContributors = value; Notify(); }
+        }
+
+        public ICommand GenerateProductInfluencers
+        {
+            get { return mGenerateProductInfluencers; }
+            set { mGenerateProductInfluencers = value; Notify(); }
+        }
+
+        public ICommand GenerateContributorsxProducts
+        {
+            get { return mGenerateContributorsxProducts; }
+            set { mGenerateContributorsxProducts = value; Notify(); }
         }
 
         public int Progress
@@ -86,8 +109,199 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoScrapePeople)
             };
+            GenerateProductXContributors = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGenerateProductXContributors)
+            };
+            GenerateProductInfluencers = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGenerateProductInfluencers)
+            };
+            GenerateContributorsxProducts = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGenerateContributorsxProducts)
+            };
         }
         #region Actions
+
+        private void DoGenerateContributorsxProducts(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select processed category json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<ICategory> categories = null;
+            try
+            {
+                categories = ParticipantScraper.GetExistingProcessCategories(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to generate production contribution graph. Exception: {0}", e);
+                return;
+            }
+
+            if (categories == null) return;
+
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+            }
+
+            string saveFolder = null;
+            var invoking = Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                var saveLocation = new CommonOpenFileDialog
+                {
+                    IsFolderPicker = true,
+                    Title = "Select location to save results to"
+                };
+                var saveResult = saveLocation.ShowDialog();
+                if (saveResult == CommonFileDialogResult.Ok)
+                {
+                    saveFolder = saveLocation.FileName;
+                }
+            }));
+
+            invoking.Wait();
+
+            IProcessor processor = new GenerateContributorsXProductsProcessor(categories)
+            {
+                SaveFolder = saveFolder
+            };
+            processor.ProgressChanged += progress => bw.ReportProgress(progress);
+            processor.Process();
+        }
+
+        private void DoGenerateProductInfluencers(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select processed category json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<ICategory> categories = null;
+            try
+            {
+                categories = ParticipantScraper.GetExistingProcessCategories(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to generate production contribution graph. Exception: {0}", e);
+                return;
+            }
+
+            if (categories == null) return;
+
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+            }
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.Value == true)
+            {
+                saveFile = saveFp.FileName;
+            }
+
+            IProcessor processor = new ProductInfluencersProcessor(categories)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += progress => bw.ReportProgress(progress);
+            processor.Process();
+        }
+
+        private void DoGenerateProductXContributors(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select processed category json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<ICategory> categories = null;
+            try
+            {
+                categories = ParticipantScraper.GetExistingProcessCategories(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to generate production contribution graph. Exception: {0}", e);
+                return;
+            }
+
+            if (categories == null) return;
+
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+            }
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.Value == true)
+            {
+                saveFile = saveFp.FileName;
+            }
+
+            IProcessor processor = new ProductXContributorsProcessor(categories)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += progress => bw.ReportProgress(progress);
+            processor.Process();
+        }
 
         private void DoScrapePeople(BackgroundWorker bw)
         {
@@ -171,7 +385,28 @@ namespace QuirkyScraper
                 categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
             }
 
-            IProcessor processor = new PhaseContributionProcessor(categories);
+            string saveFolder = null;
+            var invoking = Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                var saveLocation = new CommonOpenFileDialog
+                {
+                    IsFolderPicker = true,
+                    Title = "Select location to save results to"
+                };
+                var saveResult = saveLocation.ShowDialog();
+                if (saveResult == CommonFileDialogResult.Ok)
+                {
+                    saveFolder = saveLocation.FileName;
+                }
+            }));
+
+            invoking.Wait();
+
+            IProcessor processor = new PhaseContributionProcessor(categories)
+            {
+                SaveFolderPath = saveFolder
+            };
+            processor.ProgressChanged += progress => bw.ReportProgress(progress);
             processor.Process();
         }
 

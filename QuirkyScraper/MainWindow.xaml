@@ -3,14 +3,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:qs="clr-namespace:QuirkyScraper"
         xmlns:c="clr-namespace:QuirkyScraper.UI.Converters"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Quirky scraper and processor" Height="400" Width="640">
     <Window.DataContext>
         <qs:MainViewModel/>
     </Window.DataContext>
     <Window.Resources>
         <c:IntMoreThanZeroConverter x:Key="VMTZ"/>
+        <ControlTemplate x:Key="ButtonBaseControlTemplate1" TargetType="{x:Type ButtonBase}">
+            <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                <TextBlock Text="{TemplateBinding Content}" TextWrapping="Wrap" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+            </Border>
+            <ControlTemplate.Triggers>
+                <Trigger Property="Button.IsDefaulted" Value="True">
+                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBEE6FD"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF3C7FB1"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFC4E5F6"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF2C628B"/>
+                </Trigger>
+                <Trigger Property="ToggleButton.IsChecked" Value="True">
+                    <Setter Property="Background" TargetName="border" Value="#FFBCDDEE"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FF245A83"/>
+                </Trigger>
+                <Trigger Property="IsEnabled" Value="False">
+                    <Setter Property="Background" TargetName="border" Value="#FFF4F4F4"/>
+                    <Setter Property="BorderBrush" TargetName="border" Value="#FFADB2B5"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="6"/>
+            <Setter Property="Template" Value="{StaticResource ButtonBaseControlTemplate1}"/>
         </Style>
     </Window.Resources>
 
@@ -23,18 +50,23 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
+                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
             <Button Content="Scrape participants" Command="{Binding ScrapeParticipants}"/>
             <Button Content="Scrape people" Command="{Binding ScrapePeople}" Grid.Column="1"/>
-            <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Row="1" Grid.Column="1"/>
             <Button Content="Generate product phase contribution graph" Command="{Binding GeneratePhaseContribution}" Grid.Row="1"/>
+            <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Row="1" Grid.Column="1"/>
+            <Button Content="Generate products against contributors graph" Command="{Binding GenerateProductXContributors}" Grid.Row="1" Grid.Column="2"/>
+            <Button Content="Generate products infuencers" Command="{Binding GenerateProductInfluencers}" Grid.Row="2" Grid.Column="0"/>
+            <Button Content="Generate Contributors against products graph" Command="{Binding GenerateContributorsxProducts}" Grid.Row="2" Grid.Column="1"/>
         </Grid>
-        
+
         <ProgressBar Maximum="100" Minimum="0" Value="{Binding Progress}" Visibility="{Binding Progress, Converter={StaticResource VMTZ}}" Grid.Row="1"/>
     </Grid>
 </Window>

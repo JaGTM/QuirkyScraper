@@ -14,6 +14,7 @@ namespace QuirkyScraper
 
         private List<ICategory> categories;
         private string mSavePath;
+        public event Action<int> ProgressChanged;
 
         public PhaseContributionProcessor(List<ICategory> categories)
         {
@@ -65,8 +66,18 @@ namespace QuirkyScraper
                 Phases = x.Select(y => y).ToList()
             }).ToList();
 
+            var totalCount = projects.Count;
+            var count = 0;
+            var progress = 0;
             foreach (var project in projects)
+            {
                 ConstructAndSaveGraph(project);
+
+                // Report project completed
+                count++;
+                progress = count * 100 / totalCount;
+                ReportProgress(progress);
+            }
         }
 
         private void ConstructAndSaveGraph(PhaseProject project)
@@ -105,7 +116,8 @@ namespace QuirkyScraper
                 for (int j = 0; j < colBlocks; j++)
                 {
                     var dimName = i + "_" + j;
-                    XmlWriter writer = Helper.GenerateXmlWriter(SaveFolderPath + (phase.Project + "_" + phase.Name + "_" + dimName).RemoveInvalidFilePathCharacters() + ".xls");
+                    var filePath = Path.Combine(SaveFolderPath, (phase.Project + "_" + phase.Name + "_" + dimName).RemoveInvalidFilePathCharacters() + ".xls");
+                    XmlWriter writer = Helper.GenerateXmlWriter(filePath);
                     writer.StartCreateXls()
                         .CreateWorksheet("Contributor Network " + dimName);
 
@@ -154,6 +166,12 @@ namespace QuirkyScraper
                         .Close();
                 }
             }
+        }
+
+        private void ReportProgress(int progress)
+        {
+            if (ProgressChanged != null)
+                ProgressChanged(progress);
         }
 
         class PhaseProject
