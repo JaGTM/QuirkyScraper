@@ -18,7 +18,7 @@ namespace QuirkyScraper
     public class PeopleScraper : IScraper
     {
         private List<ICategory> categories;
-        public event Action<int> ProgressChanged;
+        public event Action<int, string> ProgressChanged;
 
         public PeopleScraper(List<ICategory> categories)
         {
@@ -30,13 +30,16 @@ namespace QuirkyScraper
             var contributors = new List<IPeople>();
             var totalCount = categories.Count;
             var progress = 0;
-            ReportProgress(progress);
+            ReportProgress(progress, "Starting people scraping...");
 
             this.categories = this.categories.OrderBy(x => x.Project).ToList();
 
             for (var i = 0; i < this.categories.Count; i++)
             {
                 var category = categories[i];
+                ReportProgress(progress, totalCount,
+                    string.Format("Scraping category: {0} ({1})... Contributions: {2} Progress: {3}/{4}", category.Name, category.Project, category.ContributionNum, i, this.categories.Count));
+
                 if (category.ContributionNum == 0) continue;    // Nothing to do here
                 var addCategory = new Category
                 {
@@ -56,6 +59,8 @@ namespace QuirkyScraper
                 //jsonTask.Wait();
                 //var json = jsonTask.Result;
                 var jsonObj = JsonConvert.DeserializeObject(json) as JObject;
+
+                var scrapeCount = 0;
 
                 var catDetails = jsonObj["data"]["projects"].FirstOrDefault(x => x.Value<string>("human_name") == category.Name);
                 if (catDetails != null)
@@ -77,6 +82,7 @@ namespace QuirkyScraper
                         jsonObj = JsonConvert.DeserializeObject(json) as JObject;
                         hasMore = jsonObj["paginated_meta"]["contributions"].Value<bool>("has_next_page");
                         var arr = jsonObj["data"].Value<JArray>("contributions");
+                        scrapeCount += arr.Count;
 
                         var cursor = arr.Last().Value<string>("created_at");
                         DateTime date;
@@ -122,6 +128,9 @@ namespace QuirkyScraper
                                 person.AddContribution(addCategory);
                         }
 
+                        ReportProgress(progress, totalCount,
+                            string.Format("Scraping category: {0} ({1})... Scraped: {2}/{3} Progress: {3}/{4}", category.Name, category.Project, scrapeCount, category.ContributionNum, i, this.categories.Count));
+
                         if (hasMore)
                         {
                             json = GetJson(url);
@@ -132,37 +141,50 @@ namespace QuirkyScraper
                     }
                 }
 
-                progress = (i + 1) * 100 / totalCount;
-                ReportProgress(progress);
+                ReportProgress(++progress, totalCount,
+                    string.Format("Completed scraping category: {0} ({1}). Scraped: {2}/{3} Progress: {3}/{4}", category.Name, category.Project, scrapeCount, category.ContributionNum, i, this.categories.Count));
             }
 
             MessageBox.Show("People scraping completed...");
             return contributors;
         }
 
-        private void ReportProgress(int progress)
+        private void ReportProgress(int count, int totalCount, string status = null)
+        {
+            var progress = count * 100 / totalCount;
+            ReportProgress(progress, status);
+        }
+
+        private void ReportProgress(int progress, string status = null)
         {
             if (ProgressChanged != null)
-                ProgressChanged(progress);
+                ProgressChanged(progress, status);
         }
 
         private string GetJson(string url)
         {
-            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-            req.Method = "GET";
-            req.KeepAlive = false;
-            req.ProtocolVersion = HttpVersion.Version10;
-
-            HttpWebResponse resp = null;
-            StreamReader reader = null;
             string json = null;
-            using (resp = (HttpWebResponse)req.GetResponse())
-            using (reader = new StreamReader(resp.GetResponseStream(),
-                     Encoding.ASCII))
+            int count = 0;
+            while (json == null)
             {
-                json = reader.ReadToEnd();
-                return json;
+                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+                req.Method = "GET";
+                req.KeepAlive = false;
+                req.ProtocolVersion = HttpVersion.Version10;
+
+                HttpWebResponse resp = null;
+                StreamReader reader = null;
+                using (resp = (HttpWebResponse)req.GetResponse())
+                using (reader = new StreamReader(resp.GetResponseStream(),
+                         Encoding.ASCII))
+                {
+                    json = reader.ReadToEnd();
+                    if(json != null || count++ > 1)
+                        return json;
+                }
             }
+
+            return null;    // Bo bian
         }
     }
 }

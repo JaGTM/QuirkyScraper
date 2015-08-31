@@ -11,7 +11,7 @@ namespace QuirkyScraper
     public class ContributorsScraper : IScraper
     {
         private string categoryUrl;
-        public event Action<int> ProgressChanged;
+        public event Action<int, string> ProgressChanged;
         public ContributorsScraper(string categoryUrl)
         {
             this.categoryUrl = categoryUrl;

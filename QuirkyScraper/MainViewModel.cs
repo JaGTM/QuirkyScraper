@@ -25,6 +25,7 @@ namespace QuirkyScraper
         private ICommand mGenerateProductXContributors;
         private ICommand mGenerateProductInfluencers;
         private ICommand mGenerateContributorsxProducts;
+        private string mStatus;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -79,6 +80,12 @@ namespace QuirkyScraper
         {
             get { return mProgress; }
             set { mProgress = value; Notify(); }
+        }
+
+        public string Status
+        {
+            get { return mStatus; }
+            set { mStatus = value; Notify(); }
         }
         #endregion
 
@@ -341,7 +348,7 @@ namespace QuirkyScraper
             }
 
             IScraper scraper = new PeopleScraper(categories);
-            scraper.ProgressChanged += progress => bw.ReportProgress(progress);
+            scraper.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
             var results = scraper.Scrape();
 
             var output = @"C:\Users\JaG\Desktop\peopleScraped.txt";
@@ -466,10 +473,13 @@ namespace QuirkyScraper
             {
                 mBusy = false;
                 Progress = 0;
+                Status = string.Empty;
             };
             bw.ProgressChanged += (s, e) =>
             {
                 Progress = e.ProgressPercentage;
+                if (e.UserState != null && e.UserState.GetType() == typeof(string))
+                    Status = e.UserState.ToString();
             };
 
             bw.RunWorkerAsync();

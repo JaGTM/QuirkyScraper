@@ -11,7 +11,7 @@ namespace QuirkyScraper
     public class CategoriesScraper : IScraper
     {
         private string projectUrl;
-        public event Action<int> ProgressChanged;
+        public event Action<int, string> ProgressChanged;
         public CategoriesScraper(string projectUrl)
         {
             this.projectUrl = projectUrl;

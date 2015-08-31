@@ -45,6 +45,7 @@
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid>
             <Grid.RowDefinitions>
@@ -68,5 +69,8 @@
         </Grid>
 
         <ProgressBar Maximum="100" Minimum="0" Value="{Binding Progress}" Visibility="{Binding Progress, Converter={StaticResource VMTZ}}" Grid.Row="1"/>
+        <StatusBar Grid.Row="2">
+            <StatusBarItem Content="{Binding Status}"/>
+        </StatusBar>
     </Grid>
 </Window>
