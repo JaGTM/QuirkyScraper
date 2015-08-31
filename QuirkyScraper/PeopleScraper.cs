@@ -129,7 +129,7 @@ namespace QuirkyScraper
                         }
 
                         ReportProgress(progress, totalCount,
-                            string.Format("Scraping category: {0} ({1})... Scraped: {2}/{3} Progress: {3}/{4}", category.Name, category.Project, scrapeCount, category.ContributionNum, i, this.categories.Count));
+                            string.Format("Scraping category: {0} ({1})... Scraped: {2}/{3} Progress: {4}/{5}", category.Name, category.Project, scrapeCount, category.ContributionNum, i, this.categories.Count));
 
                         if (hasMore)
                         {
@@ -142,7 +142,7 @@ namespace QuirkyScraper
                 }
 
                 ReportProgress(++progress, totalCount,
-                    string.Format("Completed scraping category: {0} ({1}). Scraped: {2}/{3} Progress: {3}/{4}", category.Name, category.Project, scrapeCount, category.ContributionNum, i, this.categories.Count));
+                    string.Format("Completed scraping category: {0} ({1}). Scraped: {2}/{3} Progress: {4}/{5}", category.Name, category.Project, scrapeCount, category.ContributionNum, i, this.categories.Count));
             }
 
             MessageBox.Show("People scraping completed...");
