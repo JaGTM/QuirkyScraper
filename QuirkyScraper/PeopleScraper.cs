@@ -86,13 +86,10 @@ namespace QuirkyScraper
 
                         var cursor = arr.Last().Value<string>("created_at");
                         DateTime date;
-                        if (!DateTime.TryParse(cursor, out date))
+                        if (!DateTime.TryParseExact(cursor, "MM/dd/yyyy HH:mm:ss", null, System.Globalization.DateTimeStyles.AssumeLocal, out date))
                         {
-                            if (!DateTime.TryParseExact(cursor, "MM/dd/yyyy HH:mm:ss", null, System.Globalization.DateTimeStyles.AssumeLocal, out date))
-                            {
-                                hasMore = false;
-                                cursor = null;
-                            }
+                            hasMore = false;
+                            cursor = null;
                         }
 
                         if (cursor != null)
