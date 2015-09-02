@@ -79,7 +79,7 @@ namespace QuirkyScraper
 
                 if (hasMore)
                 {
-                    cursor = arr.First.Value<string>("created_at");
+                    cursor = arr.Last.Value<string>("created_at");
                     cursor = Helper.EncodeQuirkyDate(cursor);
                     if (cursor == null) hasMore = false;
                 }
