@@ -17,6 +17,8 @@ namespace QuirkyScraper
 {
     public class PeopleScraper : IScraper
     {
+        public const string USER_URL_FORMAT = "https://www.quirky.com/users/{0}";
+
         private List<ICategory> categories;
         public event Action<int, string> ProgressChanged;
 
@@ -50,14 +52,10 @@ namespace QuirkyScraper
 
                 var contributionsString = "https://www.quirky.com/api/v1/inventions/{0}/with_build_interface_objects?with_random_contributions=true";
                 var projectId = Regex.Match(category.URL, "(?<=/invent/)[0-9]+(?=/)");
-                //var http = new HttpClient { Timeout = new TimeSpan(0, 1, 0) };
 
-                var json = GetJson(string.Format(contributionsString, projectId));
+                var json = Helper.GetXHRJson(string.Format(contributionsString, projectId));
                 if (json == null) continue;
-
-                //var jsonTask = http.GetStringAsync(string.Format(contributionsString, projectId));
-                //jsonTask.Wait();
-                //var json = jsonTask.Result;
+                
                 var jsonObj = JsonConvert.DeserializeObject(json) as JObject;
 
                 var scrapeCount = 0;
@@ -69,12 +67,8 @@ namespace QuirkyScraper
                     var contributionString = "https://www.quirky.com/api/v1/contributions/for_project?parent_id={0}&parent_class=Project&paginated_options%5Bcontributions%5D%5Buse_cursor%5D=true&paginated_options%5Bcontributions%5D%5Bper_page%5D=20&paginated_options%5Bcontributions%5D%5Border_column%5D=created_at&paginated_options%5Bcontributions%5D%5Border%5D=desc";
                     var baseUrl = string.Format(contributionString, catId);
 
-                    json = GetJson(baseUrl);
-                    //jsonTask = http.GetStringAsync(baseUrl);
-                    //jsonTask.Wait();
-                    //json = jsonTask.Result;
+                    json = Helper.GetXHRJson(baseUrl);
                     var additional = "&paginated_options%5Bcontributions%5D%5Bcursor%5D={0}";
-                    var userUrl = "https://www.quirky.com/users/{0}";
 
                     var hasMore = true;
                     while (hasMore)
@@ -85,21 +79,8 @@ namespace QuirkyScraper
                         scrapeCount += arr.Count;
 
                         var cursor = arr.Last().Value<string>("created_at");
-                        DateTime date;
-                        if (!DateTime.TryParseExact(cursor, "MM/dd/yyyy HH:mm:ss", null, System.Globalization.DateTimeStyles.AssumeLocal, out date))
-                        {
-                            hasMore = false;
-                            cursor = null;
-                        }
-
-                        if (cursor != null)
-                        {
-                            TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
-                            var convertedTime = TimeZoneInfo.ConvertTime(date, easternZone);
-                            var tzOffset = easternZone.GetUtcOffset(convertedTime);
-                            var parsedDateTimeZone = new DateTimeOffset(convertedTime, tzOffset);
-                            cursor = HttpUtility.UrlEncode(parsedDateTimeZone.ToString("yyyy-MM-ddTHH:mm:ss.ffffffzzz"));
-                        }
+                        cursor = Helper.EncodeQuirkyDate(cursor);
+                        if (cursor == null) hasMore = false;
 
                         var url = baseUrl + string.Format(additional, cursor);
 
@@ -108,7 +89,7 @@ namespace QuirkyScraper
                         foreach (var user in users)
                         {
                             var personName = user.Value<string>("name");
-                            var personUrl = string.Format(userUrl, user.Value<string>("id"));
+                            var personUrl = string.Format(PeopleScraper.USER_URL_FORMAT, user.Value<string>("id"));
 
                             var person = contributors.FirstOrDefault(x => x.Name == personName && x.URL == personUrl);
                             if (person == null)
@@ -130,10 +111,7 @@ namespace QuirkyScraper
 
                         if (hasMore)
                         {
-                            json = GetJson(url);
-                            //jsonTask = http.GetStringAsync(url);
-                            //jsonTask.Wait();
-                            //json = jsonTask.Result;
+                            json = Helper.GetXHRJson(url);
                         }
                     }
                 }
@@ -156,32 +134,6 @@ namespace QuirkyScraper
         {
             if (ProgressChanged != null)
                 ProgressChanged(progress, status);
-        }
-
-        private string GetJson(string url)
-        {
-            string json = null;
-            int count = 0;
-            while (json == null)
-            {
-                HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-                req.Method = "GET";
-                req.KeepAlive = false;
-                req.ProtocolVersion = HttpVersion.Version10;
-
-                HttpWebResponse resp = null;
-                StreamReader reader = null;
-                using (resp = (HttpWebResponse)req.GetResponse())
-                using (reader = new StreamReader(resp.GetResponseStream(),
-                         Encoding.ASCII))
-                {
-                    json = reader.ReadToEnd();
-                    if(json != null || count++ > 1)
-                        return json;
-                }
-            }
-
-            return null;    // Bo bian
         }
     }
 }

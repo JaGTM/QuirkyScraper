@@ -8,9 +8,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Web;
 using System.Xml;
 
 namespace QuirkyScraper
@@ -68,6 +70,53 @@ namespace QuirkyScraper
                 CheckCharacters = false
             };
             return XmlWriter.Create(path, settings);
+        }
+
+        public static string GetXHRJson(string url)
+        {
+            string json = null;
+            int count = 0;
+            while (json == null)
+            {
+                try
+                {
+                    HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+                    req.Method = "GET";
+                    req.KeepAlive = false;
+                    req.ProtocolVersion = HttpVersion.Version10;
+
+                    HttpWebResponse resp = null;
+                    StreamReader reader = null;
+                    using (resp = (HttpWebResponse)req.GetResponse())
+                    using (reader = new StreamReader(resp.GetResponseStream(),
+                             Encoding.ASCII))
+                    {
+                        json = reader.ReadToEnd();
+                        if (json != null || count++ > 1)
+                            return json;
+                    }
+                }
+                catch (Exception e)
+                {   // Failed once. Try again
+                    Console.WriteLine("Failed. Exception: {0}", e);
+                    if (count > 2) return null; // If failed too many times, just return null
+                }
+            }
+
+            return null;    // Bo bian
+        }
+
+        public static string EncodeQuirkyDate(string responseDate)
+        {
+            DateTime date;
+            if (!DateTime.TryParseExact(responseDate, "MM/dd/yyyy HH:mm:ss", null, System.Globalization.DateTimeStyles.AssumeLocal, out date))
+                return null;
+            
+            TimeZoneInfo easternZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            var convertedTime = TimeZoneInfo.ConvertTime(date, easternZone);
+            var tzOffset = easternZone.GetUtcOffset(convertedTime);
+            var parsedDateTimeZone = new DateTimeOffset(convertedTime, tzOffset);
+            return HttpUtility.UrlEncode(parsedDateTimeZone.ToString("yyyy-MM-ddTHH:mm:ss.ffffffzzz"));
         }
     }
 }

@@ -16,5 +16,7 @@ namespace QuirkyScraper
         void AddContribution(ICategory contributionProjectName);
         IEnumerable<IPeople> Followers { get; }
         IEnumerable<IPeople> Followees { get; }
+        void AddFollower(IPeople person);
+        void AddFollowee(IPeople person);
     }
 }

@@ -26,6 +26,7 @@ namespace QuirkyScraper
         private ICommand mGenerateProductInfluencers;
         private ICommand mGenerateContributorsxProducts;
         private string mStatus;
+        private ICommand mScrapeFollowerFollowee;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -74,6 +75,12 @@ namespace QuirkyScraper
         {
             get { return mGenerateContributorsxProducts; }
             set { mGenerateContributorsxProducts = value; Notify(); }
+        }
+
+        public ICommand ScrapeFollowerFollowee
+        {
+            get { return mScrapeFollowerFollowee; }
+            set { mScrapeFollowerFollowee = value; Notify(); }
         }
 
         public int Progress
@@ -131,8 +138,50 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoGenerateContributorsxProducts)
             };
+            ScrapeFollowerFollowee = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoScrapeFollowerFollowee)
+            };
         }
         #region Actions
+
+        private void DoScrapeFollowerFollowee(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select scraped people json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> people = null;
+            try
+            {
+                people = Helper.GetJsonObjectFromFile<List<People>>(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get scrapped people. Exception: {0}", e);
+                return;
+            }
+
+            var sp = new SaveFileDialog
+            {
+                Title = "Select location to save scraped followers followees",
+                Filter = "json file | *.txt"
+            };
+            var saveResult = sp.ShowDialog();
+            if (saveResult.Value == false) return;
+
+            IScraper scraper = new FollowerFolloweeScraper(people);
+            scraper.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            var results = scraper.Scrape();
+
+            File.WriteAllText(sp.FileName, results.ToJson());
+        }
 
         private void DoGenerateContributorsxProducts(BackgroundWorker bw)
         {

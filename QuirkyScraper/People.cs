@@ -51,5 +51,23 @@ namespace QuirkyScraper
             if (list.Any(x => x.Name == contributionProject.Name && x.URL == contributionProject.URL)) return;
             list.Add(contributionProject);
         }
+
+        public void AddFollower(IPeople person)
+        {
+            var list = (Followers as List<IPeople>);
+
+            // Don't add duplicates
+            if (list.Any(x => x.Name == person.Name && x.URL == person.URL)) return;
+            list.Add(person);
+        }
+
+        public void AddFollowee(IPeople person)
+        {
+            var list = (Followees as List<IPeople>);
+
+            // Don't add duplicates
+            if (list.Any(x => x.Name == person.Name && x.URL == person.URL)) return;
+            list.Add(person);
+        }
     }
 }

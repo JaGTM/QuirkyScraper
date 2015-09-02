@@ -61,6 +61,7 @@
 
             <Button Content="Scrape participants" Command="{Binding ScrapeParticipants}"/>
             <Button Content="Scrape people" Command="{Binding ScrapePeople}" Grid.Column="1"/>
+            <Button Content="Scrape followers and followees" Command="{Binding ScrapeFollowerFollowee}" Grid.Column="2"/>
             <Button Content="Generate product phase contribution graph" Command="{Binding GeneratePhaseContribution}" Grid.Row="1"/>
             <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Row="1" Grid.Column="1"/>
             <Button Content="Generate products against contributors graph" Command="{Binding GenerateProductXContributors}" Grid.Row="1" Grid.Column="2"/>
