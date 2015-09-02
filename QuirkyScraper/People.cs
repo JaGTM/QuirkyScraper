@@ -14,12 +14,12 @@ namespace QuirkyScraper
         public IEnumerable<string> Projects { get; private set; }
         public IEnumerable<ICategory> Contributions { get; private set; }
         public IEnumerable<IPeople> Followers { get; private set; }
-        public IEnumerable<IPeople> Followees { get; private set; }
+        public IEnumerable<IPeople> Followings { get; private set; }
 
         public People()
         {
             Followers = new List<IPeople>();
-            Followees = new List<IPeople>();
+            Followings = new List<IPeople>();
             Projects = new List<string>();
             Contributions = new List<ICategory>();
         }
@@ -33,7 +33,7 @@ namespace QuirkyScraper
         public People(IEnumerable<People> followers, IEnumerable<People> followees, IEnumerable<string> projects, IEnumerable<Category> contributions)
         {
             Followers = new List<IPeople>(followers);
-            Followees = new List<IPeople>(followees);
+            Followings = new List<IPeople>(followees);
             Projects = new List<string>(projects);
             Contributions = new List<ICategory>(contributions);
         }
@@ -61,9 +61,9 @@ namespace QuirkyScraper
             list.Add(person);
         }
 
-        public void AddFollowee(IPeople person)
+        public void AddFollowing(IPeople person)
         {
-            var list = (Followees as List<IPeople>);
+            var list = (Followings as List<IPeople>);
 
             // Don't add duplicates
             if (list.Any(x => x.Name == person.Name && x.URL == person.URL)) return;

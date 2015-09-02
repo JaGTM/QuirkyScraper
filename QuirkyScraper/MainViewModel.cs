@@ -26,7 +26,7 @@ namespace QuirkyScraper
         private ICommand mGenerateProductInfluencers;
         private ICommand mGenerateContributorsxProducts;
         private string mStatus;
-        private ICommand mScrapeFollowerFollowee;
+        private ICommand mScrapeFollowerFollowing;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -77,10 +77,10 @@ namespace QuirkyScraper
             set { mGenerateContributorsxProducts = value; Notify(); }
         }
 
-        public ICommand ScrapeFollowerFollowee
+        public ICommand ScrapeFollowerFollowing
         {
-            get { return mScrapeFollowerFollowee; }
-            set { mScrapeFollowerFollowee = value; Notify(); }
+            get { return mScrapeFollowerFollowing; }
+            set { mScrapeFollowerFollowing = value; Notify(); }
         }
 
         public int Progress
@@ -138,15 +138,15 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoGenerateContributorsxProducts)
             };
-            ScrapeFollowerFollowee = new CustomCommand
+            ScrapeFollowerFollowing = new CustomCommand
             {
                 CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoScrapeFollowerFollowee)
+                ExecuteAction = o => DoBGAction(DoScrapeFollowerFollowing)
             };
         }
         #region Actions
 
-        private void DoScrapeFollowerFollowee(BackgroundWorker bw)
+        private void DoScrapeFollowerFollowing(BackgroundWorker bw)
         {
             var fp = new OpenFileDialog
             {
@@ -170,13 +170,13 @@ namespace QuirkyScraper
 
             var sp = new SaveFileDialog
             {
-                Title = "Select location to save scraped followers followees",
+                Title = "Select location to save scraped followers followings",
                 Filter = "json file | *.txt"
             };
             var saveResult = sp.ShowDialog();
             if (saveResult.Value == false) return;
 
-            IScraper scraper = new FollowerFolloweeScraper(people);
+            IScraper scraper = new FollowerFollowingScraper(people);
             scraper.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
             var results = scraper.Scrape();
 

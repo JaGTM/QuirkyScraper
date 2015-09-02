@@ -7,37 +7,37 @@ using System.Windows;
 
 namespace QuirkyScraper
 {
-    internal class FollowerFolloweeScraper : IScraper
+    internal class FollowerFollowingScraper : IScraper
     {
         private List<People> people;
         public event Action<int, string> ProgressChanged;
 
-        public FollowerFolloweeScraper(List<People> people)
+        public FollowerFollowingScraper(List<People> people)
         {
             this.people = people;
         }
 
         public IEnumerable<object> Scrape()
         {
-            ReportProgress(0, "Starting follower/followee scraping...");
+            ReportProgress(0, "Starting follower/following scraping...");
             var results = new List<IPeople>();
             for(int i = 0; i < this.people.Count; i++)
             {
                 var person = this.people[i];
                 var personId = Regex.Match(person.URL, "(?<=users/)[0-9]+").ToString();
 
-                int followers, followees;
-                GetFollowersFolloweesCount(out followers, out followees, personId);
+                int followers, followings;
+                GetFollowersFolloweesCount(out followers, out followings, personId);
 
                 ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followers...", person.Name));
                 PopulateFollowers(i, this.people.Count, ref person, personId, followers);
-                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followees...", person.Name));
-                PopulateFollowees(i, this.people.Count, ref person, personId, followees);
+                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followings...", person.Name));
+                PopulateFollowings(i, this.people.Count, ref person, personId, followings);
                 results.Add(person);
-                ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followees. {1}/{2} completed.", person.Name, i + 1, this.people.Count));
+                ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followings. {1}/{2} completed.", person.Name, i + 1, this.people.Count));
             }
 
-            MessageBox.Show("Follower and followee scraping completed.");
+            MessageBox.Show("Follower and following scraping completed.");
             return results;
         }
 
@@ -51,7 +51,7 @@ namespace QuirkyScraper
             followingCount = counters.Value<int>("following_count");
         }
 
-        private void PopulateFollowees(int index, int totalCount, ref People person, string personId, int count)
+        private void PopulateFollowings(int index, int totalCount, ref People person, string personId, int count)
         {
             Populate(index, totalCount, ref person, false, personId, count);
         }
@@ -63,9 +63,9 @@ namespace QuirkyScraper
 
         private void Populate(int index, int totalCount, ref People person, bool isFollower, string personId, int count)
         {
-            var reportText = isFollower ? "followers" : "followees";
+            var reportText = isFollower ? "followers" : "followings";
 
-            var urlpage = isFollower ? "following" : "followers";
+            var urlpage = isFollower ? "followers" : "following";
             var urlBase = "https://www.quirky.com/api/v1/user_profile/{0}/{1}?paginated_options%5Bfollows%5D%5Buse_cursor%5D=true&paginated_options%5Bfollows%5D%5Bper_page%5D=20&paginated_options%5Bfollows%5D%5Border_column%5D=created_at&paginated_options%5Bfollows%5D%5Border%5D=desc";
             var baseUrl = string.Format(urlBase, personId, urlpage);
             var urlCursorAddition = "&paginated_options%5Bfollows%5D%5Bcursor%5D={0}";
@@ -112,7 +112,7 @@ namespace QuirkyScraper
                     if (isFollower)
                         person.AddFollower(fellow);
                     else
-                        person.AddFollowee(fellow);
+                        person.AddFollowing(fellow);
                 }
 
                 ReportProgress(index, totalCount,
