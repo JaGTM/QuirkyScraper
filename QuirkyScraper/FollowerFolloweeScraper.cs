@@ -24,32 +24,45 @@ namespace QuirkyScraper
             for(int i = 0; i < this.people.Count; i++)
             {
                 var person = this.people[i];
+                var personId = Regex.Match(person.URL, "(?<=users/)[0-9]+").ToString();
+
+                int followers, followees;
+                GetFollowersFolloweesCount(out followers, out followees, personId);
+
                 ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followers...", person.Name));
-                PopulateFollowers(i, this.people.Count, ref person);
+                PopulateFollowers(i, this.people.Count, ref person, personId, followers);
                 ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followees...", person.Name));
-                PopulateFollowees(i, this.people.Count, ref person);
+                PopulateFollowees(i, this.people.Count, ref person, personId, followees);
                 results.Add(person);
-                ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followees...", person.Name));
+                ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followees. {1}/{2} completed.", person.Name, i + 1, this.people.Count));
             }
 
             MessageBox.Show("Follower and followee scraping completed.");
             return results;
         }
 
-        private void PopulateFollowees(int index, int totalCount, ref People person)
+        private void GetFollowersFolloweesCount(out int followersCount, out int followingCount, string personId)
         {
-            Populate(index, totalCount, ref person, false);
+            var baseUserUrl = "https://www.quirky.com/api/v1/user_profile/{0}/submitted_inventions?paginated_options%5Binventions%5D%5Buse_cursor%5D=true&paginated_options%5Binventions%5D%5Bper_page%5D=12&paginated_options%5Binventions%5D%5Border_column%5D=created_at&paginated_options%5Binventions%5D%5Border%5D=desc";
+            var json = Helper.GetXHRJson(string.Format(baseUserUrl, personId));
+            var jsonObj = JsonConvert.DeserializeObject(json) as JObject;
+            var counters = jsonObj["data"]["user"]["counters"];
+            followersCount = counters.Value<int>("followers_count");
+            followingCount = counters.Value<int>("following_count");
         }
 
-        private void PopulateFollowers(int index, int totalCount, ref People person)
+        private void PopulateFollowees(int index, int totalCount, ref People person, string personId, int count)
         {
-            Populate(index, totalCount, ref person, true);
+            Populate(index, totalCount, ref person, false, personId, count);
         }
 
-        private void Populate(int index, int totalCount, ref People person, bool isFollower)
+        private void PopulateFollowers(int index, int totalCount, ref People person, string personId, int count)
         {
-            var personId = Regex.Match(person.URL, "(?<=users/)[0-9]+");
+            Populate(index, totalCount, ref person, true, personId, count);
+        }
 
+        private void Populate(int index, int totalCount, ref People person, bool isFollower, string personId, int count)
+        {
             var reportText = isFollower ? "followers" : "followees";
 
             var urlpage = isFollower ? "following" : "followers";
@@ -103,11 +116,11 @@ namespace QuirkyScraper
                 }
 
                 ReportProgress(index, totalCount,
-                    string.Format("Scraping {0}'s {1}... Scraped: {2} {1}. Progress: {3}/{4}", person.Name, reportText, scrapedCount, index, totalCount));
+                    string.Format("Scraping {0}'s {1}... Scraped: {2}/{3} {1}. Progress: {4}/{5}", person.Name, reportText, scrapedCount, count, index, totalCount));
             }
 
-            ReportProgress(index, totalCount,
-                string.Format("Completed scraping {0}'s {1}. Scraped: {2} {1}. Progress: {3}/{4}", person.Name, reportText, scrapedCount, index, totalCount));
+            ReportProgress(index + 1, totalCount,
+                string.Format("Completed scraping {0}'s {1}. Scraped: {2}/{3} {1}. Progress: {4}/{5}", person.Name, reportText, scrapedCount, count, index + 1, totalCount));
         }
 
         private void ReportProgress(int count, int totalCount, string status = null)
