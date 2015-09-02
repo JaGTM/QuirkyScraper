@@ -30,12 +30,12 @@ namespace QuirkyScraper
         /// </summary>
         /// <param name="followers"></param>
         /// <param name="followees"></param>
-        public People(IEnumerable<People> followers, IEnumerable<People> followees)
+        public People(IEnumerable<People> followers, IEnumerable<People> followees, IEnumerable<string> projects, IEnumerable<Category> contributions)
         {
-            Followers = followers;
-            Followees = followees;
-            Projects = new List<string>();
-            Contributions = new List<ICategory>();
+            Followers = new List<IPeople>(followers);
+            Followees = new List<IPeople>(followees);
+            Projects = new List<string>(projects);
+            Contributions = new List<ICategory>(contributions);
         }
 
         public void AddProject(string projectName)
