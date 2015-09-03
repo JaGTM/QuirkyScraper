@@ -34,11 +34,11 @@ namespace QuirkyScraper
         /// <param name="followees"></param>
         public People(IEnumerable<People> followers, IEnumerable<People> followees, IEnumerable<string> projects, IEnumerable<Category> contributions, IEnumerable<string> skills)
         {
-            Followers = new List<IPeople>(followers);
-            Followings = new List<IPeople>(followees);
-            Projects = new List<string>(projects);
-            Contributions = new List<ICategory>(contributions);
-            Skills = new List<string>(skills);
+            Followers = followers == null ? new List<IPeople>() : new List<IPeople>(followers);
+            Followings = Followings == null ? new List<IPeople>() : new List<IPeople>(followees);
+            Projects = projects == null ? new List<string>() : new List<string>(projects);
+            Contributions = contributions == null ? new List<ICategory>() : new List<ICategory>(contributions);
+            Skills = skills == null ? new List<string>() : new List<string>(skills);
         }
 
         public void AddProject(string projectName)
