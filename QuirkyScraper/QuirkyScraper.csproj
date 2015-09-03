@@ -82,6 +82,7 @@
     <Compile Include="GenerateContributorsXProductsProcessor.cs" />
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
+    <Compile Include="SpecialistsScraper.cs" />
     <Compile Include="UI\Converters\IntMoreThanZeroConverter.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>

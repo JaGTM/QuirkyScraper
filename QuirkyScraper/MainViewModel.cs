@@ -27,6 +27,7 @@ namespace QuirkyScraper
         private ICommand mGenerateContributorsxProducts;
         private string mStatus;
         private ICommand mScrapeFollowerFollowing;
+        private ICommand mScrapeSpecialists;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -81,6 +82,12 @@ namespace QuirkyScraper
         {
             get { return mScrapeFollowerFollowing; }
             set { mScrapeFollowerFollowing = value; Notify(); }
+        }
+
+        public ICommand ScrapeSpecialists
+        {
+            get { return mScrapeSpecialists; }
+            set { mScrapeSpecialists = value; Notify(); }
         }
 
         public int Progress
@@ -143,8 +150,31 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoScrapeFollowerFollowing)
             };
+            ScrapeSpecialists = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoScrapeSpecialists)
+            };
         }
         #region Actions
+
+        private void DoScrapeSpecialists(BackgroundWorker bw)
+        {
+            var sp = new SaveFileDialog
+            {
+                Title = "Select location to save specialists",
+                Filter = "json file | *.txt",
+                FileName = "scrapedSpecialists.txt"
+            };
+            var saveResult = sp.ShowDialog();
+            if (saveResult.Value == false) return;
+
+            IScraper scraper = new SpecialistsScraper();
+            scraper.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            var results = scraper.Scrape();
+
+            File.WriteAllText(sp.FileName, results.ToJson());
+        }
 
         private void DoScrapeFollowerFollowing(BackgroundWorker bw)
         {

@@ -15,6 +15,7 @@ namespace QuirkyScraper
         public IEnumerable<ICategory> Contributions { get; private set; }
         public IEnumerable<IPeople> Followers { get; private set; }
         public IEnumerable<IPeople> Followings { get; private set; }
+        public IEnumerable<string> Skills { get; private set; }
 
         public People()
         {
@@ -22,6 +23,7 @@ namespace QuirkyScraper
             Followings = new List<IPeople>();
             Projects = new List<string>();
             Contributions = new List<ICategory>();
+            Skills = new List<string>();
         }
 
         [JsonConstructor]
@@ -30,12 +32,13 @@ namespace QuirkyScraper
         /// </summary>
         /// <param name="followers"></param>
         /// <param name="followees"></param>
-        public People(IEnumerable<People> followers, IEnumerable<People> followees, IEnumerable<string> projects, IEnumerable<Category> contributions)
+        public People(IEnumerable<People> followers, IEnumerable<People> followees, IEnumerable<string> projects, IEnumerable<Category> contributions, IEnumerable<string> skills)
         {
             Followers = new List<IPeople>(followers);
             Followings = new List<IPeople>(followees);
             Projects = new List<string>(projects);
             Contributions = new List<ICategory>(contributions);
+            Skills = new List<string>(skills);
         }
 
         public void AddProject(string projectName)
@@ -68,6 +71,15 @@ namespace QuirkyScraper
             // Don't add duplicates
             if (list.Any(x => x.Name == person.Name && x.URL == person.URL)) return;
             list.Add(person);
+        }
+
+        public void AddSkill(string skill)
+        {
+            var list = (Skills as List<string>);
+
+            // Don't add duplicates
+            if (list.Any(x => x == skill)) return;
+            list.Add(skill);
         }
     }
 }

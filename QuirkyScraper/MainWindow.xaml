@@ -51,22 +51,45 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-            </Grid.ColumnDefinitions>
 
-            <Button Content="Scrape participants" Command="{Binding ScrapeParticipants}"/>
-            <Button Content="Scrape people" Command="{Binding ScrapePeople}" Grid.Column="1"/>
-            <Button Content="Scrape followers and followings" Command="{Binding ScrapeFollowerFollowing}" Grid.Column="2"/>
-            <Button Content="Generate product phase contribution graph" Command="{Binding GeneratePhaseContribution}" Grid.Row="1"/>
-            <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Row="1" Grid.Column="1"/>
-            <Button Content="Generate products against contributors graph" Command="{Binding GenerateProductXContributors}" Grid.Row="1" Grid.Column="2"/>
-            <Button Content="Generate products infuencers" Command="{Binding GenerateProductInfluencers}" Grid.Row="2" Grid.Column="0"/>
-            <Button Content="Generate Contributors against products graph" Command="{Binding GenerateContributorsxProducts}" Grid.Row="2" Grid.Column="1"/>
+            <!-- Scrapers -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Content="Scrape participants" Command="{Binding ScrapeParticipants}"/>
+                <Button Content="Scrape people" Command="{Binding ScrapePeople}" Grid.Column="1"/>
+                <Button Content="Scrape followers and followings" Command="{Binding ScrapeFollowerFollowing}" Grid.Column="2"/>
+                
+                <Button Content="Scrape specialists" Command="{Binding ScrapeSpecialists}" Grid.Row="1"/>
+            </Grid>
+            
+            <!-- Processors -->
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                
+                <Button Content="Generate product phase contribution graph" Command="{Binding GeneratePhaseContribution}"/>
+                <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Column="1"/>
+                <Button Content="Generate products against contributors graph" Command="{Binding GenerateProductXContributors}" Grid.Column="2"/>
+                <Button Content="Generate products infuencers" Command="{Binding GenerateProductInfluencers}" Grid.Row="1"/>
+                <Button Content="Generate Contributors against products graph" Command="{Binding GenerateContributorsxProducts}" Grid.Row="1" Grid.Column="1"/>
+            </Grid>
         </Grid>
 
         <ProgressBar Maximum="100" Minimum="0" Value="{Binding Progress}" Visibility="{Binding Progress, Converter={StaticResource VMTZ}}" Grid.Row="1"/>

@@ -29,9 +29,9 @@ namespace QuirkyScraper
                 int followers, followings;
                 GetFollowersFolloweesCount(out followers, out followings, personId);
 
-                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followers...", person.Name));
+                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followers... {1}/{2} completed.", person.Name, i, this.people.Count));
                 PopulateFollowers(i, this.people.Count, ref person, personId, followers);
-                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followings...", person.Name));
+                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followings... {1}/{2} completed.", person.Name, i, this.people.Count));
                 PopulateFollowings(i, this.people.Count, ref person, personId, followings);
                 results.Add(person);
                 ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followings. {1}/{2} completed.", person.Name, i + 1, this.people.Count));

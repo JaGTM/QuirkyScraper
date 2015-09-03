@@ -80,21 +80,9 @@ namespace QuirkyScraper
             {
                 try
                 {
-                    HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
-                    req.Method = "GET";
-                    req.KeepAlive = false;
-                    req.ProtocolVersion = HttpVersion.Version10;
-
-                    HttpWebResponse resp = null;
-                    StreamReader reader = null;
-                    using (resp = (HttpWebResponse)req.GetResponse())
-                    using (reader = new StreamReader(resp.GetResponseStream(),
-                             Encoding.ASCII))
-                    {
-                        json = reader.ReadToEnd();
-                        if (json != null || count++ > 1)
-                            return json;
-                    }
+                    json = Helper.GetResponseString(url);
+                    if (json != null || count++ > 1)
+                        return json;
                 }
                 catch (Exception e)
                 {   // Failed once. Try again
@@ -104,6 +92,23 @@ namespace QuirkyScraper
             }
 
             return null;    // Bo bian
+        }
+
+        public static string GetResponseString(string url)
+        {
+            HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+            req.Method = "GET";
+            req.KeepAlive = false;
+            req.ProtocolVersion = HttpVersion.Version10;
+
+            HttpWebResponse resp = null;
+            StreamReader reader = null;
+            using (resp = (HttpWebResponse)req.GetResponse())
+            using (reader = new StreamReader(resp.GetResponseStream(),
+                     Encoding.ASCII))
+            {
+                return reader.ReadToEnd();
+            }
         }
 
         public static string EncodeQuirkyDate(string responseDate)

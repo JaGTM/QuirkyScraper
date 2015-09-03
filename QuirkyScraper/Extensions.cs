@@ -19,6 +19,16 @@ namespace QuirkyScraper
             return JsonConvert.SerializeObject(obj);
         }
 
+        public static object FromJson(this string json)
+        {
+            return JsonConvert.DeserializeObject(json);
+        }
+
+        public static T FromJson<T>(this string json)
+        {
+            return JsonConvert.DeserializeObject<T>(json);
+        }
+
         public static IWebElement FindElementByClassName(this IWebDriver driver, string classname)
         {
             return driver.FindElement(By.ClassName(classname));

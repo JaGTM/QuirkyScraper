@@ -18,5 +18,7 @@ namespace QuirkyScraper
         IEnumerable<IPeople> Followings { get; }
         void AddFollower(IPeople person);
         void AddFollowing(IPeople person);
+        IEnumerable<string> Skills { get; }
+        void AddSkill(string skill);
     }
 }
