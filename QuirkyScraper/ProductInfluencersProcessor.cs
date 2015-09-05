@@ -13,7 +13,7 @@ namespace QuirkyScraper
 
         private List<ICategory> categories;
         private string mSavePath;
-        public event Action<int> ProgressChanged;
+        public event Action<int, string> ProgressChanged;
 
         public ProductInfluencersProcessor(List<ICategory> categories)
         {
@@ -79,10 +79,10 @@ namespace QuirkyScraper
             ReportProgress(progress);
         }
 
-        private void ReportProgress(int progress)
+        private void ReportProgress(int progress, string status = null)
         {
             if (ProgressChanged != null)
-                ProgressChanged(progress);
+                ProgressChanged(progress, status);
         }
     }
 }

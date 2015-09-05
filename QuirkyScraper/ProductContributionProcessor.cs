@@ -15,7 +15,7 @@ namespace QuirkyScraper
 
         private IEnumerable<ICategory> categories;
         private string mSavePath;
-        public event Action<int> ProgressChanged;
+        public event Action<int, string> ProgressChanged;
 
         public ProductContributionProcessor(IEnumerable<ICategory> categories)
         {
