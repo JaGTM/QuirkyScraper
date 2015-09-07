@@ -12,7 +12,7 @@ namespace QuirkyScraper
     {
         public const string BASE_FOLDER = @"D:\Users\JaG\Desktop\processedContributionResults\";
 
-        public event Action<int> ProgressChanged;
+        public event Action<int, string> ProgressChanged;
         private List<ICategory> categories;
         private string mSaveFolder;
 
@@ -133,16 +133,16 @@ namespace QuirkyScraper
             }
         }
 
-        private void ReportProgress(int count, int totalCount)
+        private void ReportProgress(int count, int totalCount, string status = null)
         {
             var progress = count * 100 / totalCount;
-            ReportProgress(progress);
+            ReportProgress(progress, status);
         }
 
-        private void ReportProgress(int progress)
+        private void ReportProgress(int progress, string status = null)
         {
             if (ProgressChanged != null)
-                ProgressChanged(progress);
+                ProgressChanged(progress, status);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace QuirkyScraper
     {
         public const string DEFAULT_SAVE_PATH = @"D:\Users\JaG\Desktop\productcontributor.xls";
 
-        public event Action<int> ProgressChanged;
+        public event Action<int, string> ProgressChanged;
         private List<ICategory> categories;
         private string mSavePath;
 
@@ -108,10 +108,10 @@ namespace QuirkyScraper
             }
         }
 
-        private void ReportProgress(int progress)
+        private void ReportProgress(int progress, string status = null)
         {
             if (ProgressChanged != null)
-                ProgressChanged(progress);
+                ProgressChanged(progress, status);
         }
     }
 }

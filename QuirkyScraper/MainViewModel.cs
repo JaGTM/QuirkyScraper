@@ -28,6 +28,7 @@ namespace QuirkyScraper
         private string mStatus;
         private ICommand mScrapeFollowerFollowing;
         private ICommand mScrapeSpecialists;
+        private ICommand mGenerateMultiPhaseContributor;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -88,6 +89,12 @@ namespace QuirkyScraper
         {
             get { return mScrapeSpecialists; }
             set { mScrapeSpecialists = value; Notify(); }
+        }
+
+        public ICommand GenerateMultiPhaseContributor
+        {
+            get { return mGenerateMultiPhaseContributor; }
+            set { mGenerateMultiPhaseContributor = value; Notify(); }
         }
 
         public int Progress
@@ -155,8 +162,70 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoScrapeSpecialists)
             };
+            GenerateMultiPhaseContributor = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGenerateMultiPhaseContributor)
+            };
         }
         #region Actions
+
+        private void DoGenerateMultiPhaseContributor(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select processed category json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<ICategory> categories = null;
+            try
+            {
+                categories = ParticipantScraper.GetExistingProcessCategories(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to generate production contribution graph. Exception: {0}", e);
+                return;
+            }
+
+            if (categories == null) return;
+
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+            }
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls",
+                FileName = "MultiPhaseContributors.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.HasValue == false || result.Value == false) return;  // User must specify location to save file
+
+            saveFile = saveFp.FileName;
+
+            IProcessor processor = new MultiPhaseContributorProcessor(categories)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
 
         private void DoScrapeSpecialists(BackgroundWorker bw)
         {
@@ -271,7 +340,7 @@ namespace QuirkyScraper
             {
                 SaveFolder = saveFolder
             };
-            processor.ProgressChanged += progress => bw.ReportProgress(progress);
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
             processor.Process();
         }
 
@@ -328,7 +397,7 @@ namespace QuirkyScraper
             {
                 Savepath = saveFile
             };
-            processor.ProgressChanged += progress => bw.ReportProgress(progress);
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
             processor.Process();
         }
 
@@ -385,7 +454,7 @@ namespace QuirkyScraper
             {
                 Savepath = saveFile
             };
-            processor.ProgressChanged += progress => bw.ReportProgress(progress);
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
             processor.Process();
         }
 
@@ -492,7 +561,7 @@ namespace QuirkyScraper
             {
                 SaveFolderPath = saveFolder
             };
-            processor.ProgressChanged += progress => bw.ReportProgress(progress);
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
             processor.Process();
         }
 

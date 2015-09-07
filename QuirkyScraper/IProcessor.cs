@@ -8,6 +8,6 @@ namespace QuirkyScraper
     public interface IProcessor
     {
         void Process();
-        event Action<int> ProgressChanged;
+        event Action<int, string> ProgressChanged;
     }
 }

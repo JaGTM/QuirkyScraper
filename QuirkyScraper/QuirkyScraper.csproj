@@ -80,6 +80,7 @@
     </ApplicationDefinition>
     <Compile Include="FollowerFollowingScraper.cs" />
     <Compile Include="GenerateContributorsXProductsProcessor.cs" />
+    <Compile Include="MultiPhaseContributorProcessor.cs" />
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
     <Compile Include="SpecialistsScraper.cs" />
