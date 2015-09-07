@@ -83,6 +83,7 @@
     <Compile Include="MultiPhaseContributorProcessor.cs" />
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
+    <Compile Include="SpecialistDataProcessor.cs" />
     <Compile Include="SpecialistsScraper.cs" />
     <Compile Include="UI\Converters\IntMoreThanZeroConverter.cs" />
     <Page Include="MainWindow.xaml">

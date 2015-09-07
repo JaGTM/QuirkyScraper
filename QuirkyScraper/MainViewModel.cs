@@ -29,6 +29,7 @@ namespace QuirkyScraper
         private ICommand mScrapeFollowerFollowing;
         private ICommand mScrapeSpecialists;
         private ICommand mGenerateMultiPhaseContributor;
+        private ICommand mGenerateSpecialistData;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -95,6 +96,12 @@ namespace QuirkyScraper
         {
             get { return mGenerateMultiPhaseContributor; }
             set { mGenerateMultiPhaseContributor = value; Notify(); }
+        }
+
+        public ICommand GenerateSpecialistData
+        {
+            get { return mGenerateSpecialistData; }
+            set { mGenerateSpecialistData = value; Notify(); }
         }
 
         public int Progress
@@ -167,8 +174,57 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoGenerateMultiPhaseContributor)
             };
+            GenerateSpecialistData = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGenerateSpecialistData)
+            };
         }
         #region Actions
+
+        private void DoGenerateSpecialistData(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select specialist json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> specialists = null;
+            try
+            {
+                specialists = Helper.GetJsonObjectFromFile<List<People>>(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get specialist data. Exception: {0}", e);
+                return;
+            }
+
+            if (specialists == null) return;
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls",
+                FileName = "SpecialistData.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.HasValue == false || result.Value == false) return;  // User must specify location to save file
+
+            saveFile = saveFp.FileName;
+
+            IProcessor processor = new SpecialistDataProcessor(specialists)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
 
         private void DoGenerateMultiPhaseContributor(BackgroundWorker bw)
         {
