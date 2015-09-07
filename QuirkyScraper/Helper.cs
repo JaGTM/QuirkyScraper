@@ -84,10 +84,19 @@ namespace QuirkyScraper
                     if (json != null || count++ > 1)
                         return json;
                 }
+                catch (WebException e)
+                {
+                    if (e.Message == "The remote server returned an error: (401) Unauthorized.")    // User no longer exits
+                        throw new ArgumentOutOfRangeException("Invalid user");
+
+                    // Failed once. Try again
+                    Console.WriteLine("Failed. Exception: {0}", e);
+                    if (count++ > 2) return null; // If failed too many times, just return null
+                }
                 catch (Exception e)
                 {   // Failed once. Try again
                     Console.WriteLine("Failed. Exception: {0}", e);
-                    if (count > 2) return null; // If failed too many times, just return null
+                    if (count++ > 2) return null; // If failed too many times, just return null
                 }
             }
 

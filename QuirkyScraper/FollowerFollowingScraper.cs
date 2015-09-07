@@ -26,8 +26,16 @@ namespace QuirkyScraper
                 var person = this.people[i];
                 var personId = Regex.Match(person.URL, "(?<=users/)[0-9]+").ToString();
 
-                int followers, followings;
-                GetFollowersFolloweesCount(out followers, out followings, personId);
+                int followers = -1, followings = -1;
+                try
+                {
+                    GetFollowersFolloweesCount(out followers, out followings, personId);
+                }
+                catch (ArgumentNullException e)
+                {
+                    if (e.Message == "Invalid user")
+                        continue;   // User no longer exist continue
+                }
 
                 ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followers... {1}/{2} completed.", person.Name, i, this.people.Count));
                 PopulateFollowers(i, this.people.Count, ref person, personId, followers);
