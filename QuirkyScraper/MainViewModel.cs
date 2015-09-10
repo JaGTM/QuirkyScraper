@@ -30,6 +30,7 @@ namespace QuirkyScraper
         private ICommand mScrapeSpecialists;
         private ICommand mGenerateMultiPhaseContributor;
         private ICommand mGenerateSpecialistData;
+        private ICommand mGenerateProjectDomainsCount;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -102,6 +103,12 @@ namespace QuirkyScraper
         {
             get { return mGenerateSpecialistData; }
             set { mGenerateSpecialistData = value; Notify(); }
+        }
+
+        public ICommand GenerateProjectDomainsCount
+        {
+            get { return mGenerateProjectDomainsCount; }
+            set { mGenerateProjectDomainsCount = value; Notify(); }
         }
 
         public int Progress
@@ -179,8 +186,79 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoGenerateSpecialistData)
             };
+            GenerateProjectDomainsCount = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGenerateProjectDomainsCount)
+            };
         }
         #region Actions
+
+        private void DoGenerateProjectDomainsCount(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select specialist json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> specialists = null;
+            try
+            {
+                specialists = Helper.GetJsonObjectFromFile<List<People>>(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get specialist data. Exception: {0}", e);
+                return;
+            }
+
+            if (specialists == null) return;
+
+            var peoplePicker = new OpenFileDialog
+            {
+                Title = "Select scraped people json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = peoplePicker.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> people = null;
+            try
+            {
+                people = Helper.GetJsonObjectFromFile<List<People>>(peoplePicker.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get scrapped people. Exception: {0}", e);
+                return;
+            }
+
+            if (people == null) return;
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls",
+                FileName = "ProjectDomainsCount.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.HasValue == false || result.Value == false) return;  // User must specify location to save file
+
+            saveFile = saveFp.FileName;
+
+            IProcessor processor = new ProjectDomainsCountProcessor(specialists, people)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
 
         private void DoGenerateSpecialistData(BackgroundWorker bw)
         {
