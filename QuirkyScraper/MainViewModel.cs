@@ -401,6 +401,15 @@ namespace QuirkyScraper
                 return;
             }
 
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select temp completed scraping people json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            var tempFile = result.HasValue == false || result.Value == false ? null : excludeFp.FileName;
+
             var sp = new SaveFileDialog
             {
                 Title = "Select location to save scraped followers followings",
@@ -409,7 +418,10 @@ namespace QuirkyScraper
             var saveResult = sp.ShowDialog();
             if (saveResult.Value == false) return;
 
-            IScraper scraper = new FollowerFollowingScraper(people);
+            IScraper scraper = new FollowerFollowingScraper(people)
+            {
+                TempFilePath = tempFile
+            };
             scraper.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
             var results = scraper.Scrape();
 

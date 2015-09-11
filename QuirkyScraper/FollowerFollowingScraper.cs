@@ -2,6 +2,8 @@
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows;
 
@@ -9,7 +11,11 @@ namespace QuirkyScraper
 {
     internal class FollowerFollowingScraper : IScraper
     {
+        private const string DEFAULT_TEMP_FILE_PATH = @"D:\Users\JaG\Desktop\tempFollowerFollowing.xls";
+
         private List<People> people;
+        private string mTempFilePath;
+
         public event Action<int, string> ProgressChanged;
 
         public FollowerFollowingScraper(List<People> people)
@@ -17,13 +23,33 @@ namespace QuirkyScraper
             this.people = people;
         }
 
+        public string TempFilePath
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(mTempFilePath))
+                    mTempFilePath = DEFAULT_TEMP_FILE_PATH;
+                return mTempFilePath;
+            }
+            set
+            {
+                mTempFilePath = value;
+            }
+        }
+
         public IEnumerable<object> Scrape()
         {
             ReportProgress(0, "Starting follower/following scraping...");
+            var tempPeople = GetTempPeople();
+
             var results = new List<IPeople>();
-            for(int i = 0; i < this.people.Count; i++)
+            tempPeople.ForEach(x => results.Add(x));    // Add already processed people
+
+            for (int i = 0; i < this.people.Count; i++)
             {
                 var person = this.people[i];
+                if (results.Any(x => x.Name == person.Name && x.URL == person.URL)) continue;
+
                 var personId = Regex.Match(person.URL, "(?<=users/)[0-9]+").ToString();
 
                 int followers = -1, followings = -1;
@@ -31,7 +57,7 @@ namespace QuirkyScraper
                 {
                     GetFollowersFolloweesCount(out followers, out followings, personId);
                 }
-                catch (ArgumentNullException e)
+                catch (ArgumentOutOfRangeException e)
                 {
                     if (e.Message == "Invalid user")
                         continue;   // User no longer exist continue
@@ -42,11 +68,35 @@ namespace QuirkyScraper
                 ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followings... {1}/{2} completed.", person.Name, i, this.people.Count));
                 PopulateFollowings(i, this.people.Count, ref person, personId, followings);
                 results.Add(person);
+                ReportProgress(i, this.people.Count, string.Format("Writing {0} to temp file... {1}/{2} scraping completed.", person.Name, i + 1, this.people.Count));
+                WriteToTemp(tempPeople, person);
                 ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followings. {1}/{2} completed.", person.Name, i + 1, this.people.Count));
             }
 
             MessageBox.Show("Follower and following scraping completed.");
             return results;
+        }
+
+        private void WriteToTemp(List<IPeople> tempPeople, People person)
+        {
+            var newTemp = new List<IPeople>(tempPeople);
+            newTemp.Add(person);
+
+            File.WriteAllText(TempFilePath, newTemp.ToJson());
+        }
+
+        private List<IPeople> GetTempPeople()
+        {
+            if (!File.Exists(TempFilePath)) return new List<IPeople>();
+
+            try
+            {
+                return Helper.GetJsonObjectFromFile<List<People>>(TempFilePath).Cast<IPeople>().ToList();
+            }
+            catch
+            {   // If some how file is corrupted/unreadable get new list
+                return new List<IPeople>();
+            }
         }
 
         private void GetFollowersFolloweesCount(out int followersCount, out int followingCount, string personId)
@@ -89,7 +139,7 @@ namespace QuirkyScraper
                 var url = baseUrl;
                 if (firstIteration) firstIteration = false; // First iteration has no pagination cursor
                 else url += string.Format(urlCursorAddition, cursor);
-                
+
                 var json = Helper.GetXHRJson(url);
 
                 var jsonObj = JsonConvert.DeserializeObject(json) as JObject;
@@ -111,7 +161,7 @@ namespace QuirkyScraper
                 {
                     var personName = user.Value<string>("name");
                     var personUrl = string.Format(PeopleScraper.USER_URL_FORMAT, user.Value<string>("id"));
-                    
+
                     var fellow = new People
                     {
                         Name = personName,
