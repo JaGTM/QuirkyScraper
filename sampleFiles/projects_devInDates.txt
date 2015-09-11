@@ -1,0 +1,5486 @@
+[{
+	"Name": "Pawcet",
+	"URL": "https://www.quirky.com/invent/244110",
+	"UnitsSold": 1342,
+	"InfluencersCount": 1218,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "FRIDAY NOVEMBER 22ND 2013",
+	"SelectedDate": "SATURDAY DECEMBER 21ST 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Tony Lytle",
+		"URL": "https://www.quirky.com/tony-lytle",
+		"Location": "Larwill, Indiana",
+		"Projects": ["Pawcet"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/244110/design",
+		"ContributionNum": 5,
+		"Project": "Pawcet"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244110/tagline",
+		"ContributionNum": 2264,
+		"Project": "Pawcet"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244110/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Pawcet"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244110/naming",
+		"ContributionNum": 2713,
+		"Project": "Pawcet"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244110/images",
+		"ContributionNum": 9,
+		"Project": "Pawcet"
+	}]
+},
+{
+	"Name": "Egg Minder",
+	"URL": "https://www.quirky.com/invent/243958",
+	"UnitsSold": 500,
+	"InfluencersCount": 682,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "SUNDAY APRIL 14TH 2013",
+	"SelectedDate": "FRIDAY APRIL 26TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Minder-Wink-App-Enabled-Smart-Tray/dp/B00GN92KQ4",
+		"ReviewStars": "2-5",
+		"ListPrice": 49.99
+	},
+	"Inventor": {
+		"Name": "_ think",
+		"URL": "https://www.quirky.com/RafaelH",
+		"Location": "",
+		"Projects": ["Egg Minder"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243958/naming",
+		"ContributionNum": 1428,
+		"Project": "Egg Minder"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243958/tagline",
+		"ContributionNum": 1196,
+		"Project": "Egg Minder"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243958/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Egg Minder"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243958/images",
+		"ContributionNum": 1,
+		"Project": "Egg Minder"
+	}]
+},
+{
+	"Name": "Ascend",
+	"URL": "https://www.quirky.com/invent/243955",
+	"UnitsSold": 0,
+	"InfluencersCount": 831,
+	"DevelopmentTime": "150",
+	"SubmittedDate": "TUESDAY NOVEMBER 6TH 2012",
+	"SelectedDate": "FRIDAY APRIL 26TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Nathan Firth",
+		"URL": "https://www.quirky.com/nathanfirth",
+		"Location": "",
+		"Projects": ["Ascend"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243955/design",
+		"ContributionNum": 63,
+		"Project": "Ascend"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243955/naming",
+		"ContributionNum": 1952,
+		"Project": "Ascend"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243955/tagline",
+		"ContributionNum": 1199,
+		"Project": "Ascend"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243955/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Ascend"
+	}]
+},
+{
+	"Name": "Keeper",
+	"URL": "https://www.quirky.com/invent/243795",
+	"UnitsSold": 17582,
+	"InfluencersCount": 129,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "THURSDAY SEPTEMBER 13TH 2012",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Brown-Leather-Carrying-iPhone/dp/B00ANQHAI6",
+		"ReviewStars": "2",
+		"ListPrice": 34.99
+	},
+	"Inventor": {
+		"Name": "Don Darnell",
+		"URL": "https://www.quirky.com/dond",
+		"Location": "Auburn, Ca",
+		"Projects": ["Keeper"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243795/naming",
+		"ContributionNum": 205,
+		"Project": "Keeper"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243795/tagline",
+		"ContributionNum": 145,
+		"Project": "Keeper"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243795/design",
+		"ContributionNum": 21,
+		"Project": "Keeper"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243795/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Keeper"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243795/images",
+		"ContributionNum": 1,
+		"Project": "Keeper"
+	}]
+},
+{
+	"Name": "Rake 'n' Tamp",
+	"URL": "https://www.quirky.com/invent/243723",
+	"UnitsSold": 65,
+	"InfluencersCount": 392,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "MONDAY JULY 16TH 2012",
+	"SelectedDate": "TUESDAY JULY 24TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Michael Smith",
+		"URL": "https://www.quirky.com/MSmith",
+		"Location": "Connecticut",
+		"Projects": ["Rake 'n' Tamp"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243723/tagline",
+		"ContributionNum": 552,
+		"Project": "Rake 'n' Tamp"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243723/naming",
+		"ContributionNum": 631,
+		"Project": "Rake 'n' Tamp"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243723/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Rake 'n' Tamp"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243723/images",
+		"ContributionNum": 9,
+		"Project": "Rake 'n' Tamp"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243723/design",
+		"ContributionNum": 48,
+		"Project": "Rake 'n' Tamp"
+	}]
+},
+{
+	"Name": "Sheath",
+	"URL": "https://www.quirky.com/invent/243694",
+	"UnitsSold": 3174,
+	"InfluencersCount": 299,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "SATURDAY MAY 12TH 2012",
+	"SelectedDate": "WEDNESDAY JUNE 6TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B00IWYNDI2/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "5",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Sonia",
+		"URL": "https://www.quirky.com/Sonia",
+		"Location": "California",
+		"Projects": ["Sheath"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243694/naming",
+		"ContributionNum": 483,
+		"Project": "Sheath"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243694/tagline",
+		"ContributionNum": 436,
+		"Project": "Sheath"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243694/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Sheath"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243694/images",
+		"ContributionNum": 1,
+		"Project": "Sheath"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243694/design",
+		"ContributionNum": 32,
+		"Project": "Sheath"
+	}]
+},
+{
+	"Name": "Plug Power",
+	"URL": "https://www.quirky.com/invent/243604",
+	"UnitsSold": 5062,
+	"InfluencersCount": 3778,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "MONDAY DECEMBER 26TH 2011",
+	"SelectedDate": "THURSDAY FEBRUARY 2ND 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPLGP-WH01-Plug-Power/dp/B00LIS4JKU",
+		"ReviewStars": "4-5",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "MarcR",
+		"URL": "https://www.quirky.com/MarcR",
+		"Location": "Aurora",
+		"Projects": ["Plug Power"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243604/tagline",
+		"ContributionNum": 616,
+		"Project": "Plug Power"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243604/naming",
+		"ContributionNum": 783,
+		"Project": "Plug Power"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243604/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Plug Power"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243604/images",
+		"ContributionNum": 4,
+		"Project": "Plug Power"
+	}]
+},
+{
+	"Name": "Vessel",
+	"URL": "https://www.quirky.com/invent/243561",
+	"UnitsSold": 2044,
+	"InfluencersCount": 1649,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY OCTOBER 31ST 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Vessel-Portable-Shower-Station/dp/B002YVCXLM",
+		"ReviewStars": "4-5",
+		"ListPrice": 19.99
+	},
+	"Inventor": {
+		"Name": "Crreate",
+		"URL": "https://www.quirky.com/Crreate",
+		"Location": "Europe",
+		"Projects": ["Vessel"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243561/tagline",
+		"ContributionNum": 453,
+		"Project": "Vessel"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243561/naming",
+		"ContributionNum": 512,
+		"Project": "Vessel"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243561/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Vessel"
+	}]
+},
+{
+	"Name": "Pod Power",
+	"URL": "https://www.quirky.com/invent/244522",
+	"UnitsSold": 1583,
+	"InfluencersCount": 617,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "MONDAY JULY 11TH 2011",
+	"SelectedDate": "MONDAY JULY 25TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPOD1-WH01-Pod-Power/dp/B00LIS4Q1W",
+		"ReviewStars": "5",
+		"ListPrice": 19.99
+	},
+	"Inventor": {
+		"Name": "Kate Vallon",
+		"URL": "https://www.quirky.com/kate-vallon",
+		"Location": "",
+		"Projects": ["Pod Power"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244522/naming",
+		"ContributionNum": 985,
+		"Project": "Pod Power"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244522/tagline",
+		"ContributionNum": 795,
+		"Project": "Pod Power"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244522/images",
+		"ContributionNum": 0,
+		"Project": "Pod Power"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244522/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Pod Power"
+	}]
+},
+{
+	"Name": "Brim",
+	"URL": "https://www.quirky.com/invent/243512",
+	"UnitsSold": 1968,
+	"InfluencersCount": 871,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY MAY 16TH 2011",
+	"SelectedDate": "SATURDAY MAY 28TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "GreggH",
+		"URL": "https://www.quirky.com/GreggH",
+		"Location": "Illinois",
+		"Projects": ["Brim"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243512/naming",
+		"ContributionNum": 261,
+		"Project": "Brim"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243512/tagline",
+		"ContributionNum": 208,
+		"Project": "Brim"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243512/images",
+		"ContributionNum": 5,
+		"Project": "Brim"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243512/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Brim"
+	}]
+},
+{
+	"Name": "Carabandits",
+	"URL": "https://www.quirky.com/invent/243662",
+	"UnitsSold": 11730,
+	"InfluencersCount": 458,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "MONDAY FEBRUARY 7TH 2011",
+	"SelectedDate": "SATURDAY APRIL 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Carabandits-6-Pack-PCBN1-MTGT/dp/B00IWTRB94/ref=sr_1_1?ie=UTF8&qid=1429277652&sr=8-1&keywords=quirky+carabandits",
+		"ReviewStars": "4-5",
+		"ListPrice": 9.89
+	},
+	"Inventor": {
+		"Name": "Charlie Circles",
+		"URL": "https://www.quirky.com/Circles",
+		"Location": "Noowe",
+		"Projects": ["Carabandits"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243662/design",
+		"ContributionNum": 37,
+		"Project": "Carabandits"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243662/tagline",
+		"ContributionNum": 633,
+		"Project": "Carabandits"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243662/naming",
+		"ContributionNum": 793,
+		"Project": "Carabandits"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243662/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Carabandits"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243662/images",
+		"ContributionNum": 4,
+		"Project": "Carabandits"
+	}]
+},
+{
+	"Name": "Mercado",
+	"URL": "https://www.quirky.com/invent/243452",
+	"UnitsSold": 4671,
+	"InfluencersCount": 1132,
+	"DevelopmentTime": "300",
+	"SubmittedDate": "FRIDAY NOVEMBER 26TH 2010",
+	"SelectedDate": "SATURDAY DECEMBER 11TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Peter A. Wachtel",
+		"URL": "https://www.quirky.com/PAW",
+		"Location": "Buffalo, NY ★ Camarillo, CA ★ Chief Creative Kid @KIDToyology®",
+		"Projects": ["Mercado"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243452/naming",
+		"ContributionNum": 641,
+		"Project": "Mercado"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243452/tagline",
+		"ContributionNum": 559,
+		"Project": "Mercado"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243452/images",
+		"ContributionNum": 0,
+		"Project": "Mercado"
+	}]
+},
+{
+	"Name": "Contort Power",
+	"URL": "https://www.quirky.com/invent/243912",
+	"UnitsSold": 3398,
+	"InfluencersCount": 429,
+	"DevelopmentTime": "",
+	"SubmittedDate": "TUESDAY AUGUST 31ST 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PCON2-WH01-Portable-Provides-Contort/dp/B00FXRZZA0/ref=sr_1_1?s=electronics&ie=UTF8&qid=1429277909&sr=1-1&keywords=contort+power",
+		"ReviewStars": "4",
+		"ListPrice": 24.99
+	},
+	"Inventor": {
+		"Name": "Nomad",
+		"URL": "https://www.quirky.com/Nomad",
+		"Location": "San Diego",
+		"Projects": ["Contort Power"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243912/naming",
+		"ContributionNum": 747,
+		"Project": "Contort Power"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243912/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Contort Power"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243912/tagline",
+		"ContributionNum": 561,
+		"Project": "Contort Power"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243912/images",
+		"ContributionNum": 2,
+		"Project": "Contort Power"
+	}]
+},
+{
+	"Name": "Pivot Power Desktop",
+	"URL": "https://www.quirky.com/invent/244144",
+	"UnitsSold": 167,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B00N4UAXFA/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "4-5",
+		"ListPrice": 39.99
+	},
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power Desktop"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244144/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power Desktop"
+	}]
+},
+{
+	"Name": "Broom Groomer",
+	"URL": "https://www.quirky.com/invent/243410",
+	"UnitsSold": 45919,
+	"InfluencersCount": 422,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "WEDNESDAY MARCH 3RD 2010",
+	"SelectedDate": "TUESDAY MARCH 16TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "bill ward",
+		"URL": "https://www.quirky.com/bill-ward",
+		"Location": "Charleston, SC",
+		"Projects": ["Broom Groomer"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243410/tagline",
+		"ContributionNum": 229,
+		"Project": "Broom Groomer"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243410/naming",
+		"ContributionNum": 240,
+		"Project": "Broom Groomer"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243410/design",
+		"ContributionNum": 24,
+		"Project": "Broom Groomer"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243410/logo-design",
+		"ContributionNum": 35,
+		"Project": "Broom Groomer"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243410/images",
+		"ContributionNum": 0,
+		"Project": "Broom Groomer"
+	}]
+},
+{
+	"Name": "PowerCurl Mini",
+	"URL": "https://www.quirky.com/invent/243926",
+	"UnitsSold": 15400,
+	"InfluencersCount": 727,
+	"DevelopmentTime": "210",
+	"SubmittedDate": "WEDNESDAY SEPTEMBER 9TH 2009",
+	"SelectedDate": "FRIDAY APRIL 12TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Jeff Scholen",
+		"URL": "https://www.quirky.com/jeff-scholen",
+		"Location": "Alpharetta",
+		"Projects": ["PowerCurl Mini"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243926/naming",
+		"ContributionNum": 1387,
+		"Project": "PowerCurl Mini"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243926/tagline",
+		"ContributionNum": 1287,
+		"Project": "PowerCurl Mini"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243926/design",
+		"ContributionNum": 4,
+		"Project": "PowerCurl Mini"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243926/images",
+		"ContributionNum": 1,
+		"Project": "PowerCurl Mini"
+	}]
+},
+{
+	"Name": "Aros",
+	"URL": "https://www.quirky.com/invent/244090",
+	"UnitsSold": 1762,
+	"InfluencersCount": 1429,
+	"DevelopmentTime": "29",
+	"SubmittedDate": "SATURDAY NOVEMBER 16TH 2013",
+	"SelectedDate": "FRIDAY MARCH 28TH 2014",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Garthen Leslie",
+		"URL": "https://www.quirky.com/Drgldm",
+		"Location": "Columbia, Maryland",
+		"Projects": ["Aros"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244090/naming",
+		"ContributionNum": 4480,
+		"Project": "Aros"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244090/tagline",
+		"ContributionNum": 1509,
+		"Project": "Aros"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244090/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Aros"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244090/images",
+		"ContributionNum": 2,
+		"Project": "Aros"
+	}]
+},
+{
+	"Name": "Porkfolio",
+	"URL": "https://www.quirky.com/invent/243946",
+	"UnitsSold": 4911,
+	"InfluencersCount": 843,
+	"DevelopmentTime": "22",
+	"SubmittedDate": "FRIDAY APRIL 12TH 2013",
+	"SelectedDate": "FRIDAY APRIL 26TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Porkfolio-Smart-Piggy-White/dp/B00GN92MM6",
+		"ReviewStars": "3",
+		"ListPrice": 79.99
+	},
+	"Inventor": {
+		"Name": "Jason Hunter",
+		"URL": "https://www.quirky.com/Hunter",
+		"Location": "PA",
+		"Projects": ["Porkfolio"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243946/design",
+		"ContributionNum": 22,
+		"Project": "Porkfolio"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243946/naming",
+		"ContributionNum": 1926,
+		"Project": "Porkfolio"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243946/tagline",
+		"ContributionNum": 1258,
+		"Project": "Porkfolio"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243946/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Porkfolio"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243946/images",
+		"ContributionNum": 1,
+		"Project": "Porkfolio"
+	}]
+},
+{
+	"Name": "Nimbus",
+	"URL": "https://www.quirky.com/invent/243935",
+	"UnitsSold": 1794,
+	"InfluencersCount": 893,
+	"DevelopmentTime": "180",
+	"SubmittedDate": "FRIDAY OCTOBER 12TH 2012",
+	"SelectedDate": "FRIDAY APRIL 26TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PNMB1-WH01-Nimbus-Customizable-Dashboard/dp/B00H22KI3S",
+		"ReviewStars": "2",
+		"ListPrice": 149.99
+	},
+	"Inventor": {
+		"Name": "Ryan Pendleton",
+		"URL": "https://www.quirky.com/ryanpendleton",
+		"Location": "Sacramento, CA",
+		"Projects": ["Nimbus"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243935/naming",
+		"ContributionNum": 2700,
+		"Project": "Nimbus"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243935/design",
+		"ContributionNum": 86,
+		"Project": "Nimbus"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243935/tagline",
+		"ContributionNum": 1177,
+		"Project": "Nimbus"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243935/images",
+		"ContributionNum": 2,
+		"Project": "Nimbus"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243935/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Nimbus"
+	}]
+},
+{
+	"Name": "Folio",
+	"URL": "https://www.quirky.com/invent/243803",
+	"UnitsSold": 3435,
+	"InfluencersCount": 190,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY SEPTEMBER 10TH 2012",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Ernesto  Tan",
+		"URL": "https://www.quirky.com/Etanjr",
+		"Location": "Cinnnati, Ohio",
+		"Projects": ["Folio"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243803/tagline",
+		"ContributionNum": 219,
+		"Project": "Folio"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243803/naming",
+		"ContributionNum": 319,
+		"Project": "Folio"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243803/design",
+		"ContributionNum": 29,
+		"Project": "Folio"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243803/images",
+		"ContributionNum": 15,
+		"Project": "Folio"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243803/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Folio"
+	}]
+},
+{
+	"Name": "Pickup Power",
+	"URL": "https://www.quirky.com/invent/243752",
+	"UnitsSold": 456,
+	"InfluencersCount": 304,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "THURSDAY JULY 5TH 2012",
+	"SelectedDate": "WEDNESDAY AUGUST 8TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Denyveaus Sells",
+		"URL": "https://www.quirky.com/denyveaus-sells",
+		"Location": "Tulsa, Oklahoma",
+		"Projects": ["Pickup Power"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243752/naming",
+		"ContributionNum": 582,
+		"Project": "Pickup Power"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243752/design",
+		"ContributionNum": 58,
+		"Project": "Pickup Power"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243752/tagline",
+		"ContributionNum": 468,
+		"Project": "Pickup Power"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243752/images",
+		"ContributionNum": 2,
+		"Project": "Pickup Power"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243752/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Pickup Power"
+	}]
+},
+{
+	"Name": "Drift",
+	"URL": "https://www.quirky.com/invent/243660",
+	"UnitsSold": 1246,
+	"InfluencersCount": 447,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "FRIDAY APRIL 6TH 2012",
+	"SelectedDate": "SATURDAY APRIL 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PDRF1-BH01-Drift-Balance-Board/dp/B00FAVH0FC",
+		"ReviewStars": "4-5",
+		"ListPrice": 179.99
+	},
+	"Inventor": {
+		"Name": "Michael Pearson",
+		"URL": "https://www.quirky.com/michael-pearson",
+		"Location": "Boise, Idaho",
+		"Projects": ["Drift"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243660/tagline",
+		"ContributionNum": 492,
+		"Project": "Drift"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243660/naming",
+		"ContributionNum": 748,
+		"Project": "Drift"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243660/images",
+		"ContributionNum": 6,
+		"Project": "Drift"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243660/design",
+		"ContributionNum": 33,
+		"Project": "Drift"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243660/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Drift"
+	}]
+},
+{
+	"Name": "Zeus",
+	"URL": "https://www.quirky.com/invent/243600",
+	"UnitsSold": 1072,
+	"InfluencersCount": 5177,
+	"DevelopmentTime": "365",
+	"SubmittedDate": "FRIDAY DECEMBER 16TH 2011",
+	"SelectedDate": "THURSDAY FEBRUARY 2ND 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PZEU1-BK01-Zeus-Shovel-Brush/dp/B00GBTVNDC",
+		"ReviewStars": "4",
+		"ListPrice": 29.99
+	},
+	"Inventor": {
+		"Name": "Kwame Appiahene-Agyei",
+		"URL": "https://www.quirky.com/kwame-appiahene-agyei",
+		"Location": "",
+		"Projects": ["Zeus"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243600/design",
+		"ContributionNum": 18,
+		"Project": "Zeus"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243600/naming",
+		"ContributionNum": 691,
+		"Project": "Zeus"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243600/tagline",
+		"ContributionNum": 559,
+		"Project": "Zeus"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243600/images",
+		"ContributionNum": 3,
+		"Project": "Zeus"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243600/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Zeus"
+	}]
+},
+{
+	"Name": "Cargo",
+	"URL": "https://www.quirky.com/invent/243572",
+	"UnitsSold": 38396,
+	"InfluencersCount": 1106,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY OCTOBER 31ST 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Laura Doty",
+		"URL": "https://www.quirky.com/ShamrockMoose",
+		"Location": "",
+		"Projects": ["Cargo"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243572/naming",
+		"ContributionNum": 525,
+		"Project": "Cargo"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243572/tagline",
+		"ContributionNum": 407,
+		"Project": "Cargo"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243572/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Cargo"
+	}]
+},
+{
+	"Name": "Totem",
+	"URL": "https://www.quirky.com/invent/243524",
+	"UnitsSold": 40794,
+	"InfluencersCount": 918,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "SUNDAY JULY 17TH 2011",
+	"SelectedDate": "MONDAY AUGUST 1ST 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "DESIGN-JAY",
+		"URL": "https://www.quirky.com/DESIGN-JAY",
+		"Location": "Turin, Italy",
+		"Projects": ["Totem"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243524/tagline",
+		"ContributionNum": 526,
+		"Project": "Totem"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243524/naming",
+		"ContributionNum": 696,
+		"Project": "Totem"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243524/images",
+		"ContributionNum": 0,
+		"Project": "Totem"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243524/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Totem"
+	}]
+},
+{
+	"Name": "Solo",
+	"URL": "https://www.quirky.com/invent/243502",
+	"UnitsSold": 15643,
+	"InfluencersCount": 389,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "WEDNESDAY APRIL 13TH 2011",
+	"SelectedDate": "SATURDAY APRIL 30TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Howard Tseng",
+		"URL": "https://www.quirky.com/howard-tseng",
+		"Location": "Taichung, Taiwan.",
+		"Projects": ["Solo"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243502/naming",
+		"ContributionNum": 334,
+		"Project": "Solo"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243502/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Solo"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243502/images",
+		"ContributionNum": 0,
+		"Project": "Solo"
+	}]
+},
+{
+	"Name": "Slimline",
+	"URL": "https://www.quirky.com/invent/243479",
+	"UnitsSold": 1212,
+	"InfluencersCount": 1344,
+	"DevelopmentTime": "210",
+	"SubmittedDate": "WEDNESDAY FEBRUARY 2ND 2011",
+	"SelectedDate": "TUESDAY FEBRUARY 22ND 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Leanne Luce",
+		"URL": "https://www.quirky.com/leanne-luce",
+		"Location": "",
+		"Projects": ["Slimline"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243479/naming",
+		"ContributionNum": 199,
+		"Project": "Slimline"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243479/images",
+		"ContributionNum": 0,
+		"Project": "Slimline"
+	}]
+},
+{
+	"Name": "Mantis",
+	"URL": "https://www.quirky.com/invent/243451",
+	"UnitsSold": 55097,
+	"InfluencersCount": 841,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY NOVEMBER 22ND 2010",
+	"SelectedDate": "TUESDAY DECEMBER 7TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "ClintonFleenor",
+		"URL": "https://www.quirky.com/ClintonFleenor",
+		"Location": "Indianapolis, IN",
+		"Projects": ["Mantis"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243451/naming",
+		"ContributionNum": 328,
+		"Project": "Mantis"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243451/design",
+		"ContributionNum": 11,
+		"Project": "Mantis"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243451/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Mantis"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243451/images",
+		"ContributionNum": 1,
+		"Project": "Mantis"
+	}]
+},
+{
+	"Name": "Contort",
+	"URL": "https://www.quirky.com/invent/243433",
+	"UnitsSold": 88264,
+	"InfluencersCount": 530,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "TUESDAY AUGUST 31ST 2010",
+	"SelectedDate": "SATURDAY SEPTEMBER 18TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Nomad",
+		"URL": "https://www.quirky.com/Nomad",
+		"Location": "San Diego",
+		"Projects": ["Contort"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243433/naming",
+		"ContributionNum": 412,
+		"Project": "Contort"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243433/tagline",
+		"ContributionNum": 329,
+		"Project": "Contort"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243433/logo-design",
+		"ContributionNum": 67,
+		"Project": "Contort"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243433/design",
+		"ContributionNum": 46,
+		"Project": "Contort"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243433/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Contort"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243433/images",
+		"ContributionNum": 2,
+		"Project": "Contort"
+	}]
+},
+{
+	"Name": "Pivot Power Media",
+	"URL": "https://www.quirky.com/invent/243913",
+	"UnitsSold": 81,
+	"InfluencersCount": 1169,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power Media"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243913/tagline",
+		"ContributionNum": 2057,
+		"Project": "Pivot Power Media"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243913/naming",
+		"ContributionNum": 2031,
+		"Project": "Pivot Power Media"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243913/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power Media"
+	}]
+},
+{
+	"Name": "Switch",
+	"URL": "https://www.quirky.com/invent/243937",
+	"UnitsSold": 1405,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "210",
+	"SubmittedDate": "WEDNESDAY FEBRUARY 24TH 2010",
+	"SelectedDate": "SATURDAY APRIL 27TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Sports-Switch-Fishing-Pocket/dp/B00H4CRF9Q",
+		"ReviewStars": "3",
+		"ListPrice": 89.99
+	},
+	"Inventor": {
+		"Name": "jdrive",
+		"URL": "https://www.quirky.com/jdrive",
+		"Location": "New York",
+		"Projects": ["Switch"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243937/images",
+		"ContributionNum": 1,
+		"Project": "Switch"
+	}]
+},
+{
+	"Name": "PowerCurl Mini2",
+	"URL": "https://www.quirky.com/invent/243798",
+	"UnitsSold": 22930,
+	"InfluencersCount": 139,
+	"DevelopmentTime": "150",
+	"SubmittedDate": "WEDNESDAY SEPTEMBER 9TH 2009",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPCM1-TELX-Mini-Powercurl/dp/B002YVG84K",
+		"ReviewStars": "3",
+		"ListPrice": 16.94
+	},
+	"Inventor": {
+		"Name": "Jeff Scholen",
+		"URL": "https://www.quirky.com/jeff-scholen",
+		"Location": "Alpharetta",
+		"Projects": ["PowerCurl Mini2"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243798/tagline",
+		"ContributionNum": 159,
+		"Project": "PowerCurl Mini2"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243798/naming",
+		"ContributionNum": 230,
+		"Project": "PowerCurl Mini2"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243798/design",
+		"ContributionNum": 9,
+		"Project": "PowerCurl Mini2"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243798/images",
+		"ContributionNum": 1,
+		"Project": "PowerCurl Mini2"
+	}]
+},
+{
+	"Name": "Norm",
+	"URL": "https://www.quirky.com/invent/244246",
+	"UnitsSold": 0,
+	"InfluencersCount": 1422,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "THURSDAY OCTOBER 10TH 2013",
+	"SelectedDate": "FRIDAY JULY 4TH 2014",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Denny2020",
+		"URL": "https://www.quirky.com/Denny2020",
+		"Location": "Canada",
+		"Projects": ["Norm"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244246/naming",
+		"ContributionNum": 4659,
+		"Project": "Norm"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244246/tagline",
+		"ContributionNum": 1940,
+		"Project": "Norm"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244246/images",
+		"ContributionNum": 1,
+		"Project": "Norm"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244246/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Norm"
+	}]
+},
+{
+	"Name": "Squeezie",
+	"URL": "https://www.quirky.com/invent/243965",
+	"UnitsSold": 470,
+	"InfluencersCount": 830,
+	"DevelopmentTime": "29",
+	"SubmittedDate": "SUNDAY APRIL 7TH 2013",
+	"SelectedDate": "FRIDAY MAY 10TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Jason (Houston's Dad) Diaz",
+		"URL": "https://www.quirky.com/users/366591",
+		"Location": "New York City",
+		"Projects": ["Squeezie"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243965/tagline",
+		"ContributionNum": 1004,
+		"Project": "Squeezie"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243965/design",
+		"ContributionNum": 116,
+		"Project": "Squeezie"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243965/naming",
+		"ContributionNum": 1696,
+		"Project": "Squeezie"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243965/images",
+		"ContributionNum": 2,
+		"Project": "Squeezie"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243965/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Squeezie"
+	}]
+},
+{
+	"Name": "Twig",
+	"URL": "https://www.quirky.com/invent/243805",
+	"UnitsSold": 4999,
+	"InfluencersCount": 385,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "TUESDAY SEPTEMBER 25TH 2012",
+	"SelectedDate": "WEDNESDAY OCTOBER 3RD 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "sw park",
+		"URL": "https://www.quirky.com/sw-park",
+		"Location": "",
+		"Projects": ["Twig"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243805/naming",
+		"ContributionNum": 697,
+		"Project": "Twig"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243805/tagline",
+		"ContributionNum": 554,
+		"Project": "Twig"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243805/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Twig"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243805/images",
+		"ContributionNum": 5,
+		"Project": "Twig"
+	}]
+},
+{
+	"Name": "Pegit",
+	"URL": "https://www.quirky.com/invent/243793",
+	"UnitsSold": 20281,
+	"InfluencersCount": 103,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY AUGUST 27TH 2012",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPEG1-NT01-Pegit-Case-iPhone/dp/B00CB0XFF4",
+		"ReviewStars": "5",
+		"ListPrice": 10.05
+	},
+	"Inventor": {
+		"Name": "Chan ho Lee",
+		"URL": "https://www.quirky.com/chan-ho-lee",
+		"Location": "Republic of Korea",
+		"Projects": ["Pegit"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243793/naming",
+		"ContributionNum": 184,
+		"Project": "Pegit"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243793/tagline",
+		"ContributionNum": 130,
+		"Project": "Pegit"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243793/design",
+		"ContributionNum": 13,
+		"Project": "Pegit"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243793/images",
+		"ContributionNum": 1,
+		"Project": "Pegit"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243793/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Pegit"
+	}]
+},
+{
+	"Name": "Charge",
+	"URL": "https://www.quirky.com/invent/244276",
+	"UnitsSold": 295,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "THURSDAY JULY 5TH 2012",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Denyveaus Sells",
+		"URL": "https://www.quirky.com/denyveaus-sells",
+		"Location": "Tulsa, Oklahoma",
+		"Projects": ["Charge"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244276/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Charge"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244276/images",
+		"ContributionNum": 2,
+		"Project": "Charge"
+	}]
+},
+{
+	"Name": "Align",
+	"URL": "https://www.quirky.com/invent/243661",
+	"UnitsSold": 7572,
+	"InfluencersCount": 421,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "WEDNESDAY APRIL 4TH 2012",
+	"SelectedDate": "SATURDAY APRIL 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PALGN-BL01-Align-Stapler/dp/B00IWYFZ24",
+		"ReviewStars": "4-5",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Kenneth Rubi",
+		"URL": "https://www.quirky.com/Kenneth",
+		"Location": "Miami, FL",
+		"Projects": ["Align"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243661/tagline",
+		"ContributionNum": 565,
+		"Project": "Align"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243661/naming",
+		"ContributionNum": 737,
+		"Project": "Align"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243661/images",
+		"ContributionNum": 3,
+		"Project": "Align"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243661/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Align"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243661/design",
+		"ContributionNum": 34,
+		"Project": "Align"
+	}]
+},
+{
+	"Name": "Thor + Zeus",
+	"URL": "https://www.quirky.com/invent/244150",
+	"UnitsSold": 1378,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "FRIDAY DECEMBER 16TH 2011",
+	"SelectedDate": "TUESDAY MARCH 4TH 2014",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Kwame Appiahene-Agyei",
+		"URL": "https://www.quirky.com/kwame-appiahene-agyei",
+		"Location": "",
+		"Projects": ["Thor + Zeus"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244150/images",
+		"ContributionNum": 3,
+		"Project": "Thor + Zeus"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244150/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Thor + Zeus"
+	}]
+},
+{
+	"Name": "Silo",
+	"URL": "https://www.quirky.com/invent/243558",
+	"UnitsSold": 2401,
+	"InfluencersCount": 298,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "FRIDAY OCTOBER 14TH 2011",
+	"SelectedDate": "MONDAY OCTOBER 24TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Portion-Control-Container-Large/dp/B00E5H9Q5O",
+		"ReviewStars": "4-5",
+		"ListPrice": 16.0
+	},
+	"Inventor": {
+		"Name": "jan habraken",
+		"URL": "https://www.quirky.com/Jan",
+		"Location": "New York",
+		"Projects": ["Silo"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243558/naming",
+		"ContributionNum": 570,
+		"Project": "Silo"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243558/images",
+		"ContributionNum": 3,
+		"Project": "Silo"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243558/tagline",
+		"ContributionNum": 453,
+		"Project": "Silo"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243558/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Silo"
+	}]
+},
+{
+	"Name": "Broom Stopper",
+	"URL": "https://www.quirky.com/invent/243529",
+	"UnitsSold": 6646,
+	"InfluencersCount": 249,
+	"DevelopmentTime": "240",
+	"SubmittedDate": "MONDAY JULY 11TH 2011",
+	"SelectedDate": "MONDAY JULY 25TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "John Jacobsen",
+		"URL": "https://www.quirky.com/john-jacobsen-1",
+		"Location": "",
+		"Projects": ["Broom Stopper"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243529/naming",
+		"ContributionNum": 539,
+		"Project": "Broom Stopper"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243529/images",
+		"ContributionNum": 1,
+		"Project": "Broom Stopper"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243529/tagline",
+		"ContributionNum": 482,
+		"Project": "Broom Stopper"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243529/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Broom Stopper"
+	}]
+},
+{
+	"Name": "Tether",
+	"URL": "https://www.quirky.com/invent/243493",
+	"UnitsSold": 81845,
+	"InfluencersCount": 123,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "SUNDAY MARCH 20TH 2011",
+	"SelectedDate": "MONDAY APRIL 4TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B005Z49FKW/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "4-5",
+		"ListPrice": 14.99
+	},
+	"Inventor": {
+		"Name": "gary rose",
+		"URL": "https://www.quirky.com/gary-rose",
+		"Location": "Suburbs of Chicago",
+		"Projects": ["Tether"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243493/naming",
+		"ContributionNum": 261,
+		"Project": "Tether"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243493/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Tether"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243493/images",
+		"ContributionNum": 0,
+		"Project": "Tether"
+	}]
+},
+{
+	"Name": "Ventu",
+	"URL": "https://www.quirky.com/invent/243470",
+	"UnitsSold": 6244,
+	"InfluencersCount": 857,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "SUNDAY JANUARY 30TH 2011",
+	"SelectedDate": "SATURDAY FEBRUARY 19TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B00CXFF050/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "4",
+		"ListPrice": 49.99
+	},
+	"Inventor": {
+		"Name": "andrea  zabinski",
+		"URL": "https://www.quirky.com/zabber",
+		"Location": "Gibsonia, PA",
+		"Projects": ["Ventu"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243470/naming",
+		"ContributionNum": 336,
+		"Project": "Ventu"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243470/images",
+		"ContributionNum": 3,
+		"Project": "Ventu"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243470/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Ventu"
+	}]
+},
+{
+	"Name": "Verseur",
+	"URL": "https://www.quirky.com/invent/243448",
+	"UnitsSold": 54888,
+	"InfluencersCount": 661,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "SATURDAY NOVEMBER 13TH 2010",
+	"SelectedDate": "SATURDAY NOVEMBER 27TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B007S1BR7O/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "4-5",
+		"ListPrice": 18.99
+	},
+	"Inventor": {
+		"Name": "angelo cacchione",
+		"URL": "https://www.quirky.com/Awesemo",
+		"Location": "London / United Kingdom",
+		"Projects": ["Verseur"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243448/naming",
+		"ContributionNum": 456,
+		"Project": "Verseur"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243448/images",
+		"ContributionNum": 5,
+		"Project": "Verseur"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243448/design",
+		"ContributionNum": 9,
+		"Project": "Verseur"
+	}]
+},
+{
+	"Name": "Shower Station",
+	"URL": "https://www.quirky.com/invent/243432",
+	"UnitsSold": 3048,
+	"InfluencersCount": 497,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY AUGUST 30TH 2010",
+	"SelectedDate": "SATURDAY SEPTEMBER 11TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Shower-Station-Modular-Caddy/dp/B005CRMZ54",
+		"ReviewStars": "4-5",
+		"ListPrice": 69.99
+	},
+	"Inventor": {
+		"Name": "Josh Wright",
+		"URL": "https://www.quirky.com/bikr",
+		"Location": "I like to pretend I live in NY",
+		"Projects": ["Shower Station"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243432/design",
+		"ContributionNum": 61,
+		"Project": "Shower Station"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243432/naming",
+		"ContributionNum": 426,
+		"Project": "Shower Station"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243432/tagline",
+		"ContributionNum": 306,
+		"Project": "Shower Station"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243432/logo-design",
+		"ContributionNum": 54,
+		"Project": "Shower Station"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243432/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Shower Station"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243432/images",
+		"ContributionNum": 2,
+		"Project": "Shower Station"
+	}]
+},
+{
+	"Name": "Pivot Power Pop Junior",
+	"URL": "https://www.quirky.com/invent/244147",
+	"UnitsSold": 1671,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPVJP-WH01-Pivot-Power-Junior/dp/B002YU09JG/ref=sr_1_1?s=electronics&ie=UTF8&qid=1429281256&sr=1-1&keywords=PPVJP-WH01",
+		"ReviewStars": "4-5",
+		"ListPrice": 14.99
+	},
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power Pop Junior"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244147/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power Pop Junior"
+	}]
+},
+{
+	"Name": "Wrapster",
+	"URL": "https://www.quirky.com/invent/243405",
+	"UnitsSold": 537064,
+	"InfluencersCount": 407,
+	"DevelopmentTime": "23",
+	"SubmittedDate": "WEDNESDAY JANUARY 27TH 2010",
+	"SelectedDate": "TUESDAY FEBRUARY 9TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PWRP3-XGRY-Wrapster-Headphone-Organizer/dp/B002YTLVJO",
+		"ReviewStars": "4",
+		"ListPrice": 4.99
+	},
+	"Inventor": {
+		"Name": "Matthew Fleming",
+		"URL": "https://www.quirky.com/SparkBugg",
+		"Location": "Born in Philly, grew up in various countries, settled in DC.",
+		"Projects": ["Wrapster"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243405/tagline",
+		"ContributionNum": 187,
+		"Project": "Wrapster"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243405/naming",
+		"ContributionNum": 195,
+		"Project": "Wrapster"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243405/design",
+		"ContributionNum": 28,
+		"Project": "Wrapster"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243405/logo-design",
+		"ContributionNum": 41,
+		"Project": "Wrapster"
+	}]
+},
+{
+	"Name": "PowerCurl",
+	"URL": "https://www.quirky.com/invent/243963",
+	"UnitsSold": 25194,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "210",
+	"SubmittedDate": "WEDNESDAY SEPTEMBER 9TH 2009",
+	"SelectedDate": "FRIDAY MAY 3RD 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Powercurl-Wire-Organizer-PPRCP-85TL/dp/B00KFS5H3M",
+		"ReviewStars": "4",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Jeff Scholen",
+		"URL": "https://www.quirky.com/jeff-scholen",
+		"Location": "Alpharetta",
+		"Projects": ["PowerCurl"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243963/images",
+		"ContributionNum": 1,
+		"Project": "PowerCurl"
+	}]
+},
+{
+	"Name": "Refuel",
+	"URL": "https://www.quirky.com/invent/244070",
+	"UnitsSold": 1553,
+	"InfluencersCount": 1029,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "FRIDAY SEPTEMBER 13TH 2013",
+	"SelectedDate": "SATURDAY OCTOBER 12TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "anthony reddington",
+		"URL": "https://www.quirky.com/anthony-reddington",
+		"Location": "boston ma",
+		"Projects": ["Refuel"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244070/naming",
+		"ContributionNum": 1825,
+		"Project": "Refuel"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244070/tagline",
+		"ContributionNum": 1815,
+		"Project": "Refuel"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244070/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Refuel"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244070/images",
+		"ContributionNum": 1,
+		"Project": "Refuel"
+	}]
+},
+{
+	"Name": "Gifteze",
+	"URL": "https://www.quirky.com/invent/243915",
+	"UnitsSold": 0,
+	"InfluencersCount": 576,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "FRIDAY FEBRUARY 8TH 2013",
+	"SelectedDate": "THURSDAY MARCH 14TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Kat Devlon",
+		"URL": "https://www.quirky.com/KatDevlon",
+		"Location": "World Traveler",
+		"Projects": ["Gifteze"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243915/design",
+		"ContributionNum": 64,
+		"Project": "Gifteze"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243915/tagline",
+		"ContributionNum": 732,
+		"Project": "Gifteze"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243915/naming",
+		"ContributionNum": 1247,
+		"Project": "Gifteze"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243915/images",
+		"ContributionNum": 1,
+		"Project": "Gifteze"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243915/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Gifteze"
+	}]
+},
+{
+	"Name": "Upwrite",
+	"URL": "https://www.quirky.com/invent/244462",
+	"UnitsSold": 1567,
+	"InfluencersCount": 350,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "TUESDAY SEPTEMBER 18TH 2012",
+	"SelectedDate": "WEDNESDAY OCTOBER 3RD 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Upwrite-Universal-Stylus-PUPW1-UN01/dp/B00CTESMC8",
+		"ReviewStars": "2-5",
+		"ListPrice": 19.99
+	},
+	"Inventor": {
+		"Name": "Gyro",
+		"URL": "https://www.quirky.com/Gyro",
+		"Location": "Dallas, TX",
+		"Projects": ["Upwrite"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244462/tagline",
+		"ContributionNum": 469,
+		"Project": "Upwrite"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244462/naming",
+		"ContributionNum": 608,
+		"Project": "Upwrite"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244462/images",
+		"ContributionNum": 3,
+		"Project": "Upwrite"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244462/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Upwrite"
+	}]
+},
+{
+	"Name": "Pluck",
+	"URL": "https://www.quirky.com/invent/243773",
+	"UnitsSold": 22217,
+	"InfluencersCount": 362,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "THURSDAY AUGUST 23RD 2012",
+	"SelectedDate": "THURSDAY SEPTEMBER 6TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Mark Fusco",
+		"URL": "https://www.quirky.com/markfusco",
+		"Location": "Texas",
+		"Projects": ["Pluck"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243773/tagline",
+		"ContributionNum": 470,
+		"Project": "Pluck"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243773/naming",
+		"ContributionNum": 653,
+		"Project": "Pluck"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243773/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Pluck"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243773/images",
+		"ContributionNum": 3,
+		"Project": "Pluck"
+	}]
+},
+{
+	"Name": "Shake - Men's Tote",
+	"URL": "https://www.quirky.com/invent/244004",
+	"UnitsSold": 508,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "THURSDAY JUNE 21ST 2012",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "CharlieandSpike",
+		"URL": "https://www.quirky.com/CharlieandSpike",
+		"Location": "New York",
+		"Projects": ["Shake - Men's Tote"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244004/images",
+		"ContributionNum": 5,
+		"Project": "Shake - Men's Tote"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244004/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Shake - Men's Tote"
+	}]
+},
+{
+	"Name": "Loopits",
+	"URL": "https://www.quirky.com/invent/243640",
+	"UnitsSold": 1167,
+	"InfluencersCount": 333,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "WEDNESDAY FEBRUARY 22ND 2012",
+	"SelectedDate": "WEDNESDAY MARCH 28TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Heather  O'Donahoe",
+		"URL": "https://www.quirky.com/Hez",
+		"Location": "Altoona, WI",
+		"Projects": ["Loopits"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243640/naming",
+		"ContributionNum": 661,
+		"Project": "Loopits"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243640/tagline",
+		"ContributionNum": 525,
+		"Project": "Loopits"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243640/images",
+		"ContributionNum": 10,
+		"Project": "Loopits"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243640/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Loopits"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243640/design",
+		"ContributionNum": 41,
+		"Project": "Loopits"
+	}]
+},
+{
+	"Name": "Port Power",
+	"URL": "https://www.quirky.com/invent/243587",
+	"UnitsSold": 4204,
+	"InfluencersCount": 2041,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "MONDAY DECEMBER 5TH 2011",
+	"SelectedDate": "WEDNESDAY DECEMBER 28TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPRTP-WH01-Port-Power/dp/B002YUUUHM",
+		"ReviewStars": "4-5",
+		"ListPrice": 17.99
+	},
+	"Inventor": {
+		"Name": "Charlie Circles",
+		"URL": "https://www.quirky.com/Circles",
+		"Location": "Noowe",
+		"Projects": ["Port Power"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243587/naming",
+		"ContributionNum": 849,
+		"Project": "Port Power"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243587/tagline",
+		"ContributionNum": 633,
+		"Project": "Port Power"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243587/images",
+		"ContributionNum": 10,
+		"Project": "Port Power"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243587/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Port Power"
+	}]
+},
+{
+	"Name": "Crates",
+	"URL": "https://www.quirky.com/invent/243666",
+	"UnitsSold": 183040,
+	"InfluencersCount": 691,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY SEPTEMBER 26TH 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Jenny Drinkard",
+		"URL": "https://www.quirky.com/jenny-drinkard",
+		"Location": "Atlanta",
+		"Projects": ["Crates"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243666/naming",
+		"ContributionNum": 1441,
+		"Project": "Crates"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243666/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Crates"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243666/tagline",
+		"ContributionNum": 0,
+		"Project": "Crates"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243666/images",
+		"ContributionNum": 0,
+		"Project": "Crates"
+	}]
+},
+{
+	"Name": "Flipside",
+	"URL": "https://www.quirky.com/invent/243528",
+	"UnitsSold": 1209,
+	"InfluencersCount": 1992,
+	"DevelopmentTime": "365",
+	"SubmittedDate": "MONDAY JULY 11TH 2011",
+	"SelectedDate": "MONDAY JULY 25TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "wyan",
+		"URL": "https://www.quirky.com/wyan",
+		"Location": "New York",
+		"Projects": ["Flipside"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243528/tagline",
+		"ContributionNum": 602,
+		"Project": "Flipside"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243528/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Flipside"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243528/naming",
+		"ContributionNum": 803,
+		"Project": "Flipside"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243528/images",
+		"ContributionNum": 0,
+		"Project": "Flipside"
+	}]
+},
+{
+	"Name": "Converge",
+	"URL": "https://www.quirky.com/invent/243911",
+	"UnitsSold": 4980,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "SATURDAY MARCH 12TH 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PCVG3-WH01-Converge-Universal-Docking/dp/B002YUR3F4/ref=sr_1_3?ie=UTF8&qid=1429277996&sr=8-3&keywords=quirky+converge",
+		"ReviewStars": "4-5",
+		"ListPrice": 69.99
+	},
+	"Inventor": {
+		"Name": "Jin Chai",
+		"URL": "https://www.quirky.com/ZIEANY",
+		"Location": "San Ramon, CA",
+		"Projects": ["Converge"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243911/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Converge"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243911/design",
+		"ContributionNum": 0,
+		"Project": "Converge"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243911/images",
+		"ContributionNum": 5,
+		"Project": "Converge"
+	}]
+},
+{
+	"Name": "Portion",
+	"URL": "https://www.quirky.com/invent/243826",
+	"UnitsSold": 12311,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "TUESDAY JANUARY 25TH 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "MarcR",
+		"URL": "https://www.quirky.com/MarcR",
+		"Location": "Aurora",
+		"Projects": ["Portion"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243826/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Portion"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243826/images",
+		"ContributionNum": 0,
+		"Project": "Portion"
+	}]
+},
+{
+	"Name": "Verseur Metal",
+	"URL": "https://www.quirky.com/invent/244239",
+	"UnitsSold": 0,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "SATURDAY NOVEMBER 13TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "angelo cacchione",
+		"URL": "https://www.quirky.com/Awesemo",
+		"Location": "London / United Kingdom",
+		"Projects": ["Verseur Metal"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244239/images",
+		"ContributionNum": 5,
+		"Project": "Verseur Metal"
+	}]
+},
+{
+	"Name": "Unhampered",
+	"URL": "https://www.quirky.com/invent/243428",
+	"UnitsSold": 6746,
+	"InfluencersCount": 228,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY AUGUST 2ND 2010",
+	"SelectedDate": "SATURDAY AUGUST 7TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Barbara Miles",
+		"URL": "https://www.quirky.com/barbara-miles",
+		"Location": "Atlanta",
+		"Projects": ["Unhampered"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243428/tagline",
+		"ContributionNum": 318,
+		"Project": "Unhampered"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243428/design",
+		"ContributionNum": 49,
+		"Project": "Unhampered"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243428/naming",
+		"ContributionNum": 358,
+		"Project": "Unhampered"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243428/logo-design",
+		"ContributionNum": 61,
+		"Project": "Unhampered"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243428/images",
+		"ContributionNum": 8,
+		"Project": "Unhampered"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243428/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Unhampered"
+	}]
+},
+{
+	"Name": "Pivot Power Genius",
+	"URL": "https://www.quirky.com/invent/243972",
+	"UnitsSold": 2392,
+	"InfluencersCount": 531,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPVG-WH01-Pivot-Power-Genius/dp/B00GN92MC6",
+		"ReviewStars": "2-5",
+		"ListPrice": 99.99
+	},
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power Genius"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243972/tagline",
+		"ContributionNum": 984,
+		"Project": "Pivot Power Genius"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243972/naming",
+		"ContributionNum": 1200,
+		"Project": "Pivot Power Genius"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243972/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power Genius"
+	}]
+},
+{
+	"Name": "Pen Zen",
+	"URL": "https://www.quirky.com/invent/243401",
+	"UnitsSold": 11345,
+	"InfluencersCount": 643,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "TUESDAY DECEMBER 29TH 2009",
+	"SelectedDate": "WEDNESDAY JANUARY 6TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Pen-Zen-Bamboo-Blue/dp/B00DC2728G",
+		"ReviewStars": "4-5",
+		"ListPrice": 10.98
+	},
+	"Inventor": {
+		"Name": "Edwin van de Bospoort",
+		"URL": "https://www.quirky.com/edwin-van-de-bospoort",
+		"Location": "the Netherlands",
+		"Projects": ["Pen Zen"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243401/naming",
+		"ContributionNum": 285,
+		"Project": "Pen Zen"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243401/logo-design",
+		"ContributionNum": 39,
+		"Project": "Pen Zen"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243401/tagline",
+		"ContributionNum": 192,
+		"Project": "Pen Zen"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243401/design",
+		"ContributionNum": 16,
+		"Project": "Pen Zen"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243401/images",
+		"ContributionNum": 3,
+		"Project": "Pen Zen"
+	}]
+},
+{
+	"Name": "Metal Cordies",
+	"URL": "https://www.quirky.com/invent/243563",
+	"UnitsSold": 33374,
+	"InfluencersCount": 0,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY AUGUST 24TH 2009",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Cordies-Management-charging-accessory/dp/B005P58CLE",
+		"ReviewStars": "4",
+		"ListPrice": 20.9
+	},
+	"Inventor": {
+		"Name": "Stephen Stewart",
+		"URL": "https://www.quirky.com/stephen-stewart",
+		"Location": "Leeds, UK",
+		"Projects": ["Metal Cordies"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243563/images",
+		"ContributionNum": 2,
+		"Project": "Metal Cordies"
+	}]
+},
+{
+	"Name": "Overflow",
+	"URL": "https://www.quirky.com/invent/244037",
+	"UnitsSold": 121,
+	"InfluencersCount": 636,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "THURSDAY AUGUST 29TH 2013",
+	"SelectedDate": "SUNDAY SEPTEMBER 1ST 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Michael Taylor",
+		"URL": "https://www.quirky.com/MichaelTaylor",
+		"Location": "Canton, GA",
+		"Projects": ["Overflow"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244037/tagline",
+		"ContributionNum": 1212,
+		"Project": "Overflow"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244037/naming",
+		"ContributionNum": 1052,
+		"Project": "Overflow"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244037/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Overflow"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244037/images",
+		"ContributionNum": 1,
+		"Project": "Overflow"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/244037/design",
+		"ContributionNum": 2,
+		"Project": "Overflow"
+	}]
+},
+{
+	"Name": "Beat Booster",
+	"URL": "https://www.quirky.com/invent/243861",
+	"UnitsSold": 57,
+	"InfluencersCount": 527,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "SATURDAY DECEMBER 1ST 2012",
+	"SelectedDate": "THURSDAY DECEMBER 13TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Phil Zumtobel",
+		"URL": "https://www.quirky.com/Phil",
+		"Location": "",
+		"Projects": ["Beat Booster"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243861/design",
+		"ContributionNum": 66,
+		"Project": "Beat Booster"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243861/naming",
+		"ContributionNum": 946,
+		"Project": "Beat Booster"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243861/tagline",
+		"ContributionNum": 805,
+		"Project": "Beat Booster"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243861/images",
+		"ContributionNum": 4,
+		"Project": "Beat Booster"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243861/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Beat Booster"
+	}]
+},
+{
+	"Name": "Pli",
+	"URL": "https://www.quirky.com/invent/243789",
+	"UnitsSold": 12837,
+	"InfluencersCount": 117,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Adam Pruden",
+		"URL": "https://www.quirky.com/atpruden",
+		"Location": "Austin, TX",
+		"Projects": ["Pli"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243789/tagline",
+		"ContributionNum": 145,
+		"Project": "Pli"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243789/naming",
+		"ContributionNum": 194,
+		"Project": "Pli"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243789/images",
+		"ContributionNum": 1,
+		"Project": "Pli"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243789/design",
+		"ContributionNum": 27,
+		"Project": "Pli"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243789/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Pli"
+	}]
+},
+{
+	"Name": "Glide",
+	"URL": "https://www.quirky.com/invent/243762",
+	"UnitsSold": 1132,
+	"InfluencersCount": 240,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "SATURDAY AUGUST 11TH 2012",
+	"SelectedDate": "WEDNESDAY AUGUST 22ND 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Calea Kevlin",
+		"URL": "https://www.quirky.com/calea-kevlin",
+		"Location": "West Chester PA",
+		"Projects": ["Glide"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243762/tagline",
+		"ContributionNum": 413,
+		"Project": "Glide"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243762/naming",
+		"ContributionNum": 223,
+		"Project": "Glide"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243762/design",
+		"ContributionNum": 49,
+		"Project": "Glide"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243762/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Glide"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243762/images",
+		"ContributionNum": 1,
+		"Project": "Glide"
+	}]
+},
+{
+	"Name": "Nibble",
+	"URL": "https://www.quirky.com/invent/243718",
+	"UnitsSold": 5776,
+	"InfluencersCount": 350,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "SATURDAY JUNE 16TH 2012",
+	"SelectedDate": "WEDNESDAY JULY 11TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Talia Wiener",
+		"URL": "https://www.quirky.com/talia-wiener",
+		"Location": "",
+		"Projects": ["Nibble"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243718/naming",
+		"ContributionNum": 576,
+		"Project": "Nibble"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243718/tagline",
+		"ContributionNum": 509,
+		"Project": "Nibble"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243718/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Nibble"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243718/images",
+		"ContributionNum": 4,
+		"Project": "Nibble"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243718/design",
+		"ContributionNum": 50,
+		"Project": "Nibble"
+	}]
+},
+{
+	"Name": "Tapt",
+	"URL": "https://www.quirky.com/invent/244224",
+	"UnitsSold": 291,
+	"InfluencersCount": 1139,
+	"DevelopmentTime": "150",
+	"SubmittedDate": "FRIDAY FEBRUARY 17TH 2012",
+	"SelectedDate": "SATURDAY JUNE 7TH 2014",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Michael Taylor",
+		"URL": "https://www.quirky.com/MichaelTaylor",
+		"Location": "Canton, GA",
+		"Projects": ["Tapt"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244224/naming",
+		"ContributionNum": 2530,
+		"Project": "Tapt"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244224/tagline",
+		"ContributionNum": 1882,
+		"Project": "Tapt"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244224/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Tapt"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244224/images",
+		"ContributionNum": 2,
+		"Project": "Tapt"
+	}]
+},
+{
+	"Name": "Props",
+	"URL": "https://www.quirky.com/invent/243603",
+	"UnitsSold": 65214,
+	"InfluencersCount": 3880,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "SUNDAY DECEMBER 4TH 2011",
+	"SelectedDate": "THURSDAY FEBRUARY 2ND 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Momatthecape Kim Rumberger",
+		"URL": "https://www.quirky.com/momatthecape-kim-rumberger",
+		"Location": "Hyannis, Massachusetts (Cape Cod)",
+		"Projects": ["Props"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243603/naming",
+		"ContributionNum": 547,
+		"Project": "Props"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243603/tagline",
+		"ContributionNum": 426,
+		"Project": "Props"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243603/design",
+		"ContributionNum": 42,
+		"Project": "Props"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243603/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Props"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243603/images",
+		"ContributionNum": 9,
+		"Project": "Props"
+	}]
+},
+{
+	"Name": "Stem Metal",
+	"URL": "https://www.quirky.com/invent/243910",
+	"UnitsSold": 2816,
+	"InfluencersCount": 2,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY SEPTEMBER 26TH 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PSTM2-MT01-Citrus-Spritzer-Metal/dp/B00LISN7U8",
+		"ReviewStars": "2-5",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Tim Houle",
+		"URL": "https://www.quirky.com/tim-houle",
+		"Location": "",
+		"Projects": ["Stem Metal"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243910/design",
+		"ContributionNum": 2,
+		"Project": "Stem Metal"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243910/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Stem Metal"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243910/images",
+		"ContributionNum": 3,
+		"Project": "Stem Metal"
+	}]
+},
+{
+	"Name": "Slice",
+	"URL": "https://www.quirky.com/invent/243518",
+	"UnitsSold": 12493,
+	"InfluencersCount": 1216,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY JUNE 27TH 2011",
+	"SelectedDate": "SATURDAY JULY 9TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "GreggH",
+		"URL": "https://www.quirky.com/GreggH",
+		"Location": "Illinois",
+		"Projects": ["Slice"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243518/tagline",
+		"ContributionNum": 347,
+		"Project": "Slice"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243518/naming",
+		"ContributionNum": 479,
+		"Project": "Slice"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243518/images",
+		"ContributionNum": 2,
+		"Project": "Slice"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243518/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Slice"
+	}]
+},
+{
+	"Name": "Fender Smart Cover®",
+	"URL": "https://www.quirky.com/invent/243992",
+	"UnitsSold": 2515,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "FRIDAY MARCH 11TH 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Fender-Smart-Cover-iPad/dp/B00E63QXAI/ref=pd_sxp_f_pt",
+		"ReviewStars": "1",
+		"ListPrice": 39.99
+	},
+	"Inventor": {
+		"Name": "Gyro",
+		"URL": "https://www.quirky.com/Gyro",
+		"Location": "Dallas, TX",
+		"Projects": ["Fender Smart Cover®"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243992/images",
+		"ContributionNum": 1,
+		"Project": "Fender Smart Cover®"
+	}]
+},
+{
+	"Name": "Cubo",
+	"URL": "https://www.quirky.com/invent/243707",
+	"UnitsSold": 3746,
+	"InfluencersCount": 265,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "TUESDAY JANUARY 18TH 2011",
+	"SelectedDate": "WEDNESDAY JUNE 20TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Cubo-Cutting-Board-Storage/dp/B00MFC5DCQ",
+		"ReviewStars": "5",
+		"ListPrice": 29.99
+	},
+	"Inventor": {
+		"Name": "Justin Giannone",
+		"URL": "https://www.quirky.com/justin",
+		"Location": "NY",
+		"Projects": ["Cubo"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243707/tagline",
+		"ContributionNum": 554,
+		"Project": "Cubo"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243707/images",
+		"ContributionNum": 1,
+		"Project": "Cubo"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243707/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Cubo"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243707/naming",
+		"ContributionNum": 0,
+		"Project": "Cubo"
+	}]
+},
+{
+	"Name": "Verseur Metal + Levier",
+	"URL": "https://www.quirky.com/invent/244088",
+	"UnitsSold": 1370,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "SATURDAY NOVEMBER 13TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "angelo cacchione",
+		"URL": "https://www.quirky.com/Awesemo",
+		"Location": "London / United Kingdom",
+		"Projects": ["Verseur Metal + Levier"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244088/images",
+		"ContributionNum": 5,
+		"Project": "Verseur Metal + Levier"
+	}]
+},
+{
+	"Name": "Pivot Power Jr.",
+	"URL": "https://www.quirky.com/invent/244182",
+	"UnitsSold": 466,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "WEDNESDAY APRIL 16TH 2014",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPVJ2-WH01-Pivot-Power-Junior/dp/B002YUUU54",
+		"ReviewStars": "4",
+		"ListPrice": 19.98
+	},
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power Jr."],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244182/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power Jr."
+	}]
+},
+{
+	"Name": "Digits",
+	"URL": "https://www.quirky.com/invent/243411",
+	"UnitsSold": 47145,
+	"InfluencersCount": 378,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "SATURDAY MARCH 13TH 2010",
+	"SelectedDate": "TUESDAY MARCH 23RD 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B008MS0C8C/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "2",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Brian Shy",
+		"URL": "https://www.quirky.com/brian-shy",
+		"Location": "Chicago, IL",
+		"Projects": ["Digits"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243411/naming",
+		"ContributionNum": 287,
+		"Project": "Digits"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243411/tagline",
+		"ContributionNum": 295,
+		"Project": "Digits"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243411/design",
+		"ContributionNum": 36,
+		"Project": "Digits"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243411/images",
+		"ContributionNum": 2,
+		"Project": "Digits"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243411/logo-design",
+		"ContributionNum": 55,
+		"Project": "Digits"
+	}]
+},
+{
+	"Name": "Zen Cosmetics",
+	"URL": "https://www.quirky.com/invent/244103",
+	"UnitsSold": 17480,
+	"InfluencersCount": 884,
+	"DevelopmentTime": "",
+	"SubmittedDate": "TUESDAY DECEMBER 29TH 2009",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Edwin van de Bospoort",
+		"URL": "https://www.quirky.com/edwin-van-de-bospoort",
+		"Location": "the Netherlands",
+		"Projects": ["Zen Cosmetics"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244103/naming",
+		"ContributionNum": 2267,
+		"Project": "Zen Cosmetics"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244103/images",
+		"ContributionNum": 3,
+		"Project": "Zen Cosmetics"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/244103/design",
+		"ContributionNum": 3,
+		"Project": "Zen Cosmetics"
+	}]
+},
+{
+	"Name": "Cordies Executive",
+	"URL": "https://www.quirky.com/invent/243841",
+	"UnitsSold": 15465,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY AUGUST 24TH 2009",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B00C8P0UA0/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "3-5",
+		"ListPrice": 30.58
+	},
+	"Inventor": {
+		"Name": "Stephen Stewart",
+		"URL": "https://www.quirky.com/stephen-stewart",
+		"Location": "Leeds, UK",
+		"Projects": ["Cordies Executive"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243841/images",
+		"ContributionNum": 2,
+		"Project": "Cordies Executive"
+	}]
+},
+{
+	"Name": "Tripper",
+	"URL": "https://www.quirky.com/invent/244045",
+	"UnitsSold": 743,
+	"InfluencersCount": 1164,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "WEDNESDAY JULY 31ST 2013",
+	"SelectedDate": "SUNDAY SEPTEMBER 1ST 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "robert sweeney",
+		"URL": "https://www.quirky.com/robert-sweeney",
+		"Location": "",
+		"Projects": ["Tripper"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244045/naming",
+		"ContributionNum": 3209,
+		"Project": "Tripper"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244045/tagline",
+		"ContributionNum": 1024,
+		"Project": "Tripper"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244045/images",
+		"ContributionNum": 1,
+		"Project": "Tripper"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244045/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Tripper"
+	}]
+},
+{
+	"Name": "Bake Shapes + Pluck",
+	"URL": "https://www.quirky.com/invent/244162",
+	"UnitsSold": 999,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "FRIDAY NOVEMBER 30TH 2012",
+	"SelectedDate": "SATURDAY MARCH 22ND 2014",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Hadar",
+		"URL": "https://www.quirky.com/Hadar",
+		"Location": "Oceanside, CA",
+		"Projects": ["Bake Shapes + Pluck"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244162/images",
+		"ContributionNum": 1,
+		"Project": "Bake Shapes + Pluck"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244162/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Bake Shapes + Pluck"
+	}]
+},
+{
+	"Name": "Core",
+	"URL": "https://www.quirky.com/invent/243796",
+	"UnitsSold": 126,
+	"InfluencersCount": 107,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Kevin Collins",
+		"URL": "https://www.quirky.com/kevin-collins",
+		"Location": "",
+		"Projects": ["Core"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243796/naming",
+		"ContributionNum": 181,
+		"Project": "Core"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243796/tagline",
+		"ContributionNum": 128,
+		"Project": "Core"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243796/images",
+		"ContributionNum": 2,
+		"Project": "Core"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243796/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Core"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243796/design",
+		"ContributionNum": 27,
+		"Project": "Core"
+	}]
+},
+{
+	"Name": "Icecap",
+	"URL": "https://www.quirky.com/invent/243765",
+	"UnitsSold": 2403,
+	"InfluencersCount": 195,
+	"DevelopmentTime": "365",
+	"SubmittedDate": "FRIDAY AUGUST 10TH 2012",
+	"SelectedDate": "WEDNESDAY AUGUST 29TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Peter Provart",
+		"URL": "https://www.quirky.com/peter-provart",
+		"Location": "Hordle, Southern England",
+		"Projects": ["Icecap"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243765/tagline",
+		"ContributionNum": 362,
+		"Project": "Icecap"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243765/naming",
+		"ContributionNum": 432,
+		"Project": "Icecap"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243765/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Icecap"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243765/images",
+		"ContributionNum": 2,
+		"Project": "Icecap"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243765/design",
+		"ContributionNum": 44,
+		"Project": "Icecap"
+	}]
+},
+{
+	"Name": "Branch",
+	"URL": "https://www.quirky.com/invent/243721",
+	"UnitsSold": 4617,
+	"InfluencersCount": 460,
+	"DevelopmentTime": "210",
+	"SubmittedDate": "TUESDAY JUNE 5TH 2012",
+	"SelectedDate": "WEDNESDAY JULY 11TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Branch-Shower-Rings-Hooks/dp/B002YU42MG",
+		"ReviewStars": "4",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "MarcR",
+		"URL": "https://www.quirky.com/MarcR",
+		"Location": "Aurora",
+		"Projects": ["Branch"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243721/tagline",
+		"ContributionNum": 651,
+		"Project": "Branch"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243721/naming",
+		"ContributionNum": 807,
+		"Project": "Branch"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243721/images",
+		"ContributionNum": 6,
+		"Project": "Branch"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243721/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Branch"
+	}]
+},
+{
+	"Name": "Outlink",
+	"URL": "https://www.quirky.com/invent/244253",
+	"UnitsSold": 191,
+	"InfluencersCount": 749,
+	"DevelopmentTime": "",
+	"SubmittedDate": "FRIDAY FEBRUARY 17TH 2012",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Michael Taylor",
+		"URL": "https://www.quirky.com/MichaelTaylor",
+		"Location": "Canton, GA",
+		"Projects": ["Outlink"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244253/naming",
+		"ContributionNum": 1858,
+		"Project": "Outlink"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244253/images",
+		"ContributionNum": 2,
+		"Project": "Outlink"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244253/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Outlink"
+	}]
+},
+{
+	"Name": "Stowables",
+	"URL": "https://www.quirky.com/invent/243748",
+	"UnitsSold": 14,
+	"InfluencersCount": 485,
+	"DevelopmentTime": "210",
+	"SubmittedDate": "WEDNESDAY NOVEMBER 23RD 2011",
+	"SelectedDate": "WEDNESDAY AUGUST 8TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Gyro",
+		"URL": "https://www.quirky.com/Gyro",
+		"Location": "Dallas, TX",
+		"Projects": ["Stowables"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243748/tagline",
+		"ContributionNum": 749,
+		"Project": "Stowables"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243748/naming",
+		"ContributionNum": 925,
+		"Project": "Stowables"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243748/images",
+		"ContributionNum": 1,
+		"Project": "Stowables"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243748/design",
+		"ContributionNum": 0,
+		"Project": "Stowables"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243748/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Stowables"
+	}]
+},
+{
+	"Name": "Stem",
+	"URL": "https://www.quirky.com/invent/243549",
+	"UnitsSold": 157829,
+	"InfluencersCount": 1845,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY SEPTEMBER 26TH 2011",
+	"SelectedDate": "SATURDAY OCTOBER 8TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B00LYJPVDW/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "1",
+		"ListPrice": 6.43
+	},
+	"Inventor": {
+		"Name": "Tim Houle",
+		"URL": "https://www.quirky.com/tim-houle",
+		"Location": "",
+		"Projects": ["Stem"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243549/naming",
+		"ContributionNum": 553,
+		"Project": "Stem"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243549/tagline",
+		"ContributionNum": 448,
+		"Project": "Stem"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243549/images",
+		"ContributionNum": 3,
+		"Project": "Stem"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243549/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Stem"
+	}]
+},
+{
+	"Name": "Spotter UNIQ",
+	"URL": "https://www.quirky.com/invent/244388",
+	"UnitsSold": 0,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "4",
+	"SubmittedDate": "THURSDAY JUNE 2ND 2011",
+	"SelectedDate": "SATURDAY NOVEMBER 8TH 2014",
+	"LaunchedDate": "INVALID DATE",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Denny2020",
+		"URL": "https://www.quirky.com/Denny2020",
+		"Location": "Canada",
+		"Projects": ["Spotter UNIQ"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244388/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Spotter UNIQ"
+	}]
+},
+{
+	"Name": "Porter",
+	"URL": "https://www.quirky.com/invent/243482",
+	"UnitsSold": 11347,
+	"InfluencersCount": 610,
+	"DevelopmentTime": "150",
+	"SubmittedDate": "MONDAY MARCH 7TH 2011",
+	"SelectedDate": "SATURDAY MARCH 19TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Christine Torpey",
+		"URL": "https://www.quirky.com/christine-torpey",
+		"Location": "CA",
+		"Projects": ["Porter"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243482/tagline",
+		"ContributionNum": 214,
+		"Project": "Porter"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243482/naming",
+		"ContributionNum": 257,
+		"Project": "Porter"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243482/images",
+		"ContributionNum": 5,
+		"Project": "Porter"
+	}]
+},
+{
+	"Name": "Mocubo",
+	"URL": "https://www.quirky.com/invent/243465",
+	"UnitsSold": 6834,
+	"InfluencersCount": 853,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "TUESDAY JANUARY 18TH 2011",
+	"SelectedDate": "TUESDAY FEBRUARY 8TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Justin Giannone",
+		"URL": "https://www.quirky.com/justin",
+		"Location": "NY",
+		"Projects": ["Mocubo"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243465/naming",
+		"ContributionNum": 233,
+		"Project": "Mocubo"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243465/images",
+		"ContributionNum": 1,
+		"Project": "Mocubo"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243465/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Mocubo"
+	}]
+},
+{
+	"Name": "Thor",
+	"URL": "https://www.quirky.com/invent/243446",
+	"UnitsSold": 38403,
+	"InfluencersCount": 928,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY NOVEMBER 8TH 2010",
+	"SelectedDate": "SATURDAY NOVEMBER 20TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Jim  Johnstone",
+		"URL": "https://www.quirky.com/jim--johnstone",
+		"Location": "Urbana, IL",
+		"Projects": ["Thor"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243446/naming",
+		"ContributionNum": 306,
+		"Project": "Thor"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243446/design",
+		"ContributionNum": 26,
+		"Project": "Thor"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243446/images",
+		"ContributionNum": 3,
+		"Project": "Thor"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243446/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Thor"
+	}]
+},
+{
+	"Name": "Pivot Power Junior",
+	"URL": "https://www.quirky.com/invent/243850",
+	"UnitsSold": 5305,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power Junior"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243850/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power Junior"
+	}]
+},
+{
+	"Name": "Broom Groomer Mini",
+	"URL": "https://www.quirky.com/invent/243617",
+	"UnitsSold": 6206,
+	"InfluencersCount": 0,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY MARCH 3RD 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "bill ward",
+		"URL": "https://www.quirky.com/bill-ward",
+		"Location": "Charleston, SC",
+		"Projects": ["Broom Groomer Mini"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243617/images",
+		"ContributionNum": 0,
+		"Project": "Broom Groomer Mini"
+	}]
+},
+{
+	"Name": "Space Bar",
+	"URL": "https://www.quirky.com/invent/243396",
+	"UnitsSold": 18458,
+	"InfluencersCount": 727,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "THURSDAY NOVEMBER 19TH 2009",
+	"SelectedDate": "TUESDAY DECEMBER 1ST 2009",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Space-Bar-Keyboard-Organizer-USB/dp/B00BQYCF84",
+		"ReviewStars": "4",
+		"ListPrice": 89.99
+	},
+	"Inventor": {
+		"Name": "Michael Cavada",
+		"URL": "https://www.quirky.com/Michael_Cavada",
+		"Location": "Pennsylvania",
+		"Projects": ["Space Bar"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243396/naming",
+		"ContributionNum": 256,
+		"Project": "Space Bar"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243396/tagline",
+		"ContributionNum": 291,
+		"Project": "Space Bar"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243396/logo-design",
+		"ContributionNum": 53,
+		"Project": "Space Bar"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243396/design",
+		"ContributionNum": 29,
+		"Project": "Space Bar"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243396/images",
+		"ContributionNum": 7,
+		"Project": "Space Bar"
+	}]
+},
+{
+	"Name": "Cordies",
+	"URL": "https://www.quirky.com/invent/243458",
+	"UnitsSold": 521750,
+	"InfluencersCount": 0,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY AUGUST 24TH 2009",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Cordies-Management-charging-accessory/dp/B004GUS4WG",
+		"ReviewStars": "4",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Stephen Stewart",
+		"URL": "https://www.quirky.com/stephen-stewart",
+		"Location": "Leeds, UK",
+		"Projects": ["Cordies"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243458/images",
+		"ContributionNum": 2,
+		"Project": "Cordies"
+	}]
+},
+{
+	"Name": "PowerShell",
+	"URL": "https://www.quirky.com/invent/244043",
+	"UnitsSold": 1044,
+	"InfluencersCount": 755,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "THURSDAY JULY 25TH 2013",
+	"SelectedDate": "SUNDAY SEPTEMBER 1ST 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "PeteG",
+		"URL": "https://www.quirky.com/PeteG",
+		"Location": "Bridgeport, CT",
+		"Projects": ["PowerShell"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244043/tagline",
+		"ContributionNum": 1189,
+		"Project": "PowerShell"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244043/naming",
+		"ContributionNum": 1514,
+		"Project": "PowerShell"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244043/images",
+		"ContributionNum": 3,
+		"Project": "PowerShell"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244043/problem-solution",
+		"ContributionNum": 1,
+		"Project": "PowerShell"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/244043/design",
+		"ContributionNum": 6,
+		"Project": "PowerShell"
+	}]
+},
+{
+	"Name": "Bake Shapes",
+	"URL": "https://www.quirky.com/invent/243877",
+	"UnitsSold": 2273,
+	"InfluencersCount": 672,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "FRIDAY NOVEMBER 30TH 2012",
+	"SelectedDate": "THURSDAY JANUARY 10TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Hadar",
+		"URL": "https://www.quirky.com/Hadar",
+		"Location": "Oceanside, CA",
+		"Projects": ["Bake Shapes"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243877/naming",
+		"ContributionNum": 1110,
+		"Project": "Bake Shapes"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243877/tagline",
+		"ContributionNum": 945,
+		"Project": "Bake Shapes"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243877/design",
+		"ContributionNum": 65,
+		"Project": "Bake Shapes"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243877/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Bake Shapes"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243877/images",
+		"ContributionNum": 1,
+		"Project": "Bake Shapes"
+	}]
+},
+{
+	"Name": "Luminum",
+	"URL": "https://www.quirky.com/invent/243792",
+	"UnitsSold": 44017,
+	"InfluencersCount": 117,
+	"DevelopmentTime": "",
+	"SubmittedDate": "THURSDAY SEPTEMBER 13TH 2012",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PLUM1-SL01-Luminum-Case-iPhone/dp/B00AW18OZU/ref=cm_cr_pr_pdt_img_top?ie=UTF8",
+		"ReviewStars": "3",
+		"ListPrice": 4.99
+	},
+	"Inventor": {
+		"Name": "Laura Doty",
+		"URL": "https://www.quirky.com/ShamrockMoose",
+		"Location": "",
+		"Projects": ["Luminum"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243792/naming",
+		"ContributionNum": 211,
+		"Project": "Luminum"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243792/tagline",
+		"ContributionNum": 142,
+		"Project": "Luminum"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243792/images",
+		"ContributionNum": 2,
+		"Project": "Luminum"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243792/design",
+		"ContributionNum": 21,
+		"Project": "Luminum"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243792/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Luminum"
+	}]
+},
+{
+	"Name": "Cyclone",
+	"URL": "https://www.quirky.com/invent/243772",
+	"UnitsSold": 3289,
+	"InfluencersCount": 833,
+	"DevelopmentTime": "150",
+	"SubmittedDate": "THURSDAY AUGUST 9TH 2012",
+	"SelectedDate": "THURSDAY SEPTEMBER 6TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PCYC1-XRY1-Cyclone-Weiner-Slicer/dp/B00EDHP4UM",
+		"ReviewStars": "2-5",
+		"ListPrice": 140.0
+	},
+	"Inventor": {
+		"Name": "Zoli Honig",
+		"URL": "https://www.quirky.com/zolihonig",
+		"Location": "NYC",
+		"Projects": ["Cyclone"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243772/naming",
+		"ContributionNum": 1366,
+		"Project": "Cyclone"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243772/tagline",
+		"ContributionNum": 1128,
+		"Project": "Cyclone"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243772/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Cyclone"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243772/design",
+		"ContributionNum": 3,
+		"Project": "Cyclone"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243772/images",
+		"ContributionNum": 4,
+		"Project": "Cyclone"
+	}]
+},
+{
+	"Name": "Prop Power Pro",
+	"URL": "https://www.quirky.com/invent/243962",
+	"UnitsSold": 1366,
+	"InfluencersCount": 596,
+	"DevelopmentTime": "8",
+	"SubmittedDate": "THURSDAY MAY 17TH 2012",
+	"SelectedDate": "FRIDAY MAY 3RD 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Jacob",
+		"URL": "https://www.quirky.com/Jacob",
+		"Location": "Bonaire Georgia",
+		"Projects": ["Prop Power Pro"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243962/naming",
+		"ContributionNum": 1270,
+		"Project": "Prop Power Pro"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243962/tagline",
+		"ContributionNum": 910,
+		"Project": "Prop Power Pro"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243962/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Prop Power Pro"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243962/images",
+		"ContributionNum": 2,
+		"Project": "Prop Power Pro"
+	}]
+},
+{
+	"Name": "Vine",
+	"URL": "https://www.quirky.com/invent/243621",
+	"UnitsSold": 26103,
+	"InfluencersCount": 2282,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "THURSDAY FEBRUARY 2ND 2012",
+	"SelectedDate": "WEDNESDAY FEBRUARY 15TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Vine-Wine-Bottle-Stabilizer/dp/B00LISN7TE",
+		"ReviewStars": "4-5",
+		"ListPrice": 5.09
+	},
+	"Inventor": {
+		"Name": "MarcR",
+		"URL": "https://www.quirky.com/MarcR",
+		"Location": "Aurora",
+		"Projects": ["Vine"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243621/naming",
+		"ContributionNum": 700,
+		"Project": "Vine"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243621/tagline",
+		"ContributionNum": 521,
+		"Project": "Vine"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243621/images",
+		"ContributionNum": 4,
+		"Project": "Vine"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243621/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Vine"
+	}]
+},
+{
+	"Name": "Squeak",
+	"URL": "https://www.quirky.com/invent/243570",
+	"UnitsSold": 3221,
+	"InfluencersCount": 369,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "THURSDAY NOVEMBER 17TH 2011",
+	"SelectedDate": "TUESDAY NOVEMBER 29TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "TeamLab -",
+		"URL": "https://www.quirky.com/TeamLab",
+		"Location": "",
+		"Projects": ["Squeak"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243570/naming",
+		"ContributionNum": 665,
+		"Project": "Squeak"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243570/tagline",
+		"ContributionNum": 535,
+		"Project": "Squeak"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243570/images",
+		"ContributionNum": 4,
+		"Project": "Squeak"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243570/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Squeak"
+	}]
+},
+{
+	"Name": "Stem Metal + CitriTwist",
+	"URL": "https://www.quirky.com/invent/244085",
+	"UnitsSold": 3009,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY SEPTEMBER 26TH 2011",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Tim Houle",
+		"URL": "https://www.quirky.com/tim-houle",
+		"Location": "",
+		"Projects": ["Stem Metal + CitriTwist"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244085/images",
+		"ContributionNum": 3,
+		"Project": "Stem Metal + CitriTwist"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244085/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Stem Metal + CitriTwist"
+	}]
+},
+{
+	"Name": "Spotter",
+	"URL": "https://www.quirky.com/invent/243948",
+	"UnitsSold": 4549,
+	"InfluencersCount": 485,
+	"DevelopmentTime": "150",
+	"SubmittedDate": "THURSDAY JUNE 2ND 2011",
+	"SelectedDate": "FRIDAY APRIL 26TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Denny2020",
+		"URL": "https://www.quirky.com/Denny2020",
+		"Location": "Canada",
+		"Projects": ["Spotter"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243948/tagline",
+		"ContributionNum": 1215,
+		"Project": "Spotter"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243948/naming",
+		"ContributionNum": 239,
+		"Project": "Spotter"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243948/design",
+		"ContributionNum": 18,
+		"Project": "Spotter"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243948/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Spotter"
+	}]
+},
+{
+	"Name": "Scribe",
+	"URL": "https://www.quirky.com/invent/243471",
+	"UnitsSold": 11735,
+	"InfluencersCount": 613,
+	"DevelopmentTime": "120",
+	"SubmittedDate": "MONDAY FEBRUARY 14TH 2011",
+	"SelectedDate": "TUESDAY FEBRUARY 22ND 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Fred Zaw",
+		"URL": "https://www.quirky.com/fred-zaw",
+		"Location": "Fremont, CA",
+		"Projects": ["Scribe"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243471/naming",
+		"ContributionNum": 280,
+		"Project": "Scribe"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243471/images",
+		"ContributionNum": 0,
+		"Project": "Scribe"
+	}]
+},
+{
+	"Name": "Grill Wrangler",
+	"URL": "https://www.quirky.com/invent/243914",
+	"UnitsSold": 6720,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "MONDAY DECEMBER 27TH 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-Pgrl1-xred-Wrangler-Multifunction-QuirkyPGRL1-XRED/dp/B00VA9YIP8",
+		"ReviewStars": "3-5",
+		"ListPrice": 34.71
+	},
+	"Inventor": {
+		"Name": "Peter A. Wachtel",
+		"URL": "https://www.quirky.com/PAW",
+		"Location": "Buffalo, NY ★ Camarillo, CA ★ Chief Creative Kid @KIDToyology®",
+		"Projects": ["Grill Wrangler"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243914/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Grill Wrangler"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243914/images",
+		"ContributionNum": 0,
+		"Project": "Grill Wrangler"
+	}]
+},
+{
+	"Name": "Plug Hub",
+	"URL": "https://www.quirky.com/invent/243438",
+	"UnitsSold": 28705,
+	"InfluencersCount": 685,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "MONDAY OCTOBER 11TH 2010",
+	"SelectedDate": "MONDAY OCTOBER 25TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "JARED JOYCE",
+		"URL": "https://www.quirky.com/jared-joyce",
+		"Location": "BOZEMAN, MT",
+		"Projects": ["Plug Hub"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243438/naming",
+		"ContributionNum": 342,
+		"Project": "Plug Hub"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243438/tagline",
+		"ContributionNum": 223,
+		"Project": "Plug Hub"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243438/design",
+		"ContributionNum": 9,
+		"Project": "Plug Hub"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243438/images",
+		"ContributionNum": 5,
+		"Project": "Plug Hub"
+	}]
+},
+{
+	"Name": "Pivot Power Pop",
+	"URL": "https://www.quirky.com/invent/244141",
+	"UnitsSold": 3247,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "16",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "THURSDAY FEBRUARY 13TH 2014",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPVPP-WH01-Pivot-Power-White/dp/B002YU09E6/ref=sr_1_1?s=electronics&ie=UTF8&qid=1429281029&sr=1-1&keywords=PPVPP-WH01",
+		"ReviewStars": "4-5",
+		"ListPrice": 19.98
+	},
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power Pop"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244141/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power Pop"
+	}]
+},
+{
+	"Name": "Broom Groomer With Broom",
+	"URL": "https://www.quirky.com/invent/244071",
+	"UnitsSold": 181,
+	"InfluencersCount": 1,
+	"DevelopmentTime": "",
+	"SubmittedDate": "WEDNESDAY MARCH 3RD 2010",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "bill ward",
+		"URL": "https://www.quirky.com/bill-ward",
+		"Location": "Charleston, SC",
+		"Projects": ["Broom Groomer With Broom"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244071/images",
+		"ContributionNum": 0,
+		"Project": "Broom Groomer With Broom"
+	}]
+},
+{
+	"Name": "CitriTwist",
+	"URL": "https://www.quirky.com/invent/244018",
+	"UnitsSold": 1231,
+	"InfluencersCount": 540,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "SATURDAY MAY 4TH 2013",
+	"SelectedDate": "SATURDAY JUNE 8TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PCTWT-MTL1-CitriTwist-Citrus-Reamer/dp/B00LMXH19C",
+		"ReviewStars": "3-5",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Carlos Uceda",
+		"URL": "https://www.quirky.com/users/426655",
+		"Location": "Sheboygan, WI",
+		"Projects": ["CitriTwist"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244018/naming",
+		"ContributionNum": 1078,
+		"Project": "CitriTwist"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/244018/design",
+		"ContributionNum": 31,
+		"Project": "CitriTwist"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244018/tagline",
+		"ContributionNum": 879,
+		"Project": "CitriTwist"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244018/images",
+		"ContributionNum": 8,
+		"Project": "CitriTwist"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244018/problem-solution",
+		"ContributionNum": 1,
+		"Project": "CitriTwist"
+	}]
+},
+{
+	"Name": "Levier",
+	"URL": "https://www.quirky.com/invent/244041",
+	"UnitsSold": 1765,
+	"InfluencersCount": 694,
+	"DevelopmentTime": "",
+	"SubmittedDate": "TUESDAY NOVEMBER 6TH 2012",
+	"SelectedDate": "INVALID DATE",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PLVR1-MTL1-Levier-Bottle-Opener/dp/B00MO2CK0A",
+		"ReviewStars": "4",
+		"ListPrice": 9.99
+	},
+	"Inventor": {
+		"Name": "Ryan  Neel",
+		"URL": "https://www.quirky.com/ryan--neel",
+		"Location": "",
+		"Projects": ["Levier"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244041/naming",
+		"ContributionNum": 1324,
+		"Project": "Levier"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244041/tagline",
+		"ContributionNum": 1028,
+		"Project": "Levier"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/244041/design",
+		"ContributionNum": 5,
+		"Project": "Levier"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244041/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Levier"
+	}]
+},
+{
+	"Name": "Crossover for iPhone®",
+	"URL": "https://www.quirky.com/invent/243794",
+	"UnitsSold": 27060,
+	"InfluencersCount": 119,
+	"DevelopmentTime": "",
+	"SubmittedDate": "THURSDAY SEPTEMBER 13TH 2012",
+	"SelectedDate": "FRIDAY SEPTEMBER 14TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Chet",
+		"URL": "https://www.quirky.com/Chet",
+		"Location": "Las Vegas",
+		"Projects": ["Crossover for iPhone®"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243794/tagline",
+		"ContributionNum": 143,
+		"Project": "Crossover for iPhone®"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243794/naming",
+		"ContributionNum": 228,
+		"Project": "Crossover for iPhone®"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243794/images",
+		"ContributionNum": 2,
+		"Project": "Crossover for iPhone®"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243794/design",
+		"ContributionNum": 23,
+		"Project": "Crossover for iPhone®"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243794/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Crossover for iPhone®"
+	}]
+},
+{
+	"Name": "Poppit",
+	"URL": "https://www.quirky.com/invent/243747",
+	"UnitsSold": 10318,
+	"InfluencersCount": 502,
+	"DevelopmentTime": "180",
+	"SubmittedDate": "TUESDAY JULY 24TH 2012",
+	"SelectedDate": "WEDNESDAY AUGUST 8TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Yolanda Jackson",
+		"URL": "https://www.quirky.com/yolanda-jackson",
+		"Location": "IL",
+		"Projects": ["Poppit"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243747/naming",
+		"ContributionNum": 883,
+		"Project": "Poppit"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243747/tagline",
+		"ContributionNum": 685,
+		"Project": "Poppit"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243747/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Poppit"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243747/images",
+		"ContributionNum": 2,
+		"Project": "Poppit"
+	}]
+},
+{
+	"Name": "Prop Power",
+	"URL": "https://www.quirky.com/invent/243699",
+	"UnitsSold": 1566,
+	"InfluencersCount": 662,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "THURSDAY MAY 17TH 2012",
+	"SelectedDate": "WEDNESDAY JUNE 20TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PPRP1-WH01-Extension-Cord-Power/dp/B00G2BX2EW",
+		"ReviewStars": "4-5",
+		"ListPrice": 19.99
+	},
+	"Inventor": {
+		"Name": "Jacob",
+		"URL": "https://www.quirky.com/Jacob",
+		"Location": "Bonaire Georgia",
+		"Projects": ["Prop Power"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243699/tagline",
+		"ContributionNum": 945,
+		"Project": "Prop Power"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243699/naming",
+		"ContributionNum": 931,
+		"Project": "Prop Power"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243699/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Prop Power"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243699/images",
+		"ContributionNum": 2,
+		"Project": "Prop Power"
+	}]
+},
+{
+	"Name": "Vine Stop",
+	"URL": "https://www.quirky.com/invent/244012",
+	"UnitsSold": 5739,
+	"InfluencersCount": 633,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "THURSDAY FEBRUARY 2ND 2012",
+	"SelectedDate": "WEDNESDAY MAY 29TH 2013",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B002YTLWJI/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "4-5",
+		"ListPrice": 18.53
+	},
+	"Inventor": {
+		"Name": "MarcR",
+		"URL": "https://www.quirky.com/MarcR",
+		"Location": "Aurora",
+		"Projects": ["Vine Stop"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/244012/naming",
+		"ContributionNum": 1311,
+		"Project": "Vine Stop"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/244012/tagline",
+		"ContributionNum": 1112,
+		"Project": "Vine Stop"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/244012/design",
+		"ContributionNum": 24,
+		"Project": "Vine Stop"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/244012/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Vine Stop"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/244012/images",
+		"ContributionNum": 4,
+		"Project": "Vine Stop"
+	}]
+},
+{
+	"Name": "Scoop",
+	"URL": "https://www.quirky.com/invent/243565",
+	"UnitsSold": 1213,
+	"InfluencersCount": 2132,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "SATURDAY NOVEMBER 12TH 2011",
+	"SelectedDate": "WEDNESDAY NOVEMBER 23RD 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/Quirky-PSCP1-GR01-Scoop/dp/B00E3E28LS",
+		"ReviewStars": "5",
+		"ListPrice": 7.4
+	},
+	"Inventor": {
+		"Name": "Patty Lovell",
+		"URL": "https://www.quirky.com/patty-lovell",
+		"Location": "Canton, OH",
+		"Projects": ["Scoop"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243565/naming",
+		"ContributionNum": 474,
+		"Project": "Scoop"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243565/tagline",
+		"ContributionNum": 391,
+		"Project": "Scoop"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243565/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Scoop"
+	}]
+},
+{
+	"Name": "Loop",
+	"URL": "https://www.quirky.com/invent/243531",
+	"UnitsSold": 15325,
+	"InfluencersCount": 1800,
+	"DevelopmentTime": "90",
+	"SubmittedDate": "SUNDAY JULY 31ST 2011",
+	"SelectedDate": "SATURDAY AUGUST 13TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Adam Rehak",
+		"URL": "https://www.quirky.com/adam-rehak",
+		"Location": "Prague, Czech republic",
+		"Projects": ["Loop"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243531/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Loop"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243531/naming",
+		"ContributionNum": 436,
+		"Project": "Loop"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243531/tagline",
+		"ContributionNum": 357,
+		"Project": "Loop"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243531/images",
+		"ContributionNum": 0,
+		"Project": "Loop"
+	}]
+},
+{
+	"Name": "Sliders",
+	"URL": "https://www.quirky.com/invent/243508",
+	"UnitsSold": 10572,
+	"InfluencersCount": 611,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "MONDAY MAY 23RD 2011",
+	"SelectedDate": "SATURDAY JUNE 4TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Tim Hayes",
+		"URL": "https://www.quirky.com/tim-hayes",
+		"Location": "Lakewood, Ohio",
+		"Projects": ["Sliders"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243508/naming",
+		"ContributionNum": 285,
+		"Project": "Sliders"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243508/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Sliders"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243508/tagline",
+		"ContributionNum": 198,
+		"Project": "Sliders"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243508/images",
+		"ContributionNum": 0,
+		"Project": "Sliders"
+	}]
+},
+{
+	"Name": "Bandits",
+	"URL": "https://www.quirky.com/invent/243476",
+	"UnitsSold": 270863,
+	"InfluencersCount": 679,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "MONDAY FEBRUARY 7TH 2011",
+	"SelectedDate": "SATURDAY FEBRUARY 19TH 2011",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Charlie Circles",
+		"URL": "https://www.quirky.com/Circles",
+		"Location": "Noowe",
+		"Projects": ["Bandits"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243476/naming",
+		"ContributionNum": 276,
+		"Project": "Bandits"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243476/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Bandits"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243476/images",
+		"ContributionNum": 4,
+		"Project": "Bandits"
+	}]
+},
+{
+	"Name": "Ohm",
+	"URL": "https://www.quirky.com/invent/243455",
+	"UnitsSold": 227,
+	"InfluencersCount": 1907,
+	"DevelopmentTime": "19",
+	"SubmittedDate": "MONDAY DECEMBER 6TH 2010",
+	"SelectedDate": "SATURDAY DECEMBER 18TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Maria Morrill",
+		"URL": "https://www.quirky.com/Maria",
+		"Location": "Bayamon, PR",
+		"Projects": ["Ohm"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243455/naming",
+		"ContributionNum": 368,
+		"Project": "Ohm"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243455/design",
+		"ContributionNum": 46,
+		"Project": "Ohm"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243455/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Ohm"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243455/images",
+		"ContributionNum": 1,
+		"Project": "Ohm"
+	}]
+},
+{
+	"Name": "Contour",
+	"URL": "https://www.quirky.com/invent/243434",
+	"UnitsSold": 4672,
+	"InfluencersCount": 499,
+	"DevelopmentTime": "30",
+	"SubmittedDate": "TUESDAY SEPTEMBER 14TH 2010",
+	"SelectedDate": "SATURDAY SEPTEMBER 25TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Tracie Beer",
+		"URL": "https://www.quirky.com/tracie-beer",
+		"Location": "",
+		"Projects": ["Contour"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243434/logo-design",
+		"ContributionNum": 57,
+		"Project": "Contour"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243434/tagline",
+		"ContributionNum": 251,
+		"Project": "Contour"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243434/naming",
+		"ContributionNum": 339,
+		"Project": "Contour"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243434/design",
+		"ContributionNum": 50,
+		"Project": "Contour"
+	},
+	{
+		"Name": "Problem / Solution",
+		"URL": "https://www.quirky.com/invent/243434/problem-solution",
+		"ContributionNum": 1,
+		"Project": "Contour"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243434/images",
+		"ContributionNum": 13,
+		"Project": "Contour"
+	}]
+},
+{
+	"Name": "Pivot Power",
+	"URL": "https://www.quirky.com/invent/243418",
+	"UnitsSold": 621589,
+	"InfluencersCount": 1006,
+	"DevelopmentTime": "60",
+	"SubmittedDate": "WEDNESDAY APRIL 28TH 2010",
+	"SelectedDate": "WEDNESDAY MAY 5TH 2010",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": {
+		"URL": "http://www.amazon.com/gp/product/B004ZP74UA/ref=olp_product_details?ie=UTF8&me=",
+		"ReviewStars": "4-5",
+		"ListPrice": 37.0
+	},
+	"Inventor": {
+		"Name": "Jake Zien",
+		"URL": "https://www.quirky.com/jake",
+		"Location": "NYC",
+		"Projects": ["Pivot Power"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243418/design",
+		"ContributionNum": 46,
+		"Project": "Pivot Power"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243418/naming",
+		"ContributionNum": 295,
+		"Project": "Pivot Power"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243418/logo-design",
+		"ContributionNum": 32,
+		"Project": "Pivot Power"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243418/images",
+		"ContributionNum": 3,
+		"Project": "Pivot Power"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243418/tagline",
+		"ContributionNum": 278,
+		"Project": "Pivot Power"
+	}]
+},
+{
+	"Name": "Broom Groomer Pro",
+	"URL": "https://www.quirky.com/invent/243638",
+	"UnitsSold": 3742,
+	"InfluencersCount": 567,
+	"DevelopmentTime": "365",
+	"SubmittedDate": "WEDNESDAY MARCH 3RD 2010",
+	"SelectedDate": "WEDNESDAY MARCH 28TH 2012",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "bill ward",
+		"URL": "https://www.quirky.com/bill-ward",
+		"Location": "Charleston, SC",
+		"Projects": ["Broom Groomer Pro"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243638/naming",
+		"ContributionNum": 851,
+		"Project": "Broom Groomer Pro"
+	},
+	{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243638/tagline",
+		"ContributionNum": 748,
+		"Project": "Broom Groomer Pro"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243638/design",
+		"ContributionNum": 19,
+		"Project": "Broom Groomer Pro"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243638/images",
+		"ContributionNum": 0,
+		"Project": "Broom Groomer Pro"
+	}]
+},
+{
+	"Name": "Bobble Brush",
+	"URL": "https://www.quirky.com/invent/243390",
+	"UnitsSold": 16418,
+	"InfluencersCount": 494,
+	"DevelopmentTime": "29",
+	"SubmittedDate": "WEDNESDAY SEPTEMBER 16TH 2009",
+	"SelectedDate": "FRIDAY SEPTEMBER 25TH 2009",
+	"LaunchedDate": "THURSDAY MAY 12TH 2011",
+	"AmazonDetails": null,
+	"Inventor": {
+		"Name": "Spencer Sloan",
+		"URL": "https://www.quirky.com/spencer-sloan",
+		"Location": "Atlanta",
+		"Projects": ["Bobble Brush"],
+		"Contributions": [],
+		"Followers": [],
+		"Followees": []
+	},
+	"Categories": [{
+		"Name": "Tagline",
+		"URL": "https://www.quirky.com/invent/243390/tagline",
+		"ContributionNum": 317,
+		"Project": "Bobble Brush"
+	},
+	{
+		"Name": "Design",
+		"URL": "https://www.quirky.com/invent/243390/design",
+		"ContributionNum": 23,
+		"Project": "Bobble Brush"
+	},
+	{
+		"Name": "Naming",
+		"URL": "https://www.quirky.com/invent/243390/naming",
+		"ContributionNum": 315,
+		"Project": "Bobble Brush"
+	},
+	{
+		"Name": "Logo Design",
+		"URL": "https://www.quirky.com/invent/243390/logo-design",
+		"ContributionNum": 37,
+		"Project": "Bobble Brush"
+	},
+	{
+		"Name": "Images",
+		"URL": "https://www.quirky.com/invent/243390/images",
+		"ContributionNum": 1,
+		"Project": "Bobble Brush"
+	}]
+}]
