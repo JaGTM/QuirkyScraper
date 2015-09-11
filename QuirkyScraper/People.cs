@@ -81,5 +81,10 @@ namespace QuirkyScraper
             if (list.Any(x => x == skill)) return;
             list.Add(skill);
         }
+
+        public bool Equals(IPeople other)
+        {
+            return string.Equals(this.Name, other.Name, StringComparison.OrdinalIgnoreCase);
+        }
     }
 }

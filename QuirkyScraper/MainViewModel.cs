@@ -31,6 +31,7 @@ namespace QuirkyScraper
         private ICommand mGenerateMultiPhaseContributor;
         private ICommand mGenerateSpecialistData;
         private ICommand mGenerateProjectDomainsCount;
+        private ICommand mGenerateCommonCollaborator;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -109,6 +110,12 @@ namespace QuirkyScraper
         {
             get { return mGenerateProjectDomainsCount; }
             set { mGenerateProjectDomainsCount = value; Notify(); }
+        }
+
+        public ICommand GenerateCommonCollaborator
+        {
+            get { return mGenerateCommonCollaborator; }
+            set { mGenerateCommonCollaborator = value; Notify(); }
         }
 
         public int Progress
@@ -191,8 +198,93 @@ namespace QuirkyScraper
                 CanExecuteAction = o => !mBusy,
                 ExecuteAction = o => DoBGAction(DoGenerateProjectDomainsCount)
             };
+            GenerateCommonCollaborator = new CustomCommand
+            {
+                CanExecuteAction = o => !mBusy,
+                ExecuteAction = o => DoBGAction(DoGenerateCommonCollaborator)
+            };
         }
         #region Actions
+
+        private void DoGenerateCommonCollaborator(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<Project> projects = null;
+            try
+            {
+                projects = Helper.GetJsonObjectFromFile<List<Project>>(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get projects data. Exception: {0}", e);
+                return;
+            }
+
+            if (projects == null) return;
+
+            var peoplePicker = new OpenFileDialog
+            {
+                Title = "Select scraped people json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = peoplePicker.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> people = null;
+            try
+            {
+                people = Helper.GetJsonObjectFromFile<List<People>>(peoplePicker.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get scrapped people. Exception: {0}", e);
+                return;
+            }
+
+            if (people == null) return;
+            
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                projects = projects.Where(x => !excludeProject.Any(y => string.Equals(x.Name, y.Name))).ToList();
+                people = people.Where(x => !x.Contributions.All(y => excludeProject.Any(z => string.Equals(z.Name, y.Project)))).ToList();
+            }
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls",
+                FileName = "CommonCollaborator.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.HasValue == false || result.Value == false) return;  // User must specify location to save file
+
+            saveFile = saveFp.FileName;
+
+            IProcessor processor = new CommonCollaboratorProcessor(projects, people)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
 
         private void DoGenerateProjectDomainsCount(BackgroundWorker bw)
         {
