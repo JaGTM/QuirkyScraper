@@ -113,7 +113,7 @@ namespace QuirkyScraper
         private List<Tuple<IProject, List<IPeople>, List<IPeople>>> FindCommonCollaborators(List<IProject> sortedProjects)
         {
             List<Tuple<IProject, List<IPeople>, List<IPeople>>> collaborators = new List<Tuple<IProject, List<IPeople>, List<IPeople>>>();
-            var common = new List<IPeople>();
+            var previous = new List<IPeople>();
             for(int i = 0; i < sortedProjects.Count; i++)
             {
                 var project = sortedProjects[i];
@@ -123,13 +123,14 @@ namespace QuirkyScraper
                 if (i == 0)
                 {   // Has no collaborators with the previous
                     collaborators.Add(new Tuple<IProject, List<IPeople>, List<IPeople>>(project, new List<IPeople>(), projectCollaborators));
-                    common = new List<IPeople>(projectCollaborators);   // Initialize the common collaborators
+                    previous = new List<IPeople>(projectCollaborators);   // Initialize the common collaborators
                     continue;
                 }
 
                 ReportProgress(15 + (i * 45/sortedProjects.Count), string.Format("Finding common collaborators for {0}. Completed {1}/{2} projects", project.Name, i, sortedProjects.Count));
-                common = common.Join(projectCollaborators, c => c.Name, p => p.Name, (c, p) => c).ToList();
-                var commonCollaborators = new List<IPeople>(common);
+                var commonCollaborators = previous.Join(projectCollaborators, c => c.Name, p => p.Name, (c, p) => c).ToList();
+
+                previous = previous.Concat(projectCollaborators).Distinct().ToList();   // Add new people to the heap
 
                 collaborators.Add(new Tuple<IProject, List<IPeople>, List<IPeople>>(project, commonCollaborators, projectCollaborators));
             }
