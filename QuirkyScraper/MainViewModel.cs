@@ -413,7 +413,8 @@ namespace QuirkyScraper
             var sp = new SaveFileDialog
             {
                 Title = "Select location to save scraped followers followings",
-                Filter = "json file | *.txt"
+                Filter = "json file | *.txt",
+                FileName = "ScrapedFollowerFollowing.txt"
             };
             var saveResult = sp.ShowDialog();
             if (saveResult.Value == false) return;
