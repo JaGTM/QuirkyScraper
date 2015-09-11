@@ -48,7 +48,11 @@ namespace QuirkyScraper
             for (int i = 0; i < this.people.Count; i++)
             {
                 var person = this.people[i];
-                if (results.Any(x => x.Name == person.Name && x.URL == person.URL)) continue;
+                if (results.Any(x => x.Name == person.Name && x.URL == person.URL))
+                {
+                    ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followings. {1}/{2} completed.", person.Name, i + 1, this.people.Count));
+                    continue;
+                }
 
                 var personId = Regex.Match(person.URL, "(?<=users/)[0-9]+").ToString();
 
