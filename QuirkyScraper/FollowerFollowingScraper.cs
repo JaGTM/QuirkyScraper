@@ -11,7 +11,7 @@ namespace QuirkyScraper
 {
     internal class FollowerFollowingScraper : IScraper
     {
-        private const string DEFAULT_TEMP_FILE_PATH = @"tempFollowerFollowing.xls";
+        private const string DEFAULT_TEMP_FILE_PATH = @"tempFollowerFollowing.txt";
 
         private List<People> people;
         private string mTempFilePath;
