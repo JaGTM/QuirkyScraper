@@ -32,10 +32,10 @@ namespace QuirkyScraper
         /// </summary>
         /// <param name="followers"></param>
         /// <param name="followees"></param>
-        public People(IEnumerable<People> followers, IEnumerable<People> followees, IEnumerable<string> projects, IEnumerable<Category> contributions, IEnumerable<string> skills)
+        public People(IEnumerable<People> followers, IEnumerable<People> followings, IEnumerable<string> projects, IEnumerable<Category> contributions, IEnumerable<string> skills)
         {
             Followers = followers == null ? new List<IPeople>() : new List<IPeople>(followers);
-            Followings = Followings == null ? new List<IPeople>() : new List<IPeople>(followees);
+            Followings = followings == null ? new List<IPeople>() : new List<IPeople>(followings);
             Projects = projects == null ? new List<string>() : new List<string>(projects);
             Contributions = contributions == null ? new List<ICategory>() : new List<ICategory>(contributions);
             Skills = skills == null ? new List<string>() : new List<string>(skills);
