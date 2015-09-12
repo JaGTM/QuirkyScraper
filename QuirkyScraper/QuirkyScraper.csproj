@@ -87,6 +87,7 @@
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
     <Compile Include="ProjectDomainsCountProcessor.cs" />
+    <Compile Include="ProjectPhaseDomainsCountProcessor.cs" />
     <Compile Include="SpecialistDataProcessor.cs" />
     <Compile Include="SpecialistsScraper.cs" />
     <Compile Include="UI\Converters\IntMoreThanZeroConverter.cs" />

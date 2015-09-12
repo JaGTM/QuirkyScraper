@@ -96,6 +96,7 @@
                 <Button Content="Generate project domains count" Command="{Binding GenerateProjectDomainsCount}" Grid.Row="1" Grid.Column="3"/>
                 <Button Content="Generate common collaborator" Command="{Binding GenerateCommonCollaborator}" Grid.Row="2"/>
                 <Button Content="Generate phase domains count" Command="{Binding GeneratePhaseDomainsCount}" Grid.Row="2" Grid.Column="1"/>
+                <Button Content="Generate project and phase domains count" Command="{Binding GenerateProjectPhaseDomainsCount}" Grid.Row="2" Grid.Column="2"/>
             </Grid>
         </Grid>
 

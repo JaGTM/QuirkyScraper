@@ -66,7 +66,7 @@ namespace QuirkyScraper
                     var project = projects[projCount];
 
                     var currentProjectProgress = 80 + projCount * 20 / projects.Count;
-                    ReportProgress(80 + projCount * 20/ projects.Count, string.Format("Writing details for {0}...", project.Key));
+                    ReportProgress(currentProjectProgress, string.Format("Writing details for {0}...", project.Key));
                     writer.CreateWorksheet(project.Key + " Details");
 
                     var maxRows = domainsAndCounts.Where(x => project.Any(y => x.Key == y)).Select(x => x.Value.Count).Max() + 1;
@@ -92,7 +92,7 @@ namespace QuirkyScraper
             }
         }
 
-        private Dictionary<ICategory, List<string>> CountDomains()
+        public Dictionary<ICategory, List<string>> CountDomains()
         {
             var items = this.people.SelectMany(x => x.Contributions.Select(y =>
             {
@@ -115,6 +115,7 @@ namespace QuirkyScraper
                     Project = y.Project
                 };
             })).GroupBy(x => x.Project)
+            .OrderBy(x => x.Key)    // Ensure projects are ordered
             .Select(x => new
             {
                 Project = x.Key,

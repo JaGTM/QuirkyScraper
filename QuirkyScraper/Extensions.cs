@@ -52,13 +52,32 @@ namespace QuirkyScraper
 
         public static XmlWriter WriteCell(this XmlWriter writer, string value, bool bold = false)
         {
+            if (writer == null) return null;
+            return writer.WriteCell(value, "String", bold);
+        }
+
+        public static XmlWriter WriteCell(this XmlWriter writer, int value, bool bold = false)
+        {
+            if (writer == null) return null;
+            return writer.WriteCell(value.ToString(), "Number", bold);
+        }
+
+        public static XmlWriter WriteCell(this XmlWriter writer, double value, bool bold = false)
+        {
+            if (writer == null) return null;
+            return writer.WriteCell(value.ToString(), "Number", bold);
+        }
+
+        public static XmlWriter WriteCell(this XmlWriter writer, string value, string cellType, bool bold = false)
+        {
+            if (writer == null) return null;
             writer.WriteStartElement("Cell");
             if (bold)
                 writer.WriteAttributeString("ss", "StyleID", null, "s21");
 
             writer.WriteStartElement("Data");
 
-            writer.WriteAttributeString("ss", "Type", null, "String");
+            writer.WriteAttributeString("ss", "Type", null, cellType);
             writer.WriteString(value);
 
             writer.WriteEndElement();
