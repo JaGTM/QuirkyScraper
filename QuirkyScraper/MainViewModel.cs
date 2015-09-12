@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +34,7 @@ namespace QuirkyScraper
         private ICommand mGenerateSpecialistData;
         private ICommand mGenerateProjectDomainsCount;
         private ICommand mGenerateCommonCollaborator;
+        private ICommand mGeneratePhaseDomainsCount;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -118,6 +121,12 @@ namespace QuirkyScraper
             set { mGenerateCommonCollaborator = value; Notify(); }
         }
 
+        public ICommand GeneratePhaseDomainsCount
+        {
+            get { return mGeneratePhaseDomainsCount; }
+            set { mGeneratePhaseDomainsCount = value; Notify(); }
+        }
+
         public int Progress
         {
             get { return mProgress; }
@@ -136,75 +145,123 @@ namespace QuirkyScraper
             BindCommands();
         }
 
+        private void BindCommand(MainViewModel source, Expression<Func<MainViewModel, ICommand>> outExpr, Action<BackgroundWorker> input)
+        {
+            var expr = (MemberExpression)outExpr.Body;
+            var prop = (PropertyInfo)expr.Member;
+            var command = new CustomCommand
+            {
+                CanExecuteAction = o => !source.mBusy,
+                ExecuteAction = o => source.DoBGAction(input)
+            };
+            prop.SetValue(source, command, null);
+        }
+
+        class CommandsAndActions
+        {
+            public CommandsAndActions(Expression<Func<MainViewModel, ICommand>> property, Action<BackgroundWorker> command)
+            {
+                Property = property;
+                Command = command;
+            }
+
+            public Expression<Func<MainViewModel, ICommand>> Property { get; set; }
+            public Action<BackgroundWorker> Command { get; set; }
+        }
+
+        private CommandsAndActions CA(Expression<Func<MainViewModel, ICommand>> property, Action<BackgroundWorker> command)
+        {
+            return new CommandsAndActions(property, command);
+        }
+
         private void BindCommands()
         {
-            ScrapeParticipants = new CustomCommand
+            new List<CommandsAndActions>
             {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoScrapeParticipants)
-            };
-            GenerateProductContribution = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateProductContribution)
-            };
-            GeneratePhaseContribution = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGeneratePhaseContribution)
-            };
-            ScrapePeople = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoScrapePeople)
-            };
-            GenerateProductXContributors = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateProductXContributors)
-            };
-            GenerateProductInfluencers = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateProductInfluencers)
-            };
-            GenerateContributorsxProducts = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateContributorsxProducts)
-            };
-            ScrapeFollowerFollowing = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoScrapeFollowerFollowing)
-            };
-            ScrapeSpecialists = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoScrapeSpecialists)
-            };
-            GenerateMultiPhaseContributor = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateMultiPhaseContributor)
-            };
-            GenerateSpecialistData = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateSpecialistData)
-            };
-            GenerateProjectDomainsCount = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateProjectDomainsCount)
-            };
-            GenerateCommonCollaborator = new CustomCommand
-            {
-                CanExecuteAction = o => !mBusy,
-                ExecuteAction = o => DoBGAction(DoGenerateCommonCollaborator)
-            };
+                CA(o => o.ScrapeParticipants, DoScrapeParticipants),
+                CA(o => o.GenerateProductContribution, DoGenerateProductContribution),
+                CA(o => o.GeneratePhaseContribution, DoGeneratePhaseContribution),
+                CA(o => o.ScrapePeople, DoScrapePeople),
+                CA(o => o.GenerateProductXContributors, DoGenerateProductXContributors),
+                CA(o => o.GenerateProductInfluencers, DoGenerateProductInfluencers),
+                CA(o => o.GenerateContributorsxProducts, DoGenerateContributorsxProducts),
+                CA(o => o.ScrapeFollowerFollowing, DoScrapeFollowerFollowing),
+                CA(o => o.ScrapeSpecialists, DoScrapeSpecialists),
+                CA(o => o.GenerateMultiPhaseContributor, DoGenerateMultiPhaseContributor),
+                CA(o => o.GenerateSpecialistData, DoGenerateSpecialistData),
+                CA(o => o.GenerateProjectDomainsCount, DoGenerateProjectDomainsCount),
+                CA(o => o.GenerateCommonCollaborator, DoGenerateCommonCollaborator),
+                CA(o => o.GeneratePhaseDomainsCount, DoGeneratePhaseDomainsCount)
+
+            }.ForEach(x => BindCommand(this, x.Property, x.Command));
         }
         #region Actions
+
+        private void DoGeneratePhaseDomainsCount(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select specialist json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> specialists = null;
+            try
+            {
+                specialists = Helper.GetJsonObjectFromFile<List<People>>(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get specialist data. Exception: {0}", e);
+                return;
+            }
+
+            if (specialists == null) return;
+
+            var peoplePicker = new OpenFileDialog
+            {
+                Title = "Select scraped people json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = peoplePicker.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> people = null;
+            try
+            {
+                people = Helper.GetJsonObjectFromFile<List<People>>(peoplePicker.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get scrapped people. Exception: {0}", e);
+                return;
+            }
+
+            if (people == null) return;
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls",
+                FileName = "PhaseDomainsCount.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.HasValue == false || result.Value == false) return;  // User must specify location to save file
+
+            saveFile = saveFp.FileName;
+
+            IProcessor processor = new PhaseDomainsCountProcessor(specialists, people)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
 
         private void DoGenerateCommonCollaborator(BackgroundWorker bw)
         {

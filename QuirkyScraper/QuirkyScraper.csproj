@@ -82,6 +82,7 @@
     <Compile Include="FollowerFollowingScraper.cs" />
     <Compile Include="GenerateContributorsXProductsProcessor.cs" />
     <Compile Include="MultiPhaseContributorProcessor.cs" />
+    <Compile Include="PhaseDomainsCountProcessor.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
