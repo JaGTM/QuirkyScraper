@@ -43,12 +43,19 @@ namespace QuirkyScraper
             var tempPeople = GetTempPeople();
 
             var results = new List<IPeople>();
-            tempPeople.ForEach(x => results.Add(x));    // Add already processed people
+            //tempPeople.ForEach(x => results.Add(x));    // Add already processed people
 
-            for (int i = 0; i < this.people.Count; i++)
+            Stack<IPeople> stack = new Stack<IPeople>(this.people);
+            this.people = null;
+            int totalPeopleToScrap = stack.Count;
+            for (int i = 0; i < totalPeopleToScrap; i++)
             {
-                var person = this.people[i];
-                if (results.Any(x => x.Name == person.Name && x.URL == person.URL)) continue;
+                IPeople person = stack.Pop();
+                if (tempPeople.Any(x => x.Name == person.Name && x.URL == person.URL))
+                {
+                    Console.WriteLine("This person already scraped: {0}", person.Name);
+                    continue;
+                }
 
                 var personId = Regex.Match(person.URL, "(?<=users/)[0-9]+").ToString();
 
@@ -59,30 +66,26 @@ namespace QuirkyScraper
                 }
                 catch (ArgumentOutOfRangeException e)
                 {
-                    if (e.Message == "Invalid user")
+                    if (!string.IsNullOrEmpty(e.ParamName) && string.Equals(e.ParamName, "Invalid user", StringComparison.OrdinalIgnoreCase))
                         continue;   // User no longer exist continue
                 }
 
-                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followers... {1}/{2} completed.", person.Name, i, this.people.Count));
-                PopulateFollowers(i, this.people.Count, ref person, personId, followers);
-                ReportProgress(i, this.people.Count, string.Format("Scraping {0}'s followings... {1}/{2} completed.", person.Name, i, this.people.Count));
-                PopulateFollowings(i, this.people.Count, ref person, personId, followings);
-                results.Add(person);
-                ReportProgress(i, this.people.Count, string.Format("Writing {0} to temp file... {1}/{2} scraping completed.", person.Name, i + 1, this.people.Count));
-                WriteToTemp(tempPeople, person);
-                ReportProgress(i + 1, this.people.Count, string.Format("Completed scraping {0}'s followers and followings. {1}/{2} completed.", person.Name, i + 1, this.people.Count));
+                ReportProgress(i, totalPeopleToScrap, string.Format("Scraping {0}'s followers... {1}/{2} completed.", person.Name, i, totalPeopleToScrap));
+                PopulateFollowers(i, totalPeopleToScrap, ref person, personId, followers);
+                ReportProgress(i, totalPeopleToScrap, string.Format("Scraping {0}'s followings... {1}/{2} completed.", person.Name, i, totalPeopleToScrap));
+                PopulateFollowings(i, totalPeopleToScrap, ref person, personId, followings);
+                ReportProgress(i, totalPeopleToScrap, string.Format("Writing {0} to temp file... {1}/{2} scraping completed.", person.Name, i + 1, totalPeopleToScrap));
+                WriteToTemp(person);
+                ReportProgress(i + 1, totalPeopleToScrap, string.Format("Completed scraping {0}'s followers and followings. {1}/{2} completed.", person.Name, i + 1, totalPeopleToScrap));
             }
 
             MessageBox.Show("Follower and following scraping completed.");
             return results;
         }
 
-        private void WriteToTemp(List<IPeople> tempPeople, People person)
+        private void WriteToTemp(IPeople person)
         {
-            var newTemp = new List<IPeople>(tempPeople);
-            newTemp.Add(person);
-
-            File.WriteAllText(TempFilePath, newTemp.ToJson());
+            Helper.AppendToFile(person, TempFilePath);
         }
 
         private List<IPeople> GetTempPeople()
@@ -91,7 +94,10 @@ namespace QuirkyScraper
 
             try
             {
-                return Helper.GetJsonObjectFromFile<List<People>>(TempFilePath).Cast<IPeople>().ToList();
+                var people = Helper.GetJsonIEnumerableFromTemp<People>(TempFilePath);
+                return people.Select(x => new People { Name = x.Name, URL = x.URL } as IPeople).ToList();
+                //return Helper.GetJsonArrayFromTemp<List<People>>(TempFilePath).Cast<IPeople>().ToList();
+                //return Helper.GetJsonObjectFromFile<List<People>>(TempFilePath).Cast<IPeople>().ToList();
             }
             catch
             {   // If some how file is corrupted/unreadable get new list
@@ -109,17 +115,17 @@ namespace QuirkyScraper
             followingCount = counters.Value<int>("following_count");
         }
 
-        private void PopulateFollowings(int index, int totalCount, ref People person, string personId, int count)
+        private void PopulateFollowings(int index, int totalCount, ref IPeople person, string personId, int count)
         {
             Populate(index, totalCount, ref person, false, personId, count);
         }
 
-        private void PopulateFollowers(int index, int totalCount, ref People person, string personId, int count)
+        private void PopulateFollowers(int index, int totalCount, ref IPeople person, string personId, int count)
         {
             Populate(index, totalCount, ref person, true, personId, count);
         }
 
-        private void Populate(int index, int totalCount, ref People person, bool isFollower, string personId, int count)
+        private void Populate(int index, int totalCount, ref IPeople person, bool isFollower, string personId, int count)
         {
             var reportText = isFollower ? "followers" : "followings";
 

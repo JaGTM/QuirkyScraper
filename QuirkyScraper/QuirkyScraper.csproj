@@ -81,6 +81,7 @@
     <Compile Include="FollowerFollowingScraper.cs" />
     <Compile Include="GenerateContributorsXProductsProcessor.cs" />
     <Compile Include="MultiPhaseContributorProcessor.cs" />
+    <Compile Include="MyJsonConverter.cs" />
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
     <Compile Include="ProjectDomainsCountProcessor.cs" />

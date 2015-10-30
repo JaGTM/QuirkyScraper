@@ -23,8 +23,12 @@ namespace QuirkyScraper
 
         public static T GetJsonObjectFromFile<T>(string filePath)
         {
-            var json = File.ReadAllText(filePath);
-            return JsonConvert.DeserializeObject<T>(json);
+            using (StreamReader streamReader = new StreamReader(filePath))
+            using(JsonTextReader reader = new JsonTextReader(streamReader))
+            {                
+                JsonSerializer ser = new JsonSerializer();
+                return ser.Deserialize<T>(reader);
+            }
         }
 
         public static IWebDriver GetWebdriver(WebDriverType driverType = WebDriverType.PhantomJS)
@@ -48,19 +52,89 @@ namespace QuirkyScraper
         private static SemaphoreSlim semaphore = new SemaphoreSlim(1, 1);
         private const string DEFAULT_FILEPATH = @"C:\Users\JaG\Desktop\partialResults.txt";
 
-        public static async void AppendToFile(object obj, string filePath = DEFAULT_FILEPATH)
+        public static void AppendToFile(object obj, string filePath = DEFAULT_FILEPATH)
         {
-            await Task.Delay(100);
-            semaphore.Wait();
+            //await Task.Delay(100);
+            //semaphore.Wait();
             try
             {
-                var json = obj.ToJson() + ",";
-                File.AppendAllText(filePath, json);
+                using (StreamWriter stream = new StreamWriter(filePath, true))
+                using (JsonTextWriter writer = new JsonTextWriter(stream))
+                {
+                    JsonSerializer ser = JsonSerializer.Create(new JsonSerializerSettings{ Formatting = Newtonsoft.Json.Formatting.Indented});
+                    ser.Serialize(writer, obj);
+                    stream.Write(",");
+                }
+                //var json = obj.ToJson() + ",";
+                //File.AppendAllText(filePath, json);
             }
             finally
             {
-                semaphore.Release();
+                //semaphore.Release();
             }
+        }
+
+        internal static T GetJsonArrayFromTemp<T>(string filePath)
+        {
+            var tempFilePath = Helper.CloneTextFileAndAddArray(filePath);
+            T obj = default(T);
+
+            using (StreamReader streamReader = new StreamReader(tempFilePath))
+            using (JsonTextReader reader = new JsonTextReader(streamReader))
+            {
+                JsonSerializer ser = new JsonSerializer();
+                obj = ser.Deserialize<T>(reader);
+            }
+
+            File.Delete(tempFilePath);
+            return obj;
+        }
+
+        public static IEnumerable<T> GetJsonIEnumerableFromTemp<T>(string filePath)
+        {
+            var tempFilePath = Helper.CloneTextFileAndAddArray(filePath);
+            return Helper.DeserializeIEnumerableOf<T>(tempFilePath);
+        }
+
+        public static IEnumerable<T> DeserializeIEnumerableOf<T>(string filePath)
+        {
+            using (TextReader textReader = new StreamReader(filePath))
+            {
+                using (var reader = new JsonTextReader(textReader))
+                {
+                    var cachedDeserializer = JsonSerializer.Create();
+
+                    while (reader.Read())
+                    {
+                        if (reader.TokenType == JsonToken.StartObject)
+                        {
+                            var deserializedItem = cachedDeserializer.Deserialize<T>(reader);
+                            yield return deserializedItem;
+                        }
+                    }
+                }
+            }
+        }
+
+        private static string CloneTextFileAndAddArray(string filePath)
+        {
+            var tempFile = filePath + "_clone";
+            using (var readStream = File.OpenRead(filePath))
+            using (var reader = new StreamReader(readStream))
+            using (var writeStream = File.OpenWrite(tempFile))
+            using (var writer = new StreamWriter(writeStream))
+            {
+                writer.Write("[");
+                while (reader.Peek() >= 0)
+                {
+                    var buffer = new char[4096];
+                    reader.Read(buffer, 0, buffer.Length);
+                    writer.Write(buffer);
+                }
+                writer.Write("]");
+            }
+
+            return tempFile;
         }
 
         public static XmlWriter GenerateXmlWriter(string path)
