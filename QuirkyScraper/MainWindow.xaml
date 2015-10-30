@@ -62,14 +62,13 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
-                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 
                 <Button Content="Scrape participants" Command="{Binding ScrapeParticipants}"/>
                 <Button Content="Scrape people" Command="{Binding ScrapePeople}" Grid.Column="1"/>
-                <Button Content="Scrape followers and followings" Command="{Binding ScrapeFollowerFollowing}" Grid.Column="2"/>
                 
-                <Button Content="Scrape specialists" Command="{Binding ScrapeSpecialists}" Grid.Row="1"/>
+                <Button Content="Scrape followers and followings" Command="{Binding ScrapeFollowerFollowing}" Grid.Row="1"/>                
+                <Button Content="Scrape specialists" Command="{Binding ScrapeSpecialists}" Grid.Row="1" Grid.Column="1"/>
             </Grid>
             
             <!-- Processors -->
@@ -83,16 +82,21 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 
                 <Button Content="Generate product phase contribution graph" Command="{Binding GeneratePhaseContribution}"/>
                 <Button Content="Generate product contribution graph" Command="{Binding GenerateProductContribution}" Grid.Column="1"/>
                 <Button Content="Generate products against contributors graph" Command="{Binding GenerateProductXContributors}" Grid.Column="2"/>
-                <Button Content="Generate products infuencers" Command="{Binding GenerateProductInfluencers}" Grid.Row="1"/>
-                <Button Content="Generate Contributors against products graph" Command="{Binding GenerateContributorsxProducts}" Grid.Row="1" Grid.Column="1"/>
-                <Button Content="Generate people with more than 1 phase in each project" Command="{Binding GenerateMultiPhaseContributor}" Grid.Row="1" Grid.Column="2"/>
-                <Button Content="Generate specialist data" Command="{Binding GenerateSpecialistData}" Grid.Row="2"/>
-                <Button Content="Generate project domains count" Command="{Binding GenerateProjectDomainsCount}" Grid.Row="2" Grid.Column="1"/>
+                <Button Content="Generate products infuencers" Command="{Binding GenerateProductInfluencers}" Grid.Column="3"/>
+                
+                <Button Content="Generate Contributors against products graph" Command="{Binding GenerateContributorsxProducts}" Grid.Row="1"/>
+                <Button Content="Generate people with more than 1 phase in each project" Command="{Binding GenerateMultiPhaseContributor}" Grid.Row="1" Grid.Column="1"/>
+                <Button Content="Generate specialist data" Command="{Binding GenerateSpecialistData}" Grid.Row="1" Grid.Column="2"/>
+                <Button Content="Generate project domains count" Command="{Binding GenerateProjectDomainsCount}" Grid.Row="1" Grid.Column="3"/>
+                <Button Content="Generate common collaborator" Command="{Binding GenerateCommonCollaborator}" Grid.Row="2"/>
+                <Button Content="Generate phase domains count" Command="{Binding GeneratePhaseDomainsCount}" Grid.Row="2" Grid.Column="1"/>
+                <Button Content="Generate project and phase domains count" Command="{Binding GenerateProjectPhaseDomainsCount}" Grid.Row="2" Grid.Column="2"/>
             </Grid>
         </Grid>
 

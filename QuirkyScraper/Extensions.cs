@@ -52,13 +52,32 @@ namespace QuirkyScraper
 
         public static XmlWriter WriteCell(this XmlWriter writer, string value, bool bold = false)
         {
+            if (writer == null) return null;
+            return writer.WriteCell(value, "String", bold);
+        }
+
+        public static XmlWriter WriteCell(this XmlWriter writer, int value, bool bold = false)
+        {
+            if (writer == null) return null;
+            return writer.WriteCell(value.ToString(), "Number", bold);
+        }
+
+        public static XmlWriter WriteCell(this XmlWriter writer, double value, bool bold = false)
+        {
+            if (writer == null) return null;
+            return writer.WriteCell(value.ToString(), "Number", bold);
+        }
+
+        public static XmlWriter WriteCell(this XmlWriter writer, string value, string cellType, bool bold = false)
+        {
+            if (writer == null) return null;
             writer.WriteStartElement("Cell");
             if (bold)
                 writer.WriteAttributeString("ss", "StyleID", null, "s21");
 
             writer.WriteStartElement("Data");
 
-            writer.WriteAttributeString("ss", "Type", null, "String");
+            writer.WriteAttributeString("ss", "Type", null, cellType);
             writer.WriteString(value);
 
             writer.WriteEndElement();
@@ -151,6 +170,36 @@ namespace QuirkyScraper
             string regexSearch = new string(Path.GetInvalidFileNameChars()) + new string(Path.GetInvalidPathChars());
             Regex r = new Regex(string.Format("[{0}]", Regex.Escape(regexSearch)));
             return r.Replace(filename, replaceChar);
+        }
+
+        /// <summary>
+        /// Attempts to get a date from a string based on the format provided
+        /// </summary>
+        /// <param name="dateString">String to parse as date</param>
+        /// <param name="format">Standard datetime format to parse dateString</param>
+        /// <returns></returns>
+        public static DateTime? TryGetDate(this string dateString, string format)
+        {
+            DateTime date;
+            if (!DateTime.TryParseExact(dateString, format, null, System.Globalization.DateTimeStyles.None, out date))
+                return null;
+
+            return date;
+        }
+
+        /// <summary>
+        /// Splits a string into a = string[0:len(string)-frontEnd] and b = string[len(string)-backEnd:end] and return a + b
+        /// E.g. string = "Mon 12th Sept", frontEnd = 7, backEnd = 5 => a = "Mon 12", b = " Sept" and returns "Mon 12 Sept"
+        /// </summary>
+        /// <param name="dateString">string to split</param>
+        /// <param name="frontEnd">index, from the back, where the ordinal starts</param>
+        /// <param name="backEnd">index, from the back, where the ordinal ends + 1</param>
+        /// <returns>Front of ordinal + end of ordinal</returns>
+        public static string RemoveOrdinal(this string dateString, int frontEnd, int backEnd)
+        {
+            var startSplit = dateString.Length - frontEnd;
+            var endSplit = dateString.Length - backEnd;
+            return dateString.Substring(0, startSplit) + dateString.Substring(endSplit);
         }
     }
 }

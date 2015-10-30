@@ -6,15 +6,12 @@ using System.Xml;
 
 namespace QuirkyScraper
 {
-    internal class ProjectDomainsCountProcessor : IProcessor
+    internal class ProjectDomainsCountProcessor : Processor
     {
-        public const string DEFAULT_SAVE_PATH = @"D:\Users\JaG\Desktop\projectDomainsCount.xls";
+        protected override string DEFAULT_SAVE_PATH { get; } = "ProjectDomainsCount.xls";
 
         private List<People> people;
         private List<People> specialists;
-        private string mSavePath;
-
-        public event Action<int, string> ProgressChanged;
 
         public ProjectDomainsCountProcessor(List<People> specialists, List<People> people)
         {
@@ -22,20 +19,7 @@ namespace QuirkyScraper
             this.people = people;
         }
 
-        public string Savepath
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(mSavePath))
-                    mSavePath = DEFAULT_SAVE_PATH;
-
-                return mSavePath;
-            }
-
-            set { mSavePath = value; }
-        }
-
-        public void Process()
+        public override void Process()
         {
             ReportProgress(0, "Counting domains for each project...");
             var domainsAndCounts = CountDomains();
@@ -98,7 +82,7 @@ namespace QuirkyScraper
             }
         }
 
-        private Dictionary<string, List<string>> CountDomains()
+        public Dictionary<string, List<string>> CountDomains()
         {
             var items = this.people.SelectMany(x => x.Contributions.Select(y =>
             {
@@ -128,17 +112,6 @@ namespace QuirkyScraper
             .ToDictionary(x => x.Project, x => x.Domains);
 
             return items;
-        }
-
-        private void ReportProgress(int count, int total, string status = null)
-        {
-            ReportProgress(count * 100 / total, status);
-        }
-
-        private void ReportProgress(int progress, string status = null)
-        {
-            if (ProgressChanged != null)
-                ProgressChanged(progress, status);
         }
     }
 }

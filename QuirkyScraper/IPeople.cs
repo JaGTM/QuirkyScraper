@@ -5,7 +5,7 @@ using System.Text;
 
 namespace QuirkyScraper
 {
-    public interface IPeople
+    public interface IPeople: IEquatable<IPeople>
     {
         string Name { get; set; }
         string URL { get; set; }

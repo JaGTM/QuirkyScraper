@@ -78,13 +78,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CommonCollaboratorProcessor.cs" />
     <Compile Include="FollowerFollowingScraper.cs" />
     <Compile Include="GenerateContributorsXProductsProcessor.cs" />
     <Compile Include="MultiPhaseContributorProcessor.cs" />
+    <Compile Include="PhaseDomainsCountProcessor.cs" />
+    <Compile Include="Processor.cs" />
     <Compile Include="MyJsonConverter.cs" />
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
     <Compile Include="ProjectDomainsCountProcessor.cs" />
+    <Compile Include="ProjectPhaseDomainsCountProcessor.cs" />
     <Compile Include="SpecialistDataProcessor.cs" />
     <Compile Include="SpecialistsScraper.cs" />
     <Compile Include="UI\Converters\IntMoreThanZeroConverter.cs" />
