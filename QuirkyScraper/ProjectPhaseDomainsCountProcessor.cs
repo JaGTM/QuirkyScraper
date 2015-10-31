@@ -8,7 +8,7 @@ namespace QuirkyScraper
 {
     internal class ProjectPhaseDomainsCountProcessor : Processor
     {
-        protected override string DEFAULT_SAVE_PATH { get; } = "ProjectPhaseDomainsCount.xls";
+        protected override string DEFAULT_SAVE_PATH { get { return "ProjectPhaseDomainsCount.xls"; } }
 
         private List<People> people;
         private List<People> specialists;

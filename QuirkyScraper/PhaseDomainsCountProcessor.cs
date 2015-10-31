@@ -8,7 +8,7 @@ namespace QuirkyScraper
 {
     internal class PhaseDomainsCountProcessor : Processor
     {
-        protected override string DEFAULT_SAVE_PATH { get; } = "PhaseDomainsCount.xls";
+        protected override string DEFAULT_SAVE_PATH { get { return "PhaseDomainsCount.xls"; } }
 
         private List<People> people;
         private List<People> specialists;
@@ -61,7 +61,7 @@ namespace QuirkyScraper
                 writer.CloseWorksheet();
 
                 var projects = domainsAndCounts.Keys.GroupBy(x => x.Project).ToList();
-                for(var projCount = 0; projCount < projects.Count; projCount++)
+                for (var projCount = 0; projCount < projects.Count; projCount++)
                 {
                     var project = projects[projCount];
 
@@ -70,7 +70,7 @@ namespace QuirkyScraper
                     writer.CreateWorksheet(project.Key + " Details");
 
                     var maxRows = domainsAndCounts.Where(x => project.Any(y => x.Key == y)).Select(x => x.Value.Count).Max() + 1;
-                    for(var row = 0; row < maxRows; row++)
+                    for (var row = 0; row < maxRows; row++)
                     {
                         ReportProgress(currentProjectProgress, string.Format("Writing row {0}/{1} for {2}", row, maxRows, project.Key));
                         writer.CreateRow();

@@ -8,7 +8,7 @@ namespace QuirkyScraper
 {
     internal class ProjectDomainsCountProcessor : Processor
     {
-        protected override string DEFAULT_SAVE_PATH { get; } = "ProjectDomainsCount.xls";
+        protected override string DEFAULT_SAVE_PATH { get { return "ProjectDomainsCount.xls"; } }
 
         private List<People> people;
         private List<People> specialists;
@@ -33,7 +33,7 @@ namespace QuirkyScraper
         {
             using (XmlWriter writer = Helper.GenerateXmlWriter(Savepath))
             {
-                writer.StartCreateXls()                    
+                writer.StartCreateXls()
                 .CreateWorksheet("Knowledge Domain");
 
 
@@ -61,7 +61,7 @@ namespace QuirkyScraper
                 var maxRows = domainsAndCounts.Values.Select(x => x.Count).Max() + 1;
                 ReportProgress(80, "Writing details...");
                 writer.CreateWorksheet("Details");
-                for(var row = 0; row < keys.Count; row++)
+                for (var row = 0; row < keys.Count; row++)
                 {
                     ReportProgress(80 + (row * 20 / maxRows), string.Format("Writing row {0}/{1}", row, maxRows));
                     writer.CreateRow();

@@ -8,7 +8,7 @@ namespace QuirkyScraper
 {
     internal class CommonCollaboratorProcessor : Processor
     {
-        protected override string DEFAULT_SAVE_PATH { get; } = @"commonCollaborator.xls";
+        protected override string DEFAULT_SAVE_PATH { get { return @"commonCollaborator.xls"; } }
         private List<People> people;
         private List<Project> projects;
 
@@ -35,7 +35,7 @@ namespace QuirkyScraper
             using (XmlWriter writer = Helper.GenerateXmlWriter(Savepath))
             {
                 writer.StartCreateXls()
-                // Print overview page
+                    // Print overview page
                 .CreateWorksheet("Common Collaborators");
 
                 ReportProgress(60, "Writing Common Collaborators page...");
@@ -56,8 +56,8 @@ namespace QuirkyScraper
 
                     writer.CreateRow()
                         .WriteCell(projectDetails.Name)
-                        .WriteCell(submittedDate == null? "N/A" : submittedDate.Value.ToString("dd/MM/yyyy"))
-                        .WriteCell(developmentTime < 0? "0" : developmentTime.ToString())
+                        .WriteCell(submittedDate == null ? "N/A" : submittedDate.Value.ToString("dd/MM/yyyy"))
+                        .WriteCell(developmentTime < 0 ? "0" : developmentTime.ToString())
                         .WriteCell(launchedDate == null ? "N/A" : launchedDate.Value.ToString("dd/MM/yyyy"))
                         .WriteCell(project.Item2.Count.ToString())
                         .CloseRow();
@@ -83,7 +83,7 @@ namespace QuirkyScraper
                     {
                         ReportProgress(progress, string.Format("Writing {0}'s details. Completed {1}/{2} rows", projectName, j, maxRow));
                         writer.CreateRow();
-                        if(j == 0)
+                        if (j == 0)
                         {
                             writer.WriteCell("Common Collaborators", true)
                                 .WriteCell("Project contributors", true);
@@ -114,7 +114,7 @@ namespace QuirkyScraper
         {
             List<Tuple<IProject, List<IPeople>, List<IPeople>>> collaborators = new List<Tuple<IProject, List<IPeople>, List<IPeople>>>();
             var previous = new List<IPeople>();
-            for(int i = 0; i < sortedProjects.Count; i++)
+            for (int i = 0; i < sortedProjects.Count; i++)
             {
                 var project = sortedProjects[i];
 
@@ -127,7 +127,7 @@ namespace QuirkyScraper
                     continue;
                 }
 
-                ReportProgress(15 + (i * 45/sortedProjects.Count), string.Format("Finding common collaborators for {0}. Completed {1}/{2} projects", project.Name, i, sortedProjects.Count));
+                ReportProgress(15 + (i * 45 / sortedProjects.Count), string.Format("Finding common collaborators for {0}. Completed {1}/{2} projects", project.Name, i, sortedProjects.Count));
                 var commonCollaborators = previous.Join(projectCollaborators, c => c.Name, p => p.Name, (c, p) => c).ToList();
 
                 previous = previous.Concat(projectCollaborators).Distinct().ToList();   // Add new people to the heap
