@@ -53,6 +53,8 @@ namespace QuirkyScraper
 
                 for (var col = 0; col < row; col++)  // Bottom triangle is the same as top triangle
                 {
+                    if (row == col) continue;   // No need to record relationship with oneself
+
                     bool related = contributor.Followers.Contains(distinctPeople[col], comparer)
                         || contributor.Followings.Contains(distinctPeople[col], comparer);
                     int mark = related ? 1 : 0;
