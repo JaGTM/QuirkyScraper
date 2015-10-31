@@ -36,6 +36,7 @@ namespace QuirkyScraper
         private ICommand mGenerateCommonCollaborator;
         private ICommand mGeneratePhaseDomainsCount;
         private ICommand mGenerateProjectPhaseDomainsCount;
+        private ICommand mGenerateSocialNetwork;
 
         private void Notify([CallerMemberName]string name = "")
         {
@@ -134,6 +135,12 @@ namespace QuirkyScraper
             set { mGenerateProjectPhaseDomainsCount = value; Notify(); }
         }
 
+        public ICommand GenerateSocialNetwork
+        {
+            get { return mGenerateSocialNetwork; }
+            set { mGenerateSocialNetwork = value; Notify(); }
+        }
+
         public int Progress
         {
             get { return mProgress; }
@@ -199,12 +206,49 @@ namespace QuirkyScraper
                 CA(o => o.GenerateProjectDomainsCount, DoGenerateProjectDomainsCount),
                 CA(o => o.GenerateCommonCollaborator, DoGenerateCommonCollaborator),
                 CA(o => o.GeneratePhaseDomainsCount, DoGeneratePhaseDomainsCount),
-                CA(o => o.GenerateProjectPhaseDomainsCount, DoGenerateProjectPhaseDomainsCount)
+                CA(o => o.GenerateProjectPhaseDomainsCount, DoGenerateProjectPhaseDomainsCount),
+                CA(o => o.GenerateSocialNetwork, DoGenerateSocialNetwork)
 
             }.ForEach(x => BindCommand(this, x.Property, x.Command));
         }
 
         #region Actions
+        private void DoGenerateSocialNetwork(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select people json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            string saveFolder = null;
+            var invoking = Application.Current.Dispatcher.BeginInvoke(new Action(() =>
+            {
+                var saveLocation = new CommonOpenFileDialog
+                {
+                    IsFolderPicker = true,
+                    Title = "Select location to save results to"
+                };
+                var saveResult = saveLocation.ShowDialog();
+                if (saveResult == CommonFileDialogResult.Ok)
+                {
+                    saveFolder = saveLocation.FileName;
+                }
+            }));
+
+            invoking.Wait();
+
+            IProcessor processor = new GenerateSocialNetworkProcessor(fp.FileName)
+            {
+                Savepath = saveFolder
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
+
         private void DoGenerateProjectPhaseDomainsCount(BackgroundWorker bw)
         {
             var fp = new OpenFileDialog
