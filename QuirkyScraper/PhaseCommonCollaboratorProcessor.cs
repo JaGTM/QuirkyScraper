@@ -43,32 +43,65 @@ namespace QuirkyScraper
 
                 ReportProgress(60, "Writing Common Collaborators page...");
                 writer.CreateRow()
-                    .WriteCell("Phase Name", true)
                     .WriteCell("Product Name", true)
-                    .WriteCell("Idea Submitted", true)
-                    .WriteCell("Days in Development", true)
-                    .WriteCell("Launched", true)
-                    .WriteCell("No. of past collaborators with other products", true)
+                    .WriteCell("Past Collaboration in Problem / Solution")
+                    .WriteCell("Past Collaboration in Design")
+                    .WriteCell("Past Collaboration in Images")
+                    .WriteCell("Past Collaboration in Logo Design")
+                    .WriteCell("Past Collaboration in Naming")
+                    .WriteCell("Past Collaboration in Tagline")
                     .CloseRow();
 
-                foreach (var project in commonCollaborators)
+                foreach (var project in commonCollaborators.OrderBy(x => x.Project.Name))
                 {
                     var projectDetails = project.Project;
                     var submittedDate = GetSubmittedDate(projectDetails.SubmittedDate);
                     var developmentTime = GetDevelopmentTime(projectDetails.DevelopmentTime);
                     var launchedDate = GetLaunchedDate(submittedDate, developmentTime);
 
-                    foreach (var phase in project.CommonPhaseCollaborators)
+                    writer.CreateRow()
+                        .WriteCell(projectDetails.Name, true);
+
+                    for(int i = 0; i < 6; i++)
                     {
-                        writer.CreateRow()
-                            .WriteCell(phase.Key.Name)
-                            .WriteCell(projectDetails.Name)
-                            .WriteCell(submittedDate == null ? "N/A" : submittedDate.Value.ToString("dd/MM/yyyy"))
-                            .WriteCell(developmentTime < 0 ? "0" : developmentTime.ToString())
-                            .WriteCell(launchedDate == null ? "N/A" : launchedDate.Value.ToString("dd/MM/yyyy"))
-                            .WriteCell(phase.Value.Count.ToString())
-                            .CloseRow();
+                        KeyValuePair<ICategory, List<IPeople>> phase = default(KeyValuePair<ICategory, List<IPeople>>);
+                        string keyName = null;
+                        switch (i)
+                        {
+                            case 0:
+                                keyName = "problem";
+                                break;
+
+                            case 1:
+                                keyName = "design";
+                                break;
+
+                            case 2:
+                                keyName = "images";
+                                break;
+
+                            case 3:
+                                keyName = "logo";
+                                break;
+
+                            case 4:
+                                keyName = "naming";
+                                break;
+
+                            case 5:
+                                keyName = "tagline";
+                                break;
+                        }
+                        
+                        phase = project.CommonPhaseCollaborators.FirstOrDefault(x => {
+                            if (x.Key.Name.Length < keyName.Length) return false;
+                            var part = x.Key.Name.Substring(0, keyName.Length);
+                            return string.Equals(part, keyName, StringComparison.OrdinalIgnoreCase);
+                        });
+                        if (phase.Equals(default(KeyValuePair<ICategory, List<IPeople>>))) writer.WriteCell("0");
+                        else writer.WriteCell(phase.Value.Count.ToString());
                     }
+                    writer.CloseRow();
                 }
                 writer.CloseWorksheet();
 

@@ -459,7 +459,7 @@ namespace QuirkyScraper
 
             var excludeFp = new OpenFileDialog
             {
-                Title = "Select excluding projects json",
+                Title = "Select including projects json",
                 Filter = "json files | *.txt; *.json",
                 Multiselect = false
             };
@@ -467,9 +467,9 @@ namespace QuirkyScraper
             if (result.Value == true)
             {
                 var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
-                projects = projects.Where(x => !excludeProject.Any(y => string.Equals(x.Name, y.Name))).ToList();
-                people = people.Where(x => !x.Contributions.All(y => excludeProject.Any(z => string.Equals(z.Name, y.Project)))).ToList();
-                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+                projects = projects.Where(x => excludeProject.Any(y => string.Equals(x.Name, y.Name, StringComparison.OrdinalIgnoreCase))).ToList();
+                people = people.Where(x => x.Contributions.Any(y => excludeProject.Any(z => string.Equals(z.Name, y.Project, StringComparison.OrdinalIgnoreCase)))).ToList();
+                categories = categories.Where(x => excludeProject.Any(y => string.Equals(x.Project, y.Name, StringComparison.OrdinalIgnoreCase))).ToList();
             }
 
             string saveFile = null;
