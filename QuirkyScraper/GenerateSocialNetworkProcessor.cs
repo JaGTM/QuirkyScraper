@@ -33,15 +33,16 @@ namespace QuirkyScraper
 
         private void GenerateGraph()
         {
+            ReportProgress(0, "Retrieving people details");
             List<IPeople> people = GetPeople();
 
-            var count = 0;
-
+            ReportProgress(20, "Preparing...");
             // Get distinct people
             IEqualityComparer<IPeople> comparer = new PeopleComparer();
             List<IPeople> distinctPeople = people.Concat(people.SelectMany(x => x.Followers).Distinct(comparer).Concat(people.SelectMany(x => x.Followings)).Distinct(comparer)).Distinct(comparer).ToList();
 
-            var totalCount = distinctPeople.Count * 2;
+            var totalCount = distinctPeople.Count * 2 * 100/ 75;
+            var count = totalCount * 25 / 100;  // Start from 25%
             ReportProgress(count, totalCount);
 
             // Build grid
