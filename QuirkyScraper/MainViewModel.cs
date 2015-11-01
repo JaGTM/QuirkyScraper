@@ -37,7 +37,9 @@ namespace QuirkyScraper
         private ICommand mGeneratePhaseDomainsCount;
         private ICommand mGenerateProjectPhaseDomainsCount;
         private ICommand mGenerateSocialNetwork;
-
+        private ICommand mGeneratePhaseCommonCollaborator;
+        private delegate void QuirkyAction(BackgroundWorker bw);
+        
         private void Notify([CallerMemberName]string name = "")
         {
             if (PropertyChanged != null)
@@ -141,6 +143,12 @@ namespace QuirkyScraper
             set { mGenerateSocialNetwork = value; Notify(); }
         }
 
+        public ICommand GeneratePhaseCommonCollaborator
+        {
+            get { return mGeneratePhaseCommonCollaborator; }
+            set { mGeneratePhaseCommonCollaborator = value; Notify(); }
+        }
+
         public int Progress
         {
             get { return mProgress; }
@@ -159,7 +167,7 @@ namespace QuirkyScraper
             BindCommands();
         }
 
-        private void BindCommand(MainViewModel source, Expression<Func<MainViewModel, ICommand>> outExpr, Action<BackgroundWorker> input)
+        private void BindCommand(MainViewModel source, Expression<Func<MainViewModel, ICommand>> outExpr, QuirkyAction input)
         {
             var expr = (MemberExpression)outExpr.Body;
             var prop = (PropertyInfo)expr.Member;
@@ -173,17 +181,17 @@ namespace QuirkyScraper
 
         class CommandsAndActions
         {
-            public CommandsAndActions(Expression<Func<MainViewModel, ICommand>> property, Action<BackgroundWorker> command)
+            public CommandsAndActions(Expression<Func<MainViewModel, ICommand>> property, QuirkyAction command)
             {
                 Property = property;
                 Command = command;
             }
 
             public Expression<Func<MainViewModel, ICommand>> Property { get; set; }
-            public Action<BackgroundWorker> Command { get; set; }
+            public QuirkyAction Command { get; set; }
         }
 
-        private CommandsAndActions CA(Expression<Func<MainViewModel, ICommand>> property, Action<BackgroundWorker> command)
+        private CommandsAndActions CA(Expression<Func<MainViewModel, ICommand>> property, QuirkyAction command)
         {
             return new CommandsAndActions(property, command);
         }
@@ -207,12 +215,14 @@ namespace QuirkyScraper
                 CA(o => o.GenerateCommonCollaborator, DoGenerateCommonCollaborator),
                 CA(o => o.GeneratePhaseDomainsCount, DoGeneratePhaseDomainsCount),
                 CA(o => o.GenerateProjectPhaseDomainsCount, DoGenerateProjectPhaseDomainsCount),
-                CA(o => o.GenerateSocialNetwork, DoGenerateSocialNetwork)
+                CA(o => o.GenerateSocialNetwork, DoGenerateSocialNetwork),
+                CA(o => o.GeneratePhaseCommonCollaborator, DoGeneratePhaseCommonCollaborator)
 
             }.ForEach(x => BindCommand(this, x.Property, x.Command));
         }
 
         #region Actions
+
         private void DoGenerateSocialNetwork(BackgroundWorker bw)
         {
             var fp = new OpenFileDialog
@@ -374,6 +384,107 @@ namespace QuirkyScraper
             saveFile = saveFp.FileName;
 
             IProcessor processor = new PhaseDomainsCountProcessor(specialists, people)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
+
+        private void DoGeneratePhaseCommonCollaborator(BackgroundWorker bw)
+        {
+            var fp = new OpenFileDialog
+            {
+                Title = "Select projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var result = fp.ShowDialog();
+            if (result.Value == false) return;
+
+            List<Project> projects = null;
+            try
+            {
+                projects = Helper.GetJsonObjectFromFile<List<Project>>(fp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get projects data. Exception: {0}", e);
+                return;
+            }
+
+            if (projects == null) return;
+
+            var cfp = new OpenFileDialog
+            {
+                Title = "Select processed category json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            var cResult = cfp.ShowDialog();
+            if (cResult.Value == false) return;
+
+            List<ICategory> categories = null;
+            try
+            {
+                categories = ParticipantScraper.GetExistingProcessCategories(cfp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to generate production contribution graph. Exception: {0}", e);
+                return;
+            }
+
+            var peoplePicker = new OpenFileDialog
+            {
+                Title = "Select scraped people json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = peoplePicker.ShowDialog();
+            if (result.Value == false) return;
+
+            List<People> people = null;
+            try
+            {
+                people = Helper.GetJsonObjectFromFile<List<People>>(peoplePicker.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to get scrapped people. Exception: {0}", e);
+                return;
+            }
+
+            if (people == null) return;
+
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select excluding projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                projects = projects.Where(x => !excludeProject.Any(y => string.Equals(x.Name, y.Name))).ToList();
+                people = people.Where(x => !x.Contributions.All(y => excludeProject.Any(z => string.Equals(z.Name, y.Project)))).ToList();
+                categories = categories.Where(x => !excludeProject.Any(y => string.Equals(x.Project, y.Name))).ToList();
+            }
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls",
+                FileName = "CommonPhaseCollaborator.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.HasValue == false || result.Value == false) return;  // User must specify location to save file
+
+            saveFile = saveFp.FileName;
+
+            IProcessor processor = new PhaseCommonCollaboratorProcessor(projects, categories, people)
             {
                 Savepath = saveFile
             };
@@ -1024,7 +1135,7 @@ namespace QuirkyScraper
         /// Frame to hold the actual work on a background thread. Should only be called by a command
         /// </summary>
         /// <param name="action">Actual work to be done</param>
-        private void DoBGAction(Action<BackgroundWorker> action)
+        private void DoBGAction(QuirkyAction action)
         {
             if (mBusy == true) return;
             mBusy = true;

@@ -77,6 +77,7 @@
                     <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
@@ -94,10 +95,13 @@
                 <Button Content="Generate people with more than 1 phase in each project" Command="{Binding GenerateMultiPhaseContributor}" Grid.Row="1" Grid.Column="1"/>
                 <Button Content="Generate specialist data" Command="{Binding GenerateSpecialistData}" Grid.Row="1" Grid.Column="2"/>
                 <Button Content="Generate project domains count" Command="{Binding GenerateProjectDomainsCount}" Grid.Row="1" Grid.Column="3"/>
+                
                 <Button Content="Generate common collaborator" Command="{Binding GenerateCommonCollaborator}" Grid.Row="2"/>
                 <Button Content="Generate phase domains count" Command="{Binding GeneratePhaseDomainsCount}" Grid.Row="2" Grid.Column="1"/>
                 <Button Content="Generate project and phase domains count" Command="{Binding GenerateProjectPhaseDomainsCount}" Grid.Row="2" Grid.Column="2"/>
                 <Button Content="Generate social network" Command="{Binding GenerateSocialNetwork}" Grid.Row="2" Grid.Column="3"/>
+                
+                <Button Content="Generate common collaborator by phase" Command="{Binding GeneratePhaseCommonCollaborator}" Grid.Row="3"/>
             </Grid>
         </Grid>
 

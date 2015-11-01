@@ -72,8 +72,9 @@ namespace QuirkyScraper
                 var items = JsonConvert.DeserializeObject<List<Category>>("[" + text.Substring(0, text.Length - 1) + "]");
                 return items.Cast<ICategory>().ToList();
             }
-            catch
+            catch(Exception e)
             {
+                Console.WriteLine(e);
                 return new List<ICategory>();
             }
         }

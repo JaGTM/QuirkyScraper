@@ -84,6 +84,7 @@
     <Compile Include="GenerateSocialNetworkProcessor.cs" />
     <Compile Include="MultiPhaseContributorProcessor.cs" />
     <Compile Include="PeopleComparer.cs" />
+    <Compile Include="PhaseCommonCollaboratorProcessor.cs" />
     <Compile Include="PhaseDomainsCountProcessor.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="MyJsonConverter.cs" />
