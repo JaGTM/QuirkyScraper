@@ -23,25 +23,59 @@ namespace QuirkyScraper.Processors
             get { return @"SocialNetworkResults"; }
         }
 
-        class SimplifiedPeople: IEquatable<SimplifiedPeople>
+        class SimplifiedPeople: List<SimplifiedPerson>
         {
-            public List<SimplifiedPeople> Connections { get; internal set; }
+            public new void AddRange(IEnumerable<SimplifiedPerson> range)
+            {
+                foreach (SimplifiedPerson person in range)
+                    Add(person);
+            }
+
+            public new void Add(SimplifiedPerson person)
+            {
+                if (this.Count <= 0)
+                {
+                    base.Add(person);
+                    return;
+                }
+
+                for(int i = 0; i < this.Count; i++)
+                {
+                    if(person.CompareTo(this[i]) <= 0)
+                    {
+                        base.Insert(i, person);
+                        return;
+                    }
+                }
+
+                base.Add(person);
+            }
+        }
+
+        class SimplifiedPerson: IEquatable<SimplifiedPerson>, IComparable<SimplifiedPerson>
+        {
+            public List<SimplifiedPerson> Connections { get; internal set; }
             public string Name { get; set; }
 
-            public bool Equals(SimplifiedPeople other)
+            public int CompareTo(SimplifiedPerson other)
+            {
+                return this.Name.ToLower().CompareTo(other.Name.ToLower());
+            }
+
+            public bool Equals(SimplifiedPerson other)
             {
                 return string.Equals(this.Name, other.Name, StringComparison.OrdinalIgnoreCase);
             }
         }
 
-        class SimplifiedPeopleComparer : IEqualityComparer<SimplifiedPeople>
+        class SimplifiedPeopleComparer : IEqualityComparer<SimplifiedPerson>
         {
-            public bool Equals(SimplifiedPeople x, SimplifiedPeople y)
+            public bool Equals(SimplifiedPerson x, SimplifiedPerson y)
             {
                 return x.Equals(y);
             }
 
-            public int GetHashCode(SimplifiedPeople people)
+            public int GetHashCode(SimplifiedPerson people)
             {
                 //Check whether the object is null
                 if (Object.ReferenceEquals(people, null)) return 0;
@@ -62,14 +96,89 @@ namespace QuirkyScraper.Processors
             if (!Directory.Exists(Savepath))
                 Directory.CreateDirectory(Savepath);
 
-            List<SimplifiedPeople> graph = BuildGraph();
+            List<SimplifiedPerson> graph = BuildGraph();
+            SaveGraph(graph);
             //GenerateGraph();
             MessageBox.Show("Social network have been generated in " + Savepath);
         }
 
-        private List<SimplifiedPeople> BuildGraph()
+        private void SaveGraph(List<SimplifiedPerson> graph)
         {
-            List<SimplifiedPeople> graph = new List<SimplifiedPeople>();
+            var totalCount = graph.Count * 2 * 100 / 75;
+            var count = totalCount * 25 / 100;  // Start from 25%
+            ReportProgress(count, totalCount);
+
+            var sizeX = 1000;
+            var sizeY = 1000;
+
+            var rowBlocks = (graph.Count / sizeY) + 1;
+            var colBlocks = (graph.Count / sizeX) + 1;
+            for (int i = 0; i < rowBlocks; i++)
+            {
+                for (int j = 0; j < colBlocks; j++)
+                {
+                    var dimName = i + "_" + j;
+                    var filePath = Path.Combine(Savepath, ("SocialNetwork_" + dimName).RemoveInvalidFilePathCharacters() + ".xls");
+                    XmlWriter writer = Helper.GenerateXmlWriter(filePath);
+                    writer.StartCreateXls()
+                        .CreateWorksheet("Social Network " + dimName);
+
+                    var startRowIndex = i * sizeY;
+                    var startColIndex = j * sizeX;
+
+                    // Setup header
+                    // Creates a row.
+                    writer.CreateRow()
+                        .WriteCell(string.Empty);
+                    for (var index = startColIndex; index < startColIndex + sizeX; index++)
+                    {
+                        if (index >= graph.Count)
+                            break;
+                        else
+                            writer.WriteCell(graph[index].Name, true);
+                    }
+                    writer.CloseRow();
+
+                    // Populate data
+                    for (var row = 0; row < sizeY; row++)
+                    {
+                        var rowIndex = row + startRowIndex;
+                        if (rowIndex >= graph.Count) break;
+
+                        writer.CreateRow()
+                            .WriteCell(graph[rowIndex].Name, true);
+
+                        for (var col = 0; col < sizeX; col++)
+                        {
+                            var colIndex = col + startColIndex;
+                            if (colIndex >= graph.Count) break;
+
+                            if (row == col)
+                            {
+                                writer.WriteCell(string.Empty);
+                            }
+
+                            bool related = graph[row].Connections.Contains(graph[col]);
+                            if (related)
+                                writer.WriteCell("1");
+                            else
+                                writer.WriteCell("0");
+                        }
+                        writer.CloseRow();
+
+                        ReportProgress(++count, totalCount);
+                    }
+
+                    writer.CloseWorksheet()
+                        .CloseXls()
+                        .Close();
+                }
+            }
+        }
+
+        private List<SimplifiedPerson> BuildGraph()
+        {
+            List<SimplifiedPerson> graph = new List<SimplifiedPerson>();
             var filePath = Helper.CloneTextFileAndAddArray(this.rawFilePath);
             using (TextReader textReader = new StreamReader(filePath))
             using (var reader = new JsonTextReader(textReader))
@@ -85,19 +194,19 @@ namespace QuirkyScraper.Processors
                         if (string.IsNullOrWhiteSpace(deserializedItem.Name)) continue;
 
                         SimplifiedPeopleComparer comparer = new SimplifiedPeopleComparer();
-                        SimplifiedPeople sp = new SimplifiedPeople
+                        SimplifiedPerson sp = new SimplifiedPerson
                         {
                             Name = deserializedItem.Name
                         };
                         if (graph.Contains(sp, comparer)) continue;
 
                         // Get this persons connections
-                        List<SimplifiedPeople> connections = new List<SimplifiedPeople>();
+                        List<SimplifiedPerson> connections = new List<SimplifiedPerson>();
                         if (deserializedItem.Followers != null)
-                            connections.AddRange(deserializedItem.Followers.Select(x => new SimplifiedPeople { Name = x.Name }).Distinct());
+                            connections.AddRange(deserializedItem.Followers.Select(x => new SimplifiedPerson { Name = x.Name }).Distinct());
 
                         if (deserializedItem.Followings != null)
-                            connections.AddRange(deserializedItem.Followings.Select(x => new SimplifiedPeople { Name = x.Name }).Distinct());
+                            connections.AddRange(deserializedItem.Followings.Select(x => new SimplifiedPerson { Name = x.Name }).Distinct());
 
                         connections = connections.Distinct().ToList();  // Ensure no duplicates
 
