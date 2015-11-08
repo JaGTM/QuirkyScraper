@@ -6,20 +6,20 @@ using System.Text;
 using System.Windows;
 using System.Xml;
 
-namespace QuirkyScraper
+namespace QuirkyScraper.Processors
 {
-    class GenerateSocialNetworkProcessor : Processor
+    class SocialNetworkProcessor : Processor
     {
         private string rawFilePath;
 
-        public GenerateSocialNetworkProcessor(string rawFilePath)
+        public SocialNetworkProcessor(string rawFilePath)
         {
             this.rawFilePath = rawFilePath;
         }
 
         protected override string DEFAULT_SAVE_PATH
         {
-            get { return @"D:\Users\JaG\Desktop\SocialNetworkResults\"; }
+            get { return @"SocialNetworkResults"; }
         }
 
         public override void Process()

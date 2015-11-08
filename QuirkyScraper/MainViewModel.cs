@@ -316,7 +316,7 @@ namespace QuirkyScraper
 
             invoking.Wait();
 
-            IProcessor processor = new GenerateSocialNetworkProcessor(fp.FileName)
+            IProcessor processor = new SocialNetworkProcessor(fp.FileName)
             {
                 Savepath = saveFolder
             };

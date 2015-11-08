@@ -81,7 +81,7 @@
     <Compile Include="CommonCollaboratorProcessor.cs" />
     <Compile Include="FollowerFollowingScraper.cs" />
     <Compile Include="GenerateContributorsXProductsProcessor.cs" />
-    <Compile Include="GenerateSocialNetworkProcessor.cs" />
+    <Compile Include="Processors\SocialNetworkProcessor.cs" />
     <Compile Include="MultiPhaseContributorProcessor.cs" />
     <Compile Include="PeopleComparer.cs" />
     <Compile Include="PhaseCommonCollaboratorProcessor.cs" />
