@@ -116,7 +116,7 @@ namespace QuirkyScraper
             }
         }
 
-        private static string CloneTextFileAndAddArray(string filePath)
+        public static string CloneTextFileAndAddArray(string filePath)
         {
             var tempFile = filePath + "_clone";
             using (var readStream = File.OpenRead(filePath))

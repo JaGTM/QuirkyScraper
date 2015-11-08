@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,13 +23,92 @@ namespace QuirkyScraper.Processors
             get { return @"SocialNetworkResults"; }
         }
 
+        class SimplifiedPeople: IEquatable<SimplifiedPeople>
+        {
+            public List<SimplifiedPeople> Connections { get; internal set; }
+            public string Name { get; set; }
+
+            public bool Equals(SimplifiedPeople other)
+            {
+                return string.Equals(this.Name, other.Name, StringComparison.OrdinalIgnoreCase);
+            }
+        }
+
+        class SimplifiedPeopleComparer : IEqualityComparer<SimplifiedPeople>
+        {
+            public bool Equals(SimplifiedPeople x, SimplifiedPeople y)
+            {
+                return x.Equals(y);
+            }
+
+            public int GetHashCode(SimplifiedPeople people)
+            {
+                //Check whether the object is null
+                if (Object.ReferenceEquals(people, null)) return 0;
+
+                //Get hash code for the Name field if it is not null.
+                int hashProductName = people.Name == null ? 0 : people.Name.GetHashCode();
+
+                //Get hash code for the Code field.
+                int hashProductCode = people.Connections.GetHashCode();
+
+                //Calculate the hash code for the product.
+                return hashProductName ^ hashProductCode;
+            }
+        }
+
         public override void Process()
         {
             if (!Directory.Exists(Savepath))
                 Directory.CreateDirectory(Savepath);
 
-            GenerateGraph();
+            List<SimplifiedPeople> graph = BuildGraph();
+            //GenerateGraph();
             MessageBox.Show("Social network have been generated in " + Savepath);
+        }
+
+        private List<SimplifiedPeople> BuildGraph()
+        {
+            List<SimplifiedPeople> graph = new List<SimplifiedPeople>();
+            var filePath = Helper.CloneTextFileAndAddArray(this.rawFilePath);
+            using (TextReader textReader = new StreamReader(filePath))
+            using (var reader = new JsonTextReader(textReader))
+            {
+                JsonSerializer cachedDeserializer = JsonSerializer.Create();
+
+                while (reader.Read())
+                {
+                    if (reader.TokenType == JsonToken.StartObject)
+                    {
+                        People deserializedItem = cachedDeserializer.Deserialize<People>(reader);
+
+                        if (string.IsNullOrWhiteSpace(deserializedItem.Name)) continue;
+
+                        SimplifiedPeopleComparer comparer = new SimplifiedPeopleComparer();
+                        SimplifiedPeople sp = new SimplifiedPeople
+                        {
+                            Name = deserializedItem.Name
+                        };
+                        if (graph.Contains(sp, comparer)) continue;
+
+                        // Get this persons connections
+                        List<SimplifiedPeople> connections = new List<SimplifiedPeople>();
+                        if (deserializedItem.Followers != null)
+                            connections.AddRange(deserializedItem.Followers.Select(x => new SimplifiedPeople { Name = x.Name }).Distinct());
+
+                        if (deserializedItem.Followings != null)
+                            connections.AddRange(deserializedItem.Followings.Select(x => new SimplifiedPeople { Name = x.Name }).Distinct());
+
+                        connections = connections.Distinct().ToList();  // Ensure no duplicates
+
+                        sp.Connections = connections;
+
+                        graph.Add(sp);
+                    }
+                }
+            }
+
+            return graph;
         }
 
         private void GenerateGraph()
