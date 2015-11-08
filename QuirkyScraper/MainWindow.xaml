@@ -100,8 +100,9 @@
                 <Button Content="Generate phase domains count" Command="{Binding GeneratePhaseDomainsCount}" Grid.Row="2" Grid.Column="1"/>
                 <Button Content="Generate project and phase domains count" Command="{Binding GenerateProjectPhaseDomainsCount}" Grid.Row="2" Grid.Column="2"/>
                 <Button Content="Generate social network" Command="{Binding GenerateSocialNetwork}" Grid.Row="2" Grid.Column="3"/>
-                
+
                 <Button Content="Generate common collaborator by phase" Command="{Binding GeneratePhaseCommonCollaborator}" Grid.Row="3"/>
+                <Button Content="Generate unique contributor count by phase" Command="{Binding GeneratePhaseUniqueContributorCount}" Grid.Row="3" Grid.Column="1"/>
             </Grid>
         </Grid>
 

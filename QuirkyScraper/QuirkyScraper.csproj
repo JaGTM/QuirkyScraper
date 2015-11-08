@@ -88,6 +88,7 @@
     <Compile Include="PhaseDomainsCountProcessor.cs" />
     <Compile Include="Processor.cs" />
     <Compile Include="MyJsonConverter.cs" />
+    <Compile Include="Processors\PhaseUniqueContributorsProcessor.cs" />
     <Compile Include="ProductInfluencersProcessor.cs" />
     <Compile Include="ProductXContributorsProcessor.cs" />
     <Compile Include="ProjectDomainsCountProcessor.cs" />

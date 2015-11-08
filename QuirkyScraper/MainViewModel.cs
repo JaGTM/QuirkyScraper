@@ -1,5 +1,6 @@
 ﻿using Microsoft.Win32;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using QuirkyScraper.Processors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,8 @@ namespace QuirkyScraper
         private ICommand mGenerateProjectPhaseDomainsCount;
         private ICommand mGenerateSocialNetwork;
         private ICommand mGeneratePhaseCommonCollaborator;
+        private ICommand mGeneratePhaseUniqueContributorCount;
+
         private delegate void QuirkyAction(BackgroundWorker bw);
         
         private void Notify([CallerMemberName]string name = "")
@@ -149,6 +152,12 @@ namespace QuirkyScraper
             set { mGeneratePhaseCommonCollaborator = value; Notify(); }
         }
 
+        public ICommand GeneratePhaseUniqueContributorCount
+        {
+            get { return mGeneratePhaseUniqueContributorCount; }
+            set { mGeneratePhaseUniqueContributorCount = value; Notify(); }
+        }
+
         public int Progress
         {
             get { return mProgress; }
@@ -216,12 +225,68 @@ namespace QuirkyScraper
                 CA(o => o.GeneratePhaseDomainsCount, DoGeneratePhaseDomainsCount),
                 CA(o => o.GenerateProjectPhaseDomainsCount, DoGenerateProjectPhaseDomainsCount),
                 CA(o => o.GenerateSocialNetwork, DoGenerateSocialNetwork),
-                CA(o => o.GeneratePhaseCommonCollaborator, DoGeneratePhaseCommonCollaborator)
+                CA(o => o.GeneratePhaseCommonCollaborator, DoGeneratePhaseCommonCollaborator),
+                CA(o => o.GeneratePhaseUniqueContributorCount, DoGeneratePhaseUniqueContributorCount)
 
             }.ForEach(x => BindCommand(this, x.Property, x.Command));
         }
 
         #region Actions
+
+        private void DoGeneratePhaseUniqueContributorCount(BackgroundWorker bw)
+        {
+            var cfp = new OpenFileDialog
+            {
+                Title = "Select processed category json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            bool? cResult = cfp.ShowDialog();
+            if (cResult.Value == false) return;
+
+            List<ICategory> categories = null;
+            try
+            {
+                categories = ParticipantScraper.GetExistingProcessCategories(cfp.FileName);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Failed to generate phase unique contributor data. Exception: {0}", e);
+                return;
+            }
+
+            var excludeFp = new OpenFileDialog
+            {
+                Title = "Select including projects json",
+                Filter = "json files | *.txt; *.json",
+                Multiselect = false
+            };
+            bool? result = excludeFp.ShowDialog();
+            if (result.Value == true)
+            {
+                var excludeProject = Helper.GetJsonObjectFromFile<List<Project>>(excludeFp.FileName);
+                categories = categories.Where(x => excludeProject.Any(y => string.Equals(x.Project, y.Name, StringComparison.OrdinalIgnoreCase))).ToList();
+            }
+
+            string saveFile = null;
+            var saveFp = new SaveFileDialog
+            {
+                Title = "Select file to save to",
+                Filter = "Excel 2003 | *.xls",
+                FileName = "PhaseUniqueContributors.xls"
+            };
+            result = saveFp.ShowDialog();
+            if (result.HasValue == false || result.Value == false) return;  // User must specify location to save file
+
+            saveFile = saveFp.FileName;
+
+            IProcessor processor = new PhaseUniqueContributorsProcessor(categories)
+            {
+                Savepath = saveFile
+            };
+            processor.ProgressChanged += (progress, status) => bw.ReportProgress(progress, status);
+            processor.Process();
+        }
 
         private void DoGenerateSocialNetwork(BackgroundWorker bw)
         {
